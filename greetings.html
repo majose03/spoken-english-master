@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings & Phrases — SpokenMaster</title>
+  <meta name="description" content="Learn formally and politely to say Hello, Thank You, and How are you in any situation. Tamil, Malayalam, and Telugu translations provided.">
+  <meta name="keywords" content="english greetings, say hello in english, formal greetings, daily spoken english phrases">
+  <meta property="og:title" content="Greetings & Phrases — SpokenMaster">
+  <meta property="og:description" content="Learn English greetings with translations.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/greetings.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --yellow: #FFC312; --hotpink: #FD79A8; --lavender: #A29BFE;
+      --teal: #00B894; --coral: #E17055; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; overflow-x:hidden; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes floatUp { 0% {transform:translateY(0) rotate(0deg); opacity:0.2;} 50% {opacity:0.4;} 100% {transform:translateY(-110vh) rotate(720deg); opacity:0;} }
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin:20px 0; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    
+    .section-hero { background:linear-gradient(135deg, var(--green), var(--teal)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); animation:heroGlow 4s ease-in-out infinite alternate; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:white; text-shadow:0 2px 20px rgba(0,0,0,0.4); margin-bottom:12px; position:relative; z-index:1; }
+    .section-hero p { color:rgba(255,255,255,0.85); font-size:16px; max-width:600px; margin:0 auto; position:relative; z-index:1; }
+
+    /* Greetings Table */
+    .greetings-wrap { background:var(--bg-card); border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; margin:40px 0; }
+    .g-table { width:100%; border-collapse:collapse; }
+    .g-table tr { padding:14px; border-bottom:1px solid var(--border); transition:0.2s; }
+    .g-table tr:hover { background:rgba(255,255,255,0.02); }
+    .g-table td { padding:16px 20px; vertical-align:middle; line-height:1.5; }
+    .g-en { font-size:18px; font-weight:600; color:white; margin-bottom:4px; display:flex; align-items:center; gap:10px; }
+    .g-tt { font-size:14px; color:var(--green); font-family:monospace; }
+    .g-tr { font-size:14px; color:var(--text-muted); font-weight:500; }
+    .g-usage { font-size:13px; color:rgba(255,255,255,0.5); font-style:italic; }
+    .g-badge { font-size:11px; font-weight:700; padding:3px 8px; border-radius:12px; }
+    .badge-f { background:rgba(67,233,123,0.1); color:var(--green); border:1px solid var(--green); }
+    .badge-i { background:rgba(255,101,132,0.1); color:var(--pink); border:1px solid var(--pink); }
+
+    /* Sound Icon */
+    .sound-btn { background:none; border:none; cursor:pointer; color:var(--cyan); font-size:18px; transition:0.2s; }
+    .sound-btn:hover { transform:scale(1.2); }
+
+    /* Chat Simulation */
+    .chat-box { background:#0B0B19; border:1px solid var(--border); border-radius:var(--radius); padding:20px; height:400px; overflow-y:auto; display:flex; flex-direction:column; gap:15px; margin:40px 0; box-shadow:inset 0 0 20px rgba(0,0,0,0.5); }
+    .c-msg { max-width:70%; padding:12px 18px; border-radius:20px; font-size:15px; line-height:1.5; position:relative; }
+    .c-bot { align-self:flex-start; background:var(--bg-card2); border:1px solid var(--border); border-bottom-left-radius:4px; }
+    .c-user { align-self:flex-end; background:linear-gradient(135deg, var(--green), var(--teal)); border-bottom-right-radius:4px; color:#000; font-weight:500; }
+    .c-author { font-size:11px; margin-bottom:4px; opacity:0.7; }
+
+    .sim-ctrls { text-align:center; margin-bottom:20px; }
+    .sim-btn { background:var(--purple); color:white; border:none; padding:10px 24px; border-radius:30px; font-weight:600; cursor:pointer; font-size:14px; transition:0.3s; }
+    .sim-btn:hover { background:var(--pink); }
+
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item active" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>👋 Daily Greetings</h1>
+    <p>Learn politely to say Hello, Thank You, and How are you in any situation.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="greetings-wrap">
+      <table class="g-table" id="greetTable">
+        <!-- Rendered by JS -->
+      </table>
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot ad-mid" style="text-align:center;padding:10px 0;margin:40px auto;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;">Advertisement (336x280)</div>
+    </div>
+
+    <h2 style="font-family:var(--font-heading); margin-top:60px; text-align:center;">Live Conversation Simulator</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:20px;">Watch a realistic greeting exchange between colleagues.</p>
+    
+    <div class="sim-ctrls">
+      <button class="sim-btn" onclick="startSim()">▶ Start Simulation</button>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+      <!-- Chat populated by JS -->
+      <div style="text-align:center; color:var(--text-muted); font-size:14px; margin-top:auto; margin-bottom:auto;">Press Start Simulation to begin...</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">The world's best free Spoken English website. Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="tenses.html">Tenses</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // System
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderTable();
+    }
+
+    function playSound(text) {
+      if(!('speechSynthesis' in window)) return alert('Web Speech API not supported in your browser.');
+      const ut = new SpeechSynthesisUtterance(text);
+      ut.lang = 'en-US';
+      ut.rate = 0.9;
+      window.speechSynthesis.speak(ut);
+    }
+
+    // Data - 30 Greetings
+    const greetData = [
+      { en:"Hello!", f:1, u:"Any formal or default situation",
+        ta:"வணக்கம் [Vanakkam]", ml:"നമസ്കാരം [Namaskaram]", te:"నమస్కారం [Namaskaram]",
+        tt:"Used with anyone, at any time." },
+      { en:"Good morning.", f:1, u:"Until 12 PM (Noon)",
+        ta:"காலை வணக்கம் [Kaalai vanakkam]", ml:"സുപ്രഭാതം [Suprabhatham]", te:"శుభోదయం [Shubhodayam]",
+        tt:"The standard formal morning greeting." },
+      { en:"Good afternoon.", f:1, u:"12 PM to 5 PM",
+        ta:"மதிய வணக்கம் [Madhiya vanakkam]", ml:"ശുഭ സായാഹ്നം [Shubha dinnam]", te:"శుభ మధ్యాహ్నం [Shubha madhyahnam]",
+        tt:"Used after lunch." },
+      { en:"Good evening.", f:1, u:"After 5 PM",
+        ta:"மாலை வணக்கம் [Maalai vanakkam]", ml:"ശുഭ സായാഹ്നം [Shubha sayahnam]", te:"శుభ సాయంత్రం [Shubha sayantram]",
+        tt:"Used in the late hours before sleeping." },
+      { en:"Hi there!", f:0, u:"Informal, to friends or juniors",
+        ta:"ஹாய் [Hai]", ml:"ഹായ് [Hai]", te:"హాయ్ [Hai]",
+        tt:"Friendly greeting." },
+      { en:"How are you?", f:1, u:"Asking about their wellbeing",
+        ta:"நீங்கள் எப்படி இருக்கிறீர்கள்? [Neengal eppadi irukkireergal?]", ml:"നിങ്ങൾക്ക് സുഖമാണോ? [Ningalkku sukhamano?]", te:"మీరు ఎలా ఉన్నారు? [Meeru ela unnaru?]",
+        tt:"Standard formal checking." },
+      { en:"How's it going?", f:0, u:"Casual alternative to How are you",
+        ta:"எப்படி போகிறது? [Eppadi pogiradhu?]", ml:"എങ്ങനെയുണ്ട് വിശേഷങ്ങൾ? [Enganeyund visheshangal?]", te:"ఎలా జరుగుతోంది? [Ela jarugutondi?]",
+        tt:"Used casually at work or with friends." },
+      { en:"What's up?", f:0, u:"Very informal, close friends",
+        ta:"என்ன விஷயம்? [Enna vishayam?]", ml:"എന്തൊക്കെയുണ്ട്? [Enthokkeyund?]", te:"ఏంటి సంగతులు? [Enti sangatulu?]",
+        tt:"Young people use this a lot." },
+      { en:"I'm fine, thank you.", f:1, u:"Replying to 'How are you?'",
+        ta:"நான் நன்றாக இருக்கிறேன், நன்றி. [Naan nandraga irukkiren, nandri.]", ml:"എനിക്ക് സുഖമാണ്, നന്ദി. [Enikku sukhamanu, nandi.]", te:"నేను బాగున్నాను, ధన్యవాదాలు. [Nenu bagunnanu, dhanyavadalu.]",
+        tt:"The safest polite answer." },
+      { en:"Not too bad.", f:0, u:"Replying mildly positive",
+        ta:"அவ்வளவு மோசம் இல்லை. [Avvalavu mosam illai.]", ml:"കുഴപ്പമില്ല. [Kuzhappamilla.]", te:"పర్వాలేదు. [Parvaledu.]",
+        tt:"British speakers often say this." },
+      { en:"Nice to meet you.", f:1, u:"Meeting someone for the very first time",
+        ta:"உங்களை சந்தித்ததில் மகிழ்ச்சி. [Ungalai sandhithadhil magizhchi.]", ml:"കണ്ടതിൽ സന്തോഷം. [Kandathil santhosham.]", te:"మిమ్మల్ని కలవడం సంతోషంగా ఉంది. [Mimmalni kalavadam santhoshanga undi.]",
+        tt:"Crucial phrase for interviews or new contacts." },
+      { en:"It's a pleasure to meet you.", f:1, u:"Very formal meeting",
+        ta:"உங்களை சந்திப்பது எனக்கு ஒரு மகிழ்ச்சி. [Ungalai sandhippadhu enakku oru magizhchi.]", ml:"താങ്കളെ പരിചയപ്പെട്ടതിൽ വളരെ സന്തോഷം. [Thangale parichayappettathil valare santhosham.]", te:"మిమ్మల్ని కలవడం నా అదృష్టం. [Mimmalni kalavadam naa adrushtam.]",
+        tt:"Used mostly for VVIPs or formal clients." },
+      { en:"Long time no see.", f:0, u:"Meeting a friend after a long gap",
+        ta:"பார்த்து ரொம்ப நாளாச்சு. [Paarthu romba naalachu.]", ml:"കണ്ടിട്ട് ഒരുപാട് നാളായല്ലോ. [Kandittu orupadu nalayallo.]", te:"చూసి చాలా రోజులైంది. [Choosi chala rojulaindi.]",
+        tt:"Friendly acknowledgement of time passed." },
+      { en:"Goodbye.", f:1, u:"Formal leaving",
+        ta:"சென்று வருகிறேன். [Sendru varugiren.]", ml:"വിടനൽകുന്നു. [Vidunalkunnu.]", te:"వెళ్ళి వస్తాను. [Velli vasthanu.]",
+        tt:"Or just 'Bye' in an office." },
+      { en:"See you later.", f:0, u:"Casual leaving, assuming you will meet again soon",
+        ta:"பிறகு சந்திக்கலாம். [Piragu sandhikkalaam.]", ml:"പിന്നെ കാണാം. [Pinne kanam.]", te:"తరువాత కలుద్దాం. [Tharuvatha kaluddam.]",
+        tt:"Used frequently between coworkers." },
+      { en:"Take care.", f:0, u:"Friendly goodbye",
+        ta:"பத்திரமாக பார்த்துக்கொள்ளுங்கள். [Pathiramaga paarthukollungal.]", ml:"സൂക്ഷിക്കുക. [Sookshikkuka.]", te:"జాగ్రత్త. [Jagratha.]",
+        tt:"Shows affection when departing." },
+      { en:"Have a good day.", f:1, u:"Polite goodbye to customers/colleagues",
+        ta:"இந்த நாள் இனிய நாளாக அமையட்டும். [Indha naal iniya naalaga amaiyattum.]", ml:"നല്ലൊരു ദിവസം ആശംസിക്കുന്നു. [Nalloru divasam ashamsikkunnu.]", te:"ఈ రోజు శుభప్రదంగా ఉండాలి. [Ee roju shubhapradanga undali.]",
+        tt:"Extremely common in customer service." },
+      { en:"Thank you.", f:1, u:"Expressing gratitude politely",
+        ta:"நன்றி. [Nandri.]", ml:"നന്ദി. [Nandi.]", te:"ధన్యవాదాలు. [Dhanyavadalu.]",
+        tt:"Always use this, never forget it." },
+      { en:"Thanks a lot.", f:0, u:"Warmer casual gratitude",
+        ta:"மிக்க நன்றி. [Mikka nandri.]", ml:"വളരെ നന്ദി. [Valare nandi.]", te:"చాలా ధన్యవాదాలు. [Chala dhanyavadalu.]",
+        tt:"To a friend who helped." },
+      { en:"You're welcome.", f:1, u:"Standard reply to Thank You",
+        ta:"வரவேற்கிறேன். [Varaverkiren.]", ml:"സ്വാഗതം. [Swagatham.]", te:"స్వాగతం. [Swagatam.]",
+        tt:"The most polite response." },
+      { en:"No mention.", f:0, u:"South Asian reply to Thanks",
+        ta:"பரவாயில்லை. [Paravayillai.]", ml:"സാരമില്ല. [Saramilla.]", te:"పర్వాలేదు. [Parvaledu.]",
+        tt:"Better alternative: 'No problem' or 'My pleasure'." },
+      { en:"Excuse me.", f:1, u:"Getting attention or moving past",
+        ta:"என்னை மன்னியுங்கள். [Ennai manniyungal.]", ml:"ക്ഷമിക്കണം. [Kshamikkanam.]", te:"నన్ను క్షమించండి. [Nannu kshaminchandi.]",
+        tt:"Use before interrupting someone." },
+      { en:"I am sorry.", f:1, u:"Apologizing",
+        ta:"நான் வருந்துகிறேன். [Naan varundhugiren.]", ml:"എനിക്ക് ദുഃഖമുണ്ട്. [Enikku dukhamundu.]", te:"నన్ను క్షమించండి. [Nannu kshaminchandi.]",
+        tt:"Shows regret for a mistake." },
+      { en:"Could you please help me?", f:1, u:"Asking for favor",
+        ta:"தயவுசெய்து எனக்கு உதவ முடியுமா? [Dhayavuseidhu enakku udhava mudiyuma?]", ml:"ദയവായി എന്നെ സഹായിക്കാമോ? [Dayavayi enne sahayikkamo?]", te:"దయచేసి నాకు సహాయం చేయగలరా? [Dayachesi naaku sahayam cheyagalara?]",
+        tt:"Very polite request." },
+      { en:"What do you mean?", f:0, u:"Asking for clarification",
+        ta:"நீங்கள் என்ன சொல்கிறீர்கள்? [Neengal enna solgireergal?]", ml:"നിങ്ങൾ എന്താണ് ഉദ്ദേശിക്കുന്നത്? [Ningal enthanu uddheshikkunnathu?]", te:"మీ ఉద్దేశ్యం ఏమిటి? [Mee uddhesyam emiti?]",
+        tt:"When you don't understand." },
+      { en:"Pardon me.", f:1, u:"Asking to repeat formally",
+        ta:"மன்னிக்கவும், மீண்டும் சொல்லுங்கள். [Mannikkavum, meendum sollungal.]", ml:"മാപ്പാക്കണം, ഒന്നുകൂടി പറയാമോ. [Mappakkanam, onnukoodi parayamo.]", te:"క్షమించండి, మళ్ళీ చెప్పండి. [Kshaminchandi, malli cheppandi.]",
+        tt:"When you couldn't hear them." },
+      { en:"Congratulations!", f:1, u:"Praising a success",
+        ta:"வாழ்த்துக்கள்! [Vaazhthukkal!]", ml:"അഭിനന്ദനങ്ങൾ! [Abhinandanangal!]", te:"అభినందనలు! [Abhinandanalu!]",
+        tt:"For weddings, promotions, or passing." },
+      { en:"Good luck!", f:0, u:"Wishing success before event",
+        ta:"நல்வாழ்த்துக்கள்! [Nalvaazhthukkal!]", ml:"വിജയാശംസകൾ! [Vijayashamsakal!]", te:"శుభాకాంక్షలు! [Shubhakankshalu!]",
+        tt:"Before exams or interviews." },
+      { en:"I understand.", f:1, u:"Acknowledging information",
+        ta:"எனக்கு புரிகிறது. [Enakku purigiradhu.]", ml:"എനിക്ക് മനസ്സിലായി. [Enikku manassilayi.]", te:"నాకు అర్థమైంది. [Naaku arthamaindi.]",
+        tt:"Instead of just nodding." },
+      { en:"I don't know.", f:1, u:"Expressing lack of knowledge",
+        ta:"எனக்குத் தெரியாது. [Enakku theriyaadhu.]", ml:"എനിക്കറിയില്ല. [Enikkariyilla.]", te:"నాకు తెలియదు. [Naaku teliyadu.]",
+        tt:"Honesty when unaware." }
+    ];
+
+    function renderTable() {
+      let h = '';
+      greetData.forEach(row => {
+        let trans = '';
+        if(window.LANG === 'en') trans = row.en;
+        if(window.LANG === 'ta') trans = row.ta;
+        if(window.LANG === 'ml') trans = row.ml;
+        if(window.LANG === 'te') trans = row.te;
+
+        h += `<tr>
+          <td style="width:50px; text-align:center;">
+            <button class="sound-btn" onclick="playSound('${row.en.replace(/'/g,"\\'")}')">🔊</button>
+          </td>
+          <td>
+            <div class="g-en">${row.en} <span class="g-badge ${row.f ? 'badge-f' : 'badge-i'}">${row.f ? 'FORMAL' : 'CASUAL'}</span></div>
+            <div class="g-tt">Context: ${row.u}</div>
+            <div class="g-tr" style="display:${window.LANG==='en'?'none':'block'}; margin-top:8px;">${trans}</div>
+          </td>
+          <td style="width:30%;">
+            <div class="g-usage">${row.tt}</div>
+          </td>
+        </tr>`;
+      });
+      document.getElementById('greetTable').innerHTML = h;
+    }
+
+    // Chat Simulation
+    const chatScript = [
+      {author:"John", isBot:true, text:"Good morning, Sarah! How are you doing today?"},
+      {author:"Sarah", isBot:false, text:"Good morning, John! I'm completely fine, thank you. How about you?"},
+      {author:"John", isBot:true, text:"Not too bad, thanks. Did you get a chance to look at the new sales report?"},
+      {author:"Sarah", isBot:false, text:"Yes, I did. I have a few questions though. Could you please help me with the Q3 data?"},
+      {author:"John", isBot:true, text:"Of course! Let's schedule a meeting. See you later!"},
+      {author:"Sarah", isBot:false, text:"Thank you so much. Have a good day!"}
+    ];
+
+    let simIndex = 0;
+    let simTimer = null;
+
+    function startSim() {
+      const box = document.getElementById('chatBox');
+      box.innerHTML = '';
+      simIndex = 0;
+      clearInterval(simTimer);
+      simTimer = setInterval(() => {
+        if(simIndex >= chatScript.length) {
+          clearInterval(simTimer);
+          return;
+        }
+        const msg = chatScript[simIndex];
+        const div = document.createElement('div');
+        div.className = `c-msg ${msg.isBot ? 'c-bot' : 'c-user'}`;
+        div.innerHTML = `<div class="c-author">${msg.author}</div>${msg.text}`;
+        box.appendChild(div);
+        box.scrollTop = box.scrollHeight;
+        playSound(msg.text);
+        simIndex++;
+      }, 4000); // 4 seconds apart to allow TTS
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Particles
+      const bgColors = ['#6C63FF','#FF6584','#43E97B','#FA8231','#00C9FF','#FFC312'];
+      for(let i=0; i<10; i++) {
+        const p = document.createElement('div');
+        p.style.cssText = `position:fixed;width:${3+Math.random()*5}px;height:${3+Math.random()*5}px;background:${bgColors[Math.floor(Math.random()*bgColors.length)]};border-radius:50%;left:${Math.random()*100}vw;top:${100+Math.random()*20}vh;opacity:${0.15+Math.random()*0.25};animation:floatUp ${8+Math.random()*12}s linear ${Math.random()*8}s infinite;pointer-events:none;z-index:0;`;
+        document.body.appendChild(p);
+      }
+      renderTable();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

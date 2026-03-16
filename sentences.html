@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Daily Sentences — SpokenMaster</title>
+  <meta name="description" content="100 essential daily English sentences translated into Tamil, Malayalam, and Telugu. With audio pronunciation.">
+  <meta name="keywords" content="daily english sentences, 100 daily use english sentences, english speaking practice">
+  <meta property="og:title" content="100 Daily Sentences">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/sentences.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    
+    .section-hero { background:linear-gradient(135deg, var(--purple), var(--blue)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:white; margin-bottom:12px; }
+    .section-hero p { color:rgba(255,255,255,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500; }
+
+    /* Controls */
+    .controls { display:flex; justify-content:space-between; align-items:center; margin:30px 0; flex-wrap:wrap; gap:15px; }
+    .cat-filter { padding:10px 16px; border-radius:8px; background:var(--bg-card); border:1px solid var(--border); color:white; font-size:14px; outline:none; cursor:pointer; min-width:200px; }
+    .search-box { padding:10px 16px; border-radius:8px; background:var(--bg-card); border:1px solid var(--border); color:white; font-size:14px; outline:none; flex:1; max-width:400px; }
+    .search-box::placeholder { color:var(--text-muted); }
+
+    /* Sentence List */
+    .s-list { display:flex; flex-direction:column; gap:12px; margin-bottom:40px; }
+    .s-item { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; transition:0.2s; }
+    .s-item:hover { border-color:var(--purple); transform:translateX(5px); }
+    .s-content { flex:1; }
+    .s-en { font-size:18px; font-weight:500; color:white; margin-bottom:6px; }
+    .s-tr { font-size:14px; color:var(--text-muted); }
+    .s-cat { font-size:11px; padding:3px 8px; border-radius:10px; background:rgba(255,255,255,0.05); color:var(--yellow); text-transform:uppercase; font-weight:600; margin-bottom:6px; display:inline-block; }
+    
+    .s-actions { display:flex; gap:10px; margin-left:20px; }
+    .s-btn { background:var(--bg-card2); border:1px solid var(--border); width:40px; height:40px; border-radius:50%; display:flex; justify-content:center; align-items:center; cursor:pointer; font-size:16px; transition:0.2s; color:white; }
+    .s-btn:hover { background:var(--purple); border-color:var(--purple); transform:scale(1.1); }
+    .s-btn.playing { background:var(--green); border-color:var(--green); animation:pulse 1s infinite; }
+
+    @keyframes pulse { 0% {transform:scale(1);} 50% {transform:scale(1.1);} 100% {transform:scale(1);} }
+
+    .no-results { text-align:center; padding:40px; color:var(--text-muted); font-size:16px; display:none; }
+
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item active" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>💬 100 Daily Sentences</h1>
+    <p>Practice these 100 essential sentences to boost your fluency in everyday situations.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="controls">
+      <select class="cat-filter" id="catFilter" onchange="filterSentences()">
+        <option value="all">📁 All Categories</option>
+        <option value="Daily Routine">☀️ Daily Routine</option>
+        <option value="Office & Work">💼 Office & Work</option>
+        <option value="Travel & Directions">🚗 Travel & Directions</option>
+        <option value="Shopping & Money">🛒 Shopping & Money</option>
+        <option value="Health">🏥 Health</option>
+      </select>
+      <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search in English..." onkeyup="filterSentences()">
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot" style="text-align:center;padding:10px 0;margin-bottom:20px;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+    </div>
+
+    <div class="s-list" id="sList">
+      <!-- Data via JS -->
+    </div>
+    <div class="no-results" id="noResults">No sentences found. Try a different search.</div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot ad-bottom" style="text-align:center;padding:10px 0;margin:40px auto;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;">Advertisement (336x280)</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="sentences.html">Sentences</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderSentences();
+    }
+
+    const sData = [
+      // Daily Routine
+      { c:"Daily Routine", en:"I wake up at 6 AM every day.", ta:"நான் தினமும் காலை 6 மணிக்கு எழுந்திருக்கிறேன்.", ml:"ഞാൻ എല്ലാ ദിവസവും രാവിലെ 6 മണിക്ക് എഴുന്നേൽക്കുന്നു.", te:"నేను ప్రతిరోజు ఉదయం 6 గంటలకు నిద్రలేస్తాను." },
+      { c:"Daily Routine", en:"Brush your teeth properly.", ta:"உன் பற்களை சரியாக துலக்கு.", ml:"പല്ല് നന്നായി തേക്കുക.", te:"నీ పళ్ళు సరిగ్గా బ్రష్ చెయ్." },
+      { c:"Daily Routine", en:"I am taking a bath.", ta:"நான் குளித்துக் கொண்டிருக்கிறேன்.", ml:"ഞാൻ കുളിക്കുകയാണ്.", te:"నేను స్నానం చేస్తున్నాను." },
+      { c:"Daily Routine", en:"What is for breakfast?", ta:"காலை உணவுக்கு என்ன?", ml:"പ്രഭാതഭക്ഷണത്തിന് എന്താണുള്ളത്?", te:"టిఫిన్ కి ఏముంది?" },
+      { c:"Daily Routine", en:"I am getting ready for school/office.", ta:"நான் பள்ளிக்கு/அலுவலகத்திற்கு தயாராகிக் கொண்டிருக்கிறேன்.", ml:"ഞാൻ സ്കൂളിൽ/ഓഫീസിൽ പോകാൻ തയ്യാറാവുകയാണ്.", te:"నేను స్కూల్/ఆఫీస్ కి తయారవుతున్నాను." },
+      { c:"Daily Routine", en:"Turn off the fan.", ta:"மின்விசிறியை அணைக்கவும்.", ml:"ഫാൻ ഓഫ് ചെയ്യുക.", te:"ఫ్యాన్ ఆఫ్ చెయ్." },
+      { c:"Daily Routine", en:"Let's have lunch together.", ta:"நாங்கள் ஒன்றாக மதிய உணவு சாப்பிடலாம்.", ml:"നമുക്ക് ഒരുമിച്ച് ഉച്ചഭക്ഷണം കഴിക്കാം.", te:"మనం కలిసి లంచ్ చేద్దాం." },
+      { c:"Daily Routine", en:"Wash your hands before eating.", ta:"சாப்பிடுவதற்கு முன் கை கழுவவும்.", ml:"ഭക്ഷണം കഴിക്കുന്നതിനു മുൻപ് കൈ കഴുകുക.", te:"తినేముందు చేతులు కడుక్కో." },
+      { c:"Daily Routine", en:"I will sleep early tonight.", ta:"நான் இன்று இரவு சீக்கிரம் தூங்குவேன்.", ml:"ഞാൻ ഇന്നുരാത്രി നേരത്തെ ഉറങ്ങും.", te:"నేను ఈ రాత్రి త్వరగా నిద్రపోతాను." },
+      { c:"Daily Routine", en:"Did you lock the door?", ta:"கதவை பூட்டினீர்களா?", ml:"നീ വാതിൽ പൂട്ടിയോ?", te:"నువ్వు తలుపు లాక్ చేసావా?" },
+      
+      // Office & Work
+      { c:"Office & Work", en:"I have a meeting at 10 AM.", ta:"எனக்கு காலை 10 மணிக்கு ஒரு கூட்டம் உள்ளது.", ml:"എനിക്ക് രാവിലെ 10 മണിക്ക് ഒരു മീറ്റിംഗ് ഉണ്ട്.", te:"నాకు ఉదయం 10 గంటలకు మీటింగ్ ఉంది." },
+      { c:"Office & Work", en:"Please send me the report.", ta:"தயவுசெய்து எனக்கு அறிக்கையை அனுப்பவும்.", ml:"ദയവായി എനിക്ക് ആ റിപ്പോർട്ട് അയച്ചു തരുക.", te:"దయచేసి నాకు ఆ రిపోర్ట్ పంపించు." },
+      { c:"Office & Work", en:"I am working from home today.", ta:"நான் இன்று வீட்டிலிருந்து வேலை செய்கிறேன்.", ml:"ഞാൻ ഇന്ന് വീട്ടിൽ നിന്നാണ് ജോലി ചെയ്യുന്നത്.", te:"నేను ఈరోజు ఇంటి నుండి పనిచేస్తున్నాను." },
+      { c:"Office & Work", en:"He is my boss.", ta:"அவர் எனது முதலாளி.", ml:"അദ്ദേഹം എൻ്റെ ബോസാണ്.", te:"అతను నా బాస్." },
+      { c:"Office & Work", en:"I applied for leave tomorrow.", ta:"நான் நாளை விடுமுறைக்கு விண்ணப்பித்துள்ளேன்.", ml:"ഞാൻ നാളത്തേക്ക് അവധിക്ക് അപേക്ഷിച്ചിട്ടുണ്ട്.", te:"నేను రేపటికి సెలవు కోసం అప్లై చేశాను." },
+      { c:"Office & Work", en:"Can you help me with this project?", ta:"இந்த திட்டத்தில் எனக்கு உதவ முடியுமா?", ml:"ഈ പ്രോജക്ടിൽ എന്നെ സഹായിക്കാമോ?", te:"ఈ ప్రాజెక్ట్ లో నాకు సహాయం చేస్తావా?" },
+      { c:"Office & Work", en:"Our internet connection is slow.", ta:"எங்கள் இணைய இணைப்பு மெதுவாக உள்ளது.", ml:"ഞങ്ങളുടെ ഇൻ്റർനെറ്റ് കണക്ഷൻ വളരെ സ്ലോ ആണ്.", te:"మా ఇంటర్నెట్ కనెక్షన్ స్లో గా ఉంది." },
+      { c:"Office & Work", en:"When is the deadline?", ta:"கடைசி தேதி எப்போது?", ml:"അവസാന തീയതി എപ്പോഴാണ്?", te:"గడువు ఎప్పుడు?" },
+      { c:"Office & Work", en:"Good job on the presentation.", ta:"விளக்கக்காட்சியில் சிறப்பாக செயல்பட்டீர்கள்.", ml:"പ്രസൻ്റേഷൻ നന്നായി ചെയ്തു.", te:"ప్రెజెంటేషన్ బాగా చేసావు." },
+      { c:"Office & Work", en:"I am very busy right now.", ta:"நான் இப்போது மிகவும் பிசியாக இருக்கிறேன்.", ml:"ഞാൻ ഇപ്പോൾ വളരെ തിരക്കിലാണ്.", te:"నేను ఇప్పుడు చాలా బిజీగా ఉన్నాను." },
+
+      // Travel & Directions
+      { c:"Travel & Directions", en:"Where is the railway station?", ta:"ரயில் நிலையம் எங்கே உள்ளது?", ml:"റെയിൽവേ സ്റ്റേഷൻ എവിടെയാണ്?", te:"రైల్వే స్టేషన్ ఎక్కడ ఉంది?" },
+      { c:"Travel & Directions", en:"How much is the ticket to Chennai?", ta:"சென்னைக்கு டிக்கெட் எவ்வளவு?", ml:"ചെന്നൈയിലേക്കുള്ള ടിക്കറ്റ് നിരക്ക് എത്രയാണ്?", te:"చెన్నైకి టికెట్ ఎంత?" },
+      { c:"Travel & Directions", en:"Go straight and turn left.", ta:"நேராக சென்று இடதுபுறம் திரும்பவும்.", ml:"നേരെ പോയി ഇടത്തോട്ട് തിരിയുക.", te:"తిన్నగా వెళ్లి ఎడమవైపు తిరుగు." },
+      { c:"Travel & Directions", en:"Is it far from here?", ta:"இங்கிருந்து வெகு தொலைவில் உள்ளதா?", ml:"ഇവിടെ നിന്നും വളരെ ദൂരമുണ്ടോ?", te:"ఇక్కడి నుండి చాలా దూరమా?" },
+      { c:"Travel & Directions", en:"Stop the car here.", ta:"காரை இங்கே நிறுத்துங்கள்.", ml:"കാർ ഇവിടെ നിർത്തുക.", te:"కారును ఇక్కడ ఆపు." },
+      { c:"Travel & Directions", en:"I am lost. Can you help me?", ta:"நான் தொலைந்துவிட்டேன். நீங்கள் எனக்கு உதவ முடியுமா?", ml:"എനിക്ക് വഴിതെറ്റി. എന്നെയൊന്ന് സഹായിക്കാമോ?", te:"నేను దారి తప్పాను. నాకు సహాయం చేస్తారా?" },
+      { c:"Travel & Directions", en:"At what time does the bus leave?", ta:"பேருந்து எத்தனை மணிக்கு புறப்படும்?", ml:"ബസ് എത്ര മണിക്ക് പുറപ്പെടും?", te:"బస్సు ఏ సమయానికి బయలుదేరుతుంది?" },
+      { c:"Travel & Directions", en:"I need a taxi to the airport.", ta:"விமான நிலையத்திற்கு எனக்கு ஒரு டாக்ஸி தேவை.", ml:"എനിക്ക് എയർപോർട്ടിലേക്ക് ഒരു ടാക്സി വേണം.", te:"నాకు విమానాశ్రయానికి ఒక టాక్సీ కావాలి." },
+      { c:"Travel & Directions", en:"Please drive slowly.", ta:"தயவுசெய்து மெதுவாக ஓட்டவும்.", ml:"ദയവായി പതുക്കെ ഓടിക്കുക.", te:"దయచేసి నెమ్మదిగా నడపండి." },
+      { c:"Travel & Directions", en:"We have reached our destination.", ta:"நாங்கள் எங்கள் இலக்கை அடைந்துவிட்டோம்.", ml:"ഞങ്ങൾ ലക്ഷ്യസ്ഥാനത്തെത്തി.", te:"మేము గమ్యస్థానానికి చేరుకున్నాము." },
+
+      // Shopping & Money
+      { c:"Shopping & Money", en:"How much does this cost?", ta:"இதன் விலை என்ன?", ml:"ഇതിനെന്താണ് വില?", te:"దీని ధర ఎంత?" },
+      { c:"Shopping & Money", en:"It is too expensive.", ta:"இது மிகவும் விலை உயர்ந்தது.", ml:"ഇതിന് നല്ല വില കൂടുതലാണ്.", te:"ఇది చాలా ఖరీదైనది." },
+      { c:"Shopping & Money", en:"Do you have a smaller size?", ta:"உங்களிடம் சிறிய அளவு உள்ளதா?", ml:"നിങ്ങളുടെ കൈയിൽ ചെറിയ സൈസുണ്ടോ?", te:"మీ దగ్గర చిన్న సైజు ఉందా?" },
+      { c:"Shopping & Money", en:"Can I pay by card?", ta:"நான் கார்டு மூலம் செலுத்தலாமா?", ml:"എനിക്ക് കാർഡ് വഴി പണമടക്കാമോ?", te:"నేను కార్డ్ ద్వారా చెల్లించవచ్చా?" },
+      { c:"Shopping & Money", en:"I am just looking, thanks.", ta:"நான் பார்த்துக் கொண்டிருக்கிறேன், நன்றி.", ml:"ഞാൻ വെറുതെ നോക്കുകയാണ്, നന്ദി.", te:"నేను చూస్తున్నాను అంతే, థాంక్స్." },
+      { c:"Shopping & Money", en:"Give me the bill, please.", ta:"தயவுசெய்து எனக்கு பில் கொடுங்கள்.", ml:"ദയവായി ബില്ല് തരൂ.", te:"దయచేసి బిల్లు ఇవ్వండి." },
+      { c:"Shopping & Money", en:"Do you have change for 500?", ta:"உங்களிடம் 500 ரூபாய்க்கு சில்லறை உள்ளதா?", ml:"നിങ്ങളുടെ കൈയിൽ 500 ന് ചില്ലറയുണ്ടോ?", te:"మీ దగ్గర 500కి చేంజ్ ఉందా?" },
+      { c:"Shopping & Money", en:"Where is the ATM?", ta:"ஏடிஎம் எங்கே உள்ளது?", ml:"ATM എവിടെയാണ്?", te:"ATM ఎక్కడ ఉంది?" },
+      { c:"Shopping & Money", en:"Can you give me a discount?", ta:"நீங்கள் எனக்கு தள்ளுபடி தர முடியுமா?", ml:"എനിക്ക് ഡിസ്കൗണ്ട് തരാമോ?", te:"మీరు నాకు డిస్కౌంట్ ఇవ్వగలరా?" },
+      { c:"Shopping & Money", en:"I want to return this item.", ta:"இந்த பொருளை நான் திருப்பித் தர விரும்புகிறேன்.", ml:"എനിക്കിത് തിരികെ നൽകണം.", te:"నేను ఈ వస్తువును తిరిగి ఇవ్వాలి." },
+
+      // Health
+      { c:"Health", en:"I have a headache.", ta:"எனக்கு தலைவலி உள்ளது.", ml:"എനിക്ക് തലവേദനയുണ്ട്.", te:"నాకు తలనొప్పిగా ఉంది." },
+      { c:"Health", en:"I need to see a doctor.", ta:"நான் ஒரு மருத்துவரை பார்க்க வேண்டும்.", ml:"എനിക്കാ ഡോക്ടറെ കാണണം.", te:"నేను డాక్టర్‌ను చూడాలి." },
+      { c:"Health", en:"I am feeling dizzy.", ta:"எனக்கு தலைசுற்றல் போல் உள்ளது.", ml:"എനിക്ക് തലകറങ്ങുന്നത് പോലെ തോന്നുന്നു.", te:"నాకు తల తిరుగుతున్నట్లు ఉంది." },
+      { c:"Health", en:"Did you take your medicine?", ta:"நீங்கள் உங்கள் மருந்தை எடுத்துக் கொண்டீர்களா?", ml:"നിങ്ങൾ മരുന്ന് കഴിച്ചോ?", te:"నువ్వు మందులు వేసుకున్నావా?" },
+      { c:"Health", en:"My throat hurts.", ta:"என் தொண்டை வலிக்கிறது.", ml:"എൻ്റെ തൊണ്ട വേദനിക്കുന്നു.", te:"నా గొంతు నొప్పిగా ఉంది." },
+      { c:"Health", en:"I caught a cold yesterday.", ta:"நேற்று எனக்கு சளி பிடித்தது.", ml:"എനിക്കിന്നലെ ജലദോഷം പിടിച്ചു.", te:"నాకు నిన్న జలుబు చేసింది." },
+      { c:"Health", en:"Take rest for two days.", ta:"இரண்டு நாட்கள் ஓய்வெடுக்கவும்.", ml:"രണ്ടു ദിവസം വിശ്രമിക്കുക.", te:"రెండు రోజులు రెస్ట్ తీసుకో." },
+      { c:"Health", en:"Drink plenty of warm water.", ta:"நிறைய வெதுவெதுப்பான தண்ணீரைக் குடிக்கவும்.", ml:"ധാരാളം ചൂടുവെള്ളം കുടിക്കുക.", te:"చాలా వేడి నీరు త్రాగాలి." },
+      { c:"Health", en:"Are you feeling better now?", ta:"இப்போது உங்களுக்கு நன்றாக இருக்கிறதா?", ml:"ഇപ്പോൾ ഭേദമുണ്ടോ?", te:"ఇప్పుడు నీకు బాగుందా?" },
+      { c:"Health", en:"Call an ambulance quickly!", ta:"ஆம்புலன்ஸை விரைவாக அழைக்கவும்!", ml:"വേഗം ഒരു ആംബുലൻസ് വിളിക്കൂ!", te:"త్వరగా అంబులెన్స్ కి కాల్ చెయ్!" }
+    ];
+
+    function playSound(text, btnElement) {
+      if(btnElement) {
+        btnElement.classList.add('playing');
+        setTimeout(()=>btnElement.classList.remove('playing'), 1000);
+      }
+      if(!('speechSynthesis' in window)) return;
+      const ut = new SpeechSynthesisUtterance(text);
+      ut.lang = 'en-US';
+      ut.rate = 0.9;
+      window.speechSynthesis.speak(ut);
+    }
+
+    function renderSentences() {
+      const q = document.getElementById('searchBox').value.toLowerCase();
+      const cat = document.getElementById('catFilter').value;
+      const container = document.getElementById('sList');
+      const noRes = document.getElementById('noResults');
+      
+      let h = '';
+      let count = 0;
+      
+      sData.forEach((s, i) => {
+        if(cat !== 'all' && s.c !== cat) return;
+        if(q && !s.en.toLowerCase().includes(q)) return;
+        
+        count++;
+        let trans = '';
+        if(window.LANG === 'ta') trans = s.ta;
+        if(window.LANG === 'ml') trans = s.ml;
+        if(window.LANG === 'te') trans = s.te;
+        
+        h += `
+        <div class="s-item">
+          <div class="s-content">
+            <span class="s-cat">${s.c}</span>
+            <div class="s-en">${i+1}. ${s.en}</div>
+            <div class="s-tr" style="display:${trans?'block':'none'}">${trans}</div>
+          </div>
+          <div class="s-actions">
+            <button class="s-btn" onclick="playSound('${s.en.replace(/'/g,"\\'")}', this)">🔊</button>
+          </div>
+        </div>`;
+      });
+      
+      container.innerHTML = h;
+      noRes.style.display = count === 0 ? 'block' : 'none';
+    }
+
+    function filterSentences() {
+      renderSentences();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderSentences);
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

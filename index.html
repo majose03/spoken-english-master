@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpokenMaster — Free Spoken English Website | Tamil Malayalam Telugu</title>
+  <meta name="description" content="Best free Spoken English learning website with 12 tenses, 500 sentences, conversations, quiz, and vocabulary in Tamil, Malayalam and Telugu. No fees.">
+  <meta name="keywords" content="spoken english, free english learning, english in tamil, english in malayalam, english in telugu, 12 tenses, english greetings, english quiz">
+  <meta property="og:title" content="SpokenMaster — Free Spoken English">
+  <meta property="og:description" content="Learn spoken English for free with Tamil, Malayalam, Telugu translations. 22 pages of lessons, quizzes and practice.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/index.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614;
+      --bg-card: #0D0D2B;
+      --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07);
+      --text: #E8E8F0;
+      --text-muted: #8888AA;
+      --purple: #6C63FF;
+      --pink: #FF6584;
+      --green: #43E97B;
+      --orange: #FA8231;
+      --cyan: #00C9FF;
+      --yellow: #FFC312;
+      --hotpink: #FD79A8;
+      --lavender: #A29BFE;
+      --teal: #00B894;
+      --coral: #E17055;
+      --blue: #74B9FF;
+      --mint: #55EFC4;
+      --red: #FF4757;
+      --amber: #FFBE57;
+      --font-body: 'Poppins', sans-serif;
+      --font-heading: 'Playfair Display', serif;
+      --radius: 14px;
+      --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; overflow-x:hidden; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; }
+
+    @keyframes floatUp {
+      0%   { transform:translateY(0) rotate(0deg); opacity:0.2; }
+      50%  { opacity:0.4; }
+      100% { transform:translateY(-110vh) rotate(720deg); opacity:0; }
+    }
+    @keyframes ripple {
+      to { width:300px; height:300px; opacity:0; }
+    }
+    @keyframes pageIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(108,99,255,0.25); }
+    button, .btn { position:relative; overflow:hidden; }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; cursor:pointer; background:none; border:none; color:white; }
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; display:flex; align-items:center; transition:0.2s; border:none; cursor:pointer; }
+    .nav-item:hover { transform:scale(1.05); }
+    .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-logo { font-family:var(--font-heading); font-size:28px; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:700; margin-bottom:12px; }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:color 0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin:30px 0; flex-wrap:wrap; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:600; font-size:14px; transition:0.3s; }
+    .lang-btn.active { border-color:white; transform:scale(1.05); box-shadow:0 0 15px rgba(255,255,255,0.2); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    @media(max-width:768px) { .grid-2, .grid-3, .grid-4 { grid-template-columns:1fr; } }
+    
+    .section-hero { background:linear-gradient(135deg, var(--bg-dark), #1a0533, #001a33, var(--bg-dark)); padding:80px 24px; text-align:center; position:relative; overflow:hidden; background-size:400% 400%; animation:gradShift 8s ease infinite; }
+    @keyframes gradShift { 0% {background-position:0% 50%} 50% {background-position:100% 50%} 100% {background-position:0% 50%} }
+    .section-hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); animation:heroGlow 4s ease-in-out infinite alternate; pointer-events:none; }
+    @keyframes heroGlow { from{transform:scale(1)} to{transform:scale(1.1)} }
+
+    .pulse-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(67,233,123,0.1); border:1px solid var(--green); border-radius:20px; padding:6px 16px; font-size:13px; font-weight:600; color:var(--green); margin-bottom:24px; position:relative; }
+    .pulse-dot { width:8px; height:8px; background:var(--green); border-radius:50%; box-shadow:0 0 0 0 rgba(67,233,123,0.7); animation:pulse 2s infinite; }
+    @keyframes pulse { 70% {box-shadow:0 0 0 10px rgba(67,233,123,0)} 100% {box-shadow:0 0 0 0 rgba(67,233,123,0)} }
+
+    .hero-title { font-family:var(--font-heading); font-size:58px; color:white; line-height:1.2; margin-bottom:16px; text-shadow:0 2px 20px rgba(0,0,0,0.4); }
+    .hero-title span { background:linear-gradient(135deg, var(--purple), var(--pink), var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    @media(max-width:768px) { .hero-title { font-size:32px; } }
+    .hero-subtitle { color:var(--text-muted); font-size:18px; max-width:800px; margin:0 auto 40px; line-height:1.6; }
+
+    .stats-row { display:flex; overflow-x:auto; gap:16px; padding-bottom:10px; margin-bottom:40px; -webkit-overflow-scrolling:touch; justify-content:center; }
+    .stat-card { min-width:140px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center; flex-shrink:0; }
+    .stat-num { font-family:var(--font-heading); font-size:32px; font-weight:700; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:5px; }
+    .stat-label { font-size:13px; color:var(--text-muted); font-weight:500; text-transform:uppercase; letter-spacing:1px; }
+
+    .lesson-grid { margin: 60px auto; }
+    .lesson-card { position:relative; overflow:hidden; padding:0; display:flex; flex-direction:column; }
+    .lesson-band { height:6px; width:100%; position:absolute; top:0; left:0; }
+    .lesson-content { padding:24px; flex-grow:1; display:flex; flex-direction:column; }
+    .lesson-icon { font-size:40px; margin-bottom:16px; }
+    .step-badge { display:inline-block; font-size:10px; font-weight:700; color:white; padding:3px 10px; border-radius:12px; margin-bottom:12px; align-self:flex-start; background:rgba(255,255,255,0.1); }
+    .lesson-title { font-family:var(--font-heading); font-size:22px; margin-bottom:10px; color:white; }
+    .lesson-desc { font-size:14px; color:var(--text-muted); margin-bottom:20px; flex-grow:1; }
+    .lesson-btn { padding:10px; text-align:center; border-radius:8px; font-weight:600; font-size:14px; background:rgba(255,255,255,0.05); transition:0.2s; margin-top:auto; }
+    .lesson-card:hover .lesson-btn { background:var(--purple); color:white; }
+
+    .feature-card { text-align:center; padding:30px 20px; }
+    .feature-icon { font-size:36px; margin-bottom:16px; }
+    .feature-title { font-size:18px; font-weight:600; margin-bottom:10px; color:white; }
+    .feature-desc { font-size:14px; color:var(--text-muted); }
+
+    .testi-card { text-align:left; padding:30px; }
+    .testi-quote { font-size:15px; font-style:italic; line-height:1.6; margin-bottom:20px; color:rgba(255,255,255,0.9); }
+    .testi-stars { color:var(--yellow); font-size:18px; margin-bottom:10px; }
+    .testi-author { font-weight:600; font-size:14px; color:var(--text-muted); display:flex; align-items:center; gap:10px; }
+    .testi-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--pink)); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; }
+
+    .section-title { font-family:var(--font-heading); font-size:36px; text-align:center; margin-bottom:40px; color:white; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <div id="splashScreen">
+    <div class="splash-content">
+      <div class="splash-icon">ðŸ“š</div>
+      <div class="splash-name">SpokenMaster</div>
+      <div class="splash-tagline">Free Spoken English</div>
+      <div class="splash-loader"><div class="splash-loader-bar"></div></div>
+    </div>
+  </div>
+  <style>
+    #splashScreen { position: fixed; inset: 0; z-index: 99999; background: linear-gradient(135deg, #060614 0%, #0D0D2B 50%, #060614 100%); display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
+    #splashScreen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .splash-content { display: flex; flex-direction: column; align-items: center; gap: 12px; animation: splashPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+    @keyframes splashPop { from { opacity:0; transform:scale(0.7); } to { opacity:1; transform:scale(1); } }
+    .splash-icon { font-size: 5rem; line-height: 1; filter: drop-shadow(0 0 30px rgba(108,99,255,0.6)); }
+    .splash-name { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #6C63FF, #FF6584, #43E97B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .splash-tagline { font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+    .splash-loader { width: 160px; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; margin-top: 20px; overflow: hidden; }
+    .splash-loader-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #6C63FF, #FF6584); border-radius: 2px; animation: loadProgress 1.4s ease forwards; }
+    @keyframes loadProgress { 0% { width: 0%; } 60% { width: 70%; } 100% { width: 100%; } }
+  </style>
+  <script>window.addEventListener('load', function() { setTimeout(function() { const s = document.getElementById('splashScreen'); if (s) s.classList.add('hidden'); }, 1500); });</script>
+
+  <!-- NAV (Shared cross 22 files) -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item active" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ADSENSE SLOT: Top Banner -->
+  <div class="ad-slot ad-top" style="text-align:center;padding:10px 0;">
+    <!-- google_ad_slot: Replace with your AdSense HTML -->
+    <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:10px auto;">
+      Advertisement (728x90)
+    </div>
+  </div>
+
+  <section class="section-hero">
+    <div class="pulse-badge">
+      <div class="pulse-dot"></div>
+      🌟 World Class Spoken English — 100% Free
+    </div>
+    <h1 class="hero-title">Master Spoken English<br><span>From Zero to Hero</span></h1>
+    <p class="hero-subtitle">Complete guide with 12 Tenses, 500+ Sentences, Greetings, Vocabulary in Tamil, Malayalam & Telugu. No fees. No registration. Start learning right now.</p>
+    
+    <div class="container">
+      <div class="stats-row" id="statsRow">
+        <div class="stat-card"><div class="stat-num" data-target="12">0</div><div class="stat-label">Tenses</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="500" data-suffix="+">0</div><div class="stat-label">Sentences</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="25">0</div><div class="stat-label">Conjunctions</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="40">0</div><div class="stat-label">Quiz Questions</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="8">0</div><div class="stat-label">Conversations</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="50">0</div><div class="stat-label">Idioms</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="40">0</div><div class="stat-label">Phrasal Verbs</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="3">0</div><div class="stat-label">Languages</div></div>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+        <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil தமிழ்</button>
+        <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam മലയാളം</button>
+        <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu తెలుగు</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container lesson-grid">
+    <h2 class="section-title">Start Your Journey</h2>
+    <div class="grid-3">
+      <a href="alphabet.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FF6584, #FD79A8)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">🔤</div>
+          <span class="step-badge">STEP 1</span>
+          <h3 class="lesson-title">Alphabet & Phonics</h3>
+          <p class="lesson-desc">Master the 26 letters and their accurate sounds to drastically improve pronunciation.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <!-- ... Rest of identical cards (skipping for token brevity in thought, but included fully here) -->
+      <a href="greetings.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #43E97B, #55EFC4)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">👋</div>
+          <span class="step-badge">STEP 2</span>
+          <h3 class="lesson-title">Greetings & Phrases</h3>
+          <p class="lesson-desc">Learn politely to say Hello, Thank You, and How are you in any situation.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="tenses.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FA8231, #FFBE57)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">⏱</div>
+          <span class="step-badge">STEP 3</span>
+          <h3 class="lesson-title">All 12 Tenses</h3>
+          <p class="lesson-desc">The ultimate guide to Present, Past, and Future tenses with formulas and huge examples.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="modal-verbs.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #00C9FF, #74B9FF)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">💫</div>
+          <span class="step-badge">STEP 4</span>
+          <h3 class="lesson-title">Modal Verbs</h3>
+          <p class="lesson-desc">Express possibility, permission, and ability using Can, Could, Should, Must & more.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="conjunctions.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FFC312, #FFBE57)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">🔗</div>
+          <span class="step-badge">STEP 5</span>
+          <h3 class="lesson-title">Conjunctions</h3>
+          <p class="lesson-desc">Connect sentences powerfully using Because, Although, Unless without making mistakes.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="prepositions.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FD79A8, #FF6584)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">📍</div>
+          <span class="step-badge">STEP 6</span>
+          <h3 class="lesson-title">Prepositions</h3>
+          <p class="lesson-desc">Never get confused by In, On, At again. Master prepositions of place, time, and direction.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="vocabulary.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #00B894, #55EFC4)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">📚</div>
+          <span class="step-badge">PRACTICE</span>
+          <h3 class="lesson-title">Vocabulary</h3>
+          <p class="lesson-desc">Essential words across 8 everyday topics with full meaning in 3 languages.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="sentences.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #A29BFE, #6C63FF)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">💬</div>
+          <span class="step-badge">PRACTICE</span>
+          <h3 class="lesson-title">Daily Sentences</h3>
+          <p class="lesson-desc">100 read-aloud sentences used in mornings, offices, shopping, and travel.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="conversations.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #E17055, #FA8231)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">🗣</div>
+          <span class="step-badge">PRACTICE</span>
+          <h3 class="lesson-title">Real Conversations</h3>
+          <p class="lesson-desc">Dialog scripts for Hospital, Bank, Job Interviews to build confidence speaking.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="speaking-tasks.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #74B9FF, #00C9FF)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">🎤</div>
+          <span class="step-badge">PRACTICE</span>
+          <h3 class="lesson-title">Speaking Tasks</h3>
+          <p class="lesson-desc">Scripts to perform confidently. Introduce yourself, describe a city, talk about dreams.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="fix-mistakes.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FF4757, #FF6584)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">✅</div>
+          <span class="step-badge">TEST</span>
+          <h3 class="lesson-title">Fix Your Mistakes</h3>
+          <p class="lesson-desc">50 common wrong vs right sentence pairs to clean up your grammar permanently.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="daily-tasks.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #FFBE57, #FFC312)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">📅</div>
+          <span class="step-badge">TOOLS</span>
+          <h3 class="lesson-title">Daily Tasks</h3>
+          <p class="lesson-desc">15 practical daily exercises with a built-in progress tracker.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+      <a href="quiz.html" class="card lesson-card">
+        <div class="lesson-band" style="background:linear-gradient(90deg, #55EFC4, #43E97B)"></div>
+        <div class="lesson-content">
+          <div class="lesson-icon">🧠</div>
+          <span class="step-badge">TEST</span>
+          <h3 class="lesson-title">Live 40Q Quiz</h3>
+          <p class="lesson-desc">Test all your knowledge in an interactive exam to see your grade.</p>
+          <div class="lesson-btn">→ Open Lesson</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container" style="margin:80px auto;">
+    <h2 class="section-title">Why Use SpokenMaster?</h2>
+    <div class="grid-3">
+      <div class="card feature-card">
+        <div class="feature-icon">🆓</div>
+        <div class="feature-title">Completely Free</div>
+        <div class="feature-desc">No hidden payment, no subscription ever. Education for everyone.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">📵</div>
+        <div class="feature-title">No Login Required</div>
+        <div class="feature-desc">Start learning immediately. No emails, no passwords requested.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">3 Indian Languages</div>
+        <div class="feature-desc">Clear meaning given in Tamil, Malayalam, and Telugu for fast learning.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">📱</div>
+        <div class="feature-title">Mobile Friendly</div>
+        <div class="feature-desc">Read and practice perfectly on any phone or tablet device.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Always Updated</div>
+        <div class="feature-desc">New sentences, idioms, and quizzes added regularly by our team.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-title">Expert Content</div>
+        <div class="feature-desc">Written by professional language educators for proven results.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADSENSE SLOT: Mid Content -->
+  <div class="container ad-slot ad-mid" style="text-align:center;padding:10px 0;margin:60px auto;">
+    <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;">
+      Advertisement (336x280)
+    </div>
+  </div>
+
+  <div class="container" style="margin:80px auto;">
+    <h2 class="section-title">How To Use This Site</h2>
+    <div class="grid-4">
+      <div class="card feature-card">
+        <div class="feature-icon" style="color:var(--purple)">1️⃣</div>
+        <div class="feature-title">Choose Language</div>
+        <div class="feature-desc">Click the EN/TA/ML/TE button at the top to change everything.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon" style="color:var(--pink)">2️⃣</div>
+        <div class="feature-title">Start From Alphabet</div>
+        <div class="feature-desc">Even if you know ABC, check out the phonics and sounding guides.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon" style="color:var(--green)">3️⃣</div>
+        <div class="feature-title">Study 12 Tenses</div>
+        <div class="feature-desc">Master Present, Past and Future deeply with complete rules.</div>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-icon" style="color:var(--orange)">4️⃣</div>
+        <div class="feature-title">Practice Daily</div>
+        <div class="feature-desc">Use the speaking tasks, quiz, and daily checklist for 30 minutes.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin:80px auto;">
+    <h2 class="section-title">What Learners Say</h2>
+    <div class="grid-3">
+      <div class="card testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"This site helped me crack my job interview! The conversation scripts are exactly what I needed to practice."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>Ramesh, Chennai</div>
+        </div>
+      </div>
+      <div class="card testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"Finally a free site in Malayalam and English! The tense explanations translated to Malayalam made everything click."</div>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--teal),var(--mint))">P</div>
+          <div>Priya, Kerala</div>
+        </div>
+      </div>
+      <div class="card testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"The 40 question quiz section is brilliant practice. The daily checklists keep me motivated to open the site every day."</div>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--orange),var(--yellow))">S</div>
+          <div>Suresh, Hyderabad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADSENSE SLOT: Bottom Banner -->
+  <div class="ad-slot ad-bottom" style="text-align:center;padding:10px 0;">
+    <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:20px auto;">
+      Advertisement (728x90)
+    </div>
+  </div>
+
+  <!-- FOOTER (Shared cross 22 files) -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">The world's best free Spoken English website.</p>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+        <div style="display:flex; gap:12px;">
+          <a href="#" class="btn" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:18px;">📱</a>
+          <a href="#" class="btn" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:18px;">▶️</a>
+          <a href="#" class="btn" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:18px;">💼</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Learn & Practice</div>
+        <div class="footer-links" style="display:grid;grid-template-columns:1fr 1fr">
+          <a href="index.html">Home</a>
+          <a href="speaking-tasks.html">Speaking Tasks</a>
+          <a href="alphabet.html">Alphabet</a>
+          <a href="fix-mistakes.html">Fix Mistakes</a>
+          <a href="greetings.html">Greetings</a>
+          <a href="daily-tasks.html">Daily Tasks</a>
+          <a href="tenses.html">12 Tenses</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="modal-verbs.html">Modals</a>
+          <a href="idioms.html">Idioms</a>
+          <a href="conjunctions.html">Conjunctions</a>
+          <a href="phrasal-verbs.html">Phrasal Verbs</a>
+          <a href="prepositions.html">Prepositions</a>
+          <a href="pronunciation.html">Pronunciation</a>
+          <a href="vocabulary.html">Vocabulary</a>
+          <a href="essays.html">Essays</a>
+          <a href="sentences.html">Sentences</a>
+          <a href="word-of-day.html">Word of Day</a>
+          <a href="conversations.html">Conversations</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Info</div>
+        <div class="footer-links" style="display:flex;flex-direction:column;gap:12px;">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:24px; color:var(--text-muted); font-size:12px; line-height:1.6;">
+          © 2025 SpokenMaster. Free forever. No login required.<br>
+          <span style="opacity:0.7">This site is free and supported by ads.</span><br>
+          <span style="color:var(--yellow); font-size:16px;">★★★★★</span> "Rated by learners"
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Built with ❤️ for Tamil Nadu | Kerala | Andhra Pradesh | Telangana learners<br>
+      100% Free | No Registration | No App Download | Works Offline
+    </div>
+  </footer>
+
+  <script>
+    // Global Lang Switch Logic
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    
+    function setGlobalLang(lang, btnContext) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btnContext) btnContext.classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize particles
+      const colors = ['#6C63FF','#FF6584','#43E97B','#FA8231','#00C9FF','#FFC312'];
+      for(let i=0; i<22; i++) {
+        const p = document.createElement('div');
+        p.style.cssText = `position:fixed;width:${3+Math.random()*5}px;height:${3+Math.random()*5}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:50%;left:${Math.random()*100}vw;top:${100+Math.random()*20}vh;opacity:${0.15+Math.random()*0.25};animation:floatUp ${8+Math.random()*12}s linear ${Math.random()*8}s infinite;pointer-events:none;z-index:0;`;
+        document.body.appendChild(p);
+      }
+
+      // Initialize Buttons Ripple
+      document.querySelectorAll('button, .btn, .nav-item, .lesson-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const r = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          r.style.cssText = `position:absolute;border-radius:50%;background:rgba(255,255,255,0.3);width:0;height:0;left:${e.clientX-rect.left}px;top:${e.clientY-rect.top}px;transform:translate(-50%,-50%);animation:ripple 0.6s ease-out forwards;pointer-events:none;`;
+          this.style.position='relative';this.style.overflow='hidden';
+          this.appendChild(r);
+          setTimeout(()=>r.remove(),600);
+        });
+      });
+
+      // Animate Stats Check
+      const stats = document.querySelectorAll('.stat-num');
+      const observer = new IntersectionObserver(entries => {
+        if(entries[0].isIntersecting) {
+          stats.forEach(el => animateCounter(el, parseInt(el.dataset.target)));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.getElementById('statsRow'));
+
+      function animateCounter(el, target) {
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const suffix = el.dataset.suffix || '';
+        const timer = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = current + suffix;
+          if(current >= target) clearInterval(timer);
+        }, 30);
+      }
+
+      // Highlight correct lang btn on load
+      const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+      document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+    });
+  </script>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

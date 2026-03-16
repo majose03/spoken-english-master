@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word of the Day — 30 Day Vocabulary Trainer — SpokenMaster</title>
+  <meta name="description" content="Learn 30 advanced English words in 30 days. Our interactive flashcard trainer includes definitions, sentences, and audio pronunciation.">
+  <meta name="keywords" content="word of the day, advanced english vocabulary, vocabulary flashcards">
+  <meta property="og:title" content="Word of the Day Trainer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/word-of-day.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--yellow); color:#000; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--yellow); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--yellow), var(--orange)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1000px; margin:40px auto; padding:0 24px; display:flex; flex-direction:column; align-items:center;}
+
+    .day-selector { margin-bottom:30px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; max-width:800px; }
+    .d-btn { width:40px; height:40px; border-radius:50%; background:var(--bg-card); border:1px solid var(--border); color:white; font-weight:600; cursor:pointer; transition:0.3s; display:flex; justify-content:center; align-items:center; }
+    .d-btn:hover { background:var(--bg-card2); border-color:var(--yellow); transform:translateY(-3px); }
+    .d-btn.active { background:var(--yellow); color:#000; border-color:var(--yellow); box-shadow:0 0 15px rgba(255,195,18,0.5); transform:scale(1.1); }
+    
+    .ad-slot { text-align:center; width:100%; margin-bottom:40px; }
+
+    .flashcard-container { perspective:1000px; width:100%; max-width:600px; height:400px; margin-bottom:30px; }
+    .flashcard { width:100%; height:100%; position:relative; transform-style:preserve-3d; transition:transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); cursor:pointer; }
+    .flashcard.flipped { transform:rotateY(180deg); }
+    
+    .f-front, .f-back { width:100%; height:100%; position:absolute; backface-visibility:hidden; border-radius:var(--radius); border:1px solid var(--border); display:flex; flex-direction:column; justify-content:center; align-items:center; padding:40px; text-align:center; box-shadow:var(--shadow); }
+    
+    /* Front Side */
+    .f-front { background:linear-gradient(135deg, var(--bg-card), var(--bg-card2)); }
+    .f-day { position:absolute; top:20px; left:20px; font-size:12px; font-weight:700; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; }
+    .f-icon { position:absolute; top:20px; right:20px; font-size:24px; }
+    .speak-btn { background:var(--yellow); color:#000; border:none; width:50px; height:50px; border-radius:50%; font-size:20px; display:flex; justify-content:center; align-items:center; cursor:pointer; margin-bottom:20px; transition:0.3s; box-shadow:0 5px 15px rgba(255,195,18,0.3); }
+    .speak-btn:hover { transform:scale(1.1); }
+    .word-title { font-family:var(--font-heading); font-size:48px; color:white; margin-bottom:10px; }
+    .word-pron { font-size:16px; color:var(--mint); font-family:monospace; margin-bottom:30px; }
+    .tap-hint { font-size:13px; color:var(--text-muted); font-style:italic; position:absolute; bottom:20px; animation:bounce 2s infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-5px);} }
+
+    /* Back Side */
+    .f-back { background:linear-gradient(135deg, var(--bg-card2), #151535); transform:rotateY(180deg); align-items:flex-start; text-align:left; }
+    .f-back-header { display:flex; justify-content:space-between; width:100%; border-bottom:1px solid var(--border); padding-bottom:15px; margin-bottom:20px; }
+    .f-back-word { font-family:var(--font-heading); font-size:28px; color:var(--yellow); }
+    .f-type { background:rgba(255,195,18,0.1); color:var(--yellow); padding:5px 10px; border-radius:8px; font-size:12px; font-weight:700; text-transform:uppercase; }
+    
+    .meaning { font-size:16px; color:white; line-height:1.6; margin-bottom:15px; }
+    .translation { font-size:15px; color:var(--mint); margin-bottom:25px; padding-left:15px; border-left:3px solid var(--mint); }
+    
+    .example-title { font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700; margin-bottom:8px; }
+    .example-text { font-size:15px; color:#ddd; font-style:italic; margin-bottom:20px; }
+
+    .controls { display:flex; gap:20px; width:100%; max-width:600px; margin-bottom:40px; }
+    .c-btn { flex:1; background:var(--bg-card); border:1px solid var(--border); color:white; padding:15px; border-radius:30px; font-weight:600; font-size:16px; cursor:pointer; transition:0.3s; }
+    .c-btn:hover { background:var(--yellow); color:#000; border-color:var(--yellow); }
+
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item active" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🌟 Word of the Day</h1>
+    <p>Master one advanced vocabulary word daily. Total 30 days trainer.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="day-selector" id="daySelector">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+    </div>
+
+    <div class="flashcard-container">
+      <div class="flashcard" id="card" onclick="this.classList.toggle('flipped')">
+        
+        <!-- FRONT -->
+        <div class="f-front">
+          <div class="f-day" id="fDay">DAY 1</div>
+          <div class="f-icon">✨</div>
+          <button class="speak-btn" onclick="event.stopPropagation(); speakWord()">🔊</button>
+          <div class="word-title" id="fWord">Resilient</div>
+          <div class="word-pron" id="fPron">/rɪˈzɪl.i.ənt/</div>
+          <div class="tap-hint">Tap card to see meaning and examples</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="f-back">
+          <div class="f-back-header">
+            <div class="f-back-word" id="bWord">Resilient</div>
+            <div class="f-type" id="bType">Adjective</div>
+          </div>
+          <div class="meaning" id="bMean">Able to withstand or recover quickly from difficult conditions.</div>
+          <div class="translation" id="bTrans"></div>
+          
+          <div class="example-title">Example Sentence:</div>
+          <div class="example-text" id="bEx">She is a resilient girl who never gives up on her dreams.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="c-btn" onclick="prevDay()">⬅️ Previous Word</button>
+      <button class="c-btn" onclick="nextDay()">Next Word ➡️</button>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="margin-top:20px;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;height:280px;display:flex;align-items:center;justify-content:center;">Advertisement (336x280)</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="quiz.html">Grammar Quiz</a> <a href="word-of-day.html">Word of the Day</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const words = [
+      { w:"Resilient", pron:"/rɪˈzɪl.i.ənt/", type:"Adjective", mean:"Able to withstand or recover quickly from difficult conditions.", ex:"She is a resilient girl who never gives up on her dreams.", ta:"மீண்டு வரும் திறன் கொண்ட", ml:"വിഷമഘട്ടങ്ങളെ തരണം ചെയ്യാൻ കഴിവുള്ള", te:"త్వరగా కోలుకునే సామర్థ్యం ఉన్న" },
+      { w:"Empathy", pron:"/ˈem.pə.θi/", type:"Noun", mean:"The ability to understand and share the feelings of another.", ex:"He showed great empathy towards the homeless people.", ta:"பச்சாதாபம்", ml:"സഹാനുഭൂതി", te:"సానుభూతి" },
+      { w:"Inevitable", pron:"/ɪˈnev.ɪ.tə.bəl/", type:"Adjective", mean:"Certain to happen; unavoidable.", ex:"Change is inevitable in life.", ta:"தவிர்க்க முடியாத", ml:"ഒഴിവാക്കാൻ കഴിയാത്ത", te:"తప్పించుకోలేని" },
+      { w:"Astounding", pron:"/əˈstaʊn.dɪŋ/", type:"Adjective", mean:"Surprisingly impressive or notable.", ex:"The quality of her singing was truly astounding.", ta:"ஆச்சரியமான", ml:"അത്ഭുതപ്പെടുത്തുന്ന", te:"ఆశ్చర్యపరుచు" },
+      { w:"Candid", pron:"/ˈkæn.dɪd/", type:"Adjective", mean:"Truthful and straightforward; frank.", ex:"He gave a candid interview about his past mistakes.", ta:"நேர்மையான", ml:"നിഷ്കളങ്കമായ", te:"నిజాయితీగా" },
+      { w:"Diligent", pron:"/ˈdɪl.ɪ.dʒənt/", type:"Adjective", mean:"Having or showing care and conscientiousness in one's work or duties.", ex:"They were extremely diligent in their research.", ta:"கடின உழைப்பாளி", ml:"ജാഗ്രതയുള്ള", te:"కష్టపడి పనిచేసే" },
+      { w:"Lucid", pron:"/ˈluː.sɪd/", type:"Adjective", mean:"Expressed clearly; easy to understand.", ex:"She gave a clear and lucid explanation of the project.", ta:"தெளிவான", ml:"വ്യക്തമായ", te:"స్పష్టమైన" },
+      { w:"Meticulous", pron:"/məˈtɪk.jə.ləs/", type:"Adjective", mean:"Showing great attention to detail; very careful and precise.", ex:"The painter was meticulous about every detail of the portrait.", ta:"துல்லியமான", ml:"സൂക്ഷ്മമായ", te:"సూక్ష్మమైన" },
+      { w:"Nostalgia", pron:"/nɒsˈtæl.dʒə/", type:"Noun", mean:"A sentimental longing or wistful affection for the past.", ex:"Hearing that old song brought on a wave of nostalgia.", ta:"கடந்த காலத்தின் மீதான ஏக்கம்", ml:"പഴയകാല സ്മരണ", te:"గతించిన విషయాల పట్ల ఆకాంక్ష" },
+      { w:"Optimistic", pron:"/ˌɒp.tɪˈmɪs.tɪk/", type:"Adjective", mean:"Hopeful and confident about the future.", ex:"I am highly optimistic about the company's future.", ta:"நம்பிக்கையான", ml:"ശുഭാപ്തിവിശ്വാസമുള്ള", te:"ఆశావాదంతో" },
+      { w:"Perceive", pron:"/pəˈsiːv/", type:"Verb", mean:"Become aware or conscious of (something); come to realize or understand.", ex:"Cats cannot perceive color as well as humans.", ta:"உணர்தல்", ml:"മനസ്സിലാക്കുക", te:"గ్రహించడం" },
+      { w:"Quench", pron:"/kwentʃ/", type:"Verb", mean:"Satisfy (one's thirst) by drinking.", ex:"We drank cold water to quench our thirst after the match.", ta:"தாகத்தைத் தணிப்பது", ml:"ദാഹം തീർക്കുക", te:"దాహం తీర్చడం" },
+      { w:"Reiterate", pron:"/riˈɪt.ər.eɪt/", type:"Verb", mean:"Say something again or a number of times, typically for emphasis or clarity.", ex:"Let me reiterate the importance of staying focused.", ta:"மீண்டும் வலியுறுத்து", ml:"ആവർത്തിച്ചു പറയുക", te:"మళ్ళీ చెప్పడం" },
+      { w:"Scrutinize", pron:"/ˈskruː.tɪ.naɪz/", type:"Verb", mean:"Examine or inspect closely and thoroughly.", ex:"The detective will scrutinize the crime scene for clues.", ta:"நுணுக்கமாக ஆராய்தல்", ml:"സൂക്ഷ്മപരിശോധന നടത്തുക", te:"లోపభూయిష్టమైన పరిశీలన" },
+      { w:"Tenacious", pron:"/təˈneɪ.ʃəs/", type:"Adjective", mean:"Tending to keep a firm hold of something; clinging or adhering closely.", ex:"He is a tenacious defender on the basketball court.", ta:"பிடிவாதமான", ml:"ഉറച്ചുനിൽക്കുന്ന", te:"పట్టుదలగల" },
+      { w:"Ubiquitous", pron:"/juːˈbɪk.wɪ.təs/", type:"Adjective", mean:"Present, appearing, or found everywhere.", ex:"Mobile phones have become ubiquitous in modern society.", ta:"எங்கும் இருக்கக்கூடிய", ml:"എവിടെയും കാണപ്പെടുന്ന", te:"ప్రతిచోటా ఉన్న" },
+      { w:"Versatile", pron:"/ˈvɜː.sə.taɪl/", type:"Adjective", mean:"Able to adapt or be adapted to many different functions or activities.", ex:"He is a highly versatile actor who can play any role.", ta:"பன்முகத்தன்மை கொண்ட", ml:"പലതരം കഴിവുകളുള്ള", te:"బహుముఖ" },
+      { w:"Whimsical", pron:"/ˈwɪm.zɪ.kəl/", type:"Adjective", mean:"Playfully quaint or fanciful, especially in an appealing and amusing way.", ex:"The movie had a whimsical charm that appealed to everyone.", ta:"விசித்திரமான", ml:"വിചിത്രമായ", te:"విచిత్రమైన" },
+      { w:"Yearn", pron:"/jɜːn/", type:"Verb", mean:"Have an intense feeling of longing for something, typically something that one has lost or been separated from.", ex:"I yearn for a quiet holiday by the beach.", ta:"ஏக்கம்", ml:"അതിയായി ആഗ്രഹിക്കുക", te:"ఆశపడు" },
+      { w:"Zealous", pron:"/ˈzel.əs/", type:"Adjective", mean:"Having or showing great energy or enthusiasm in pursuit of a cause or an objective.", ex:"The council was extremely zealous in the application of the regulations.", ta:"உற்சாகமான", ml:"തീക്ഷ്ണതയുള്ള", te:"ఆసక్తిగల" },
+      { w:"Amicable", pron:"/ˈæm.ɪ.kə.bəl/", type:"Adjective", mean:"(of relations between people) having a spirit of friendliness; without serious disagreement or rancor.", ex:"They reached an amicable agreement without involving lawyers.", ta:"நட்பான", ml:"സൗഹാർദ്ദപരമായ", te:"స్నేహపూర్వక" },
+      { w:"Beneficial", pron:"/ˌben.ɪˈfɪʃ.əl/", type:"Adjective", mean:"Favorable or advantageous; resulting in good.", ex:"Eating vegetables daily is beneficial to your health.", ta:"பயனுள்ள", ml:"ഗുണകരമായ", te:"ప్రయోజనకరమైన" },
+      { w:"Crucial", pron:"/ˈkruː.ʃəl/", type:"Adjective", mean:"Decisive or critical, especially in the success or failure of something.", ex:"Water is crucial for our survival.", ta:"முக்கியமான", ml:"നിർണ്ണായകമായ", te:"కీలకమైన" },
+      { w:"Dynamic", pron:"/daɪˈnæm.ɪk/", type:"Adjective", mean:"(of a process or system) characterized by constant change, activity, or progress.", ex:"The business environment is highly dynamic.", ta:"மாறும் தன்மை கொண்ட", ml:"ഊർജ്ജസ്വലമായ", te:"శక్తివంతమైన" },
+      { w:"Eloquent", pron:"/ˈel.ə.kwənt/", type:"Adjective", mean:"Fluent or persuasive in speaking or writing.", ex:"She made an eloquent speech at the conference.", ta:"வசீகரமான பேச்சாற்றல்", ml:"വാക്ചാതുര്യമുള്ള", te:"వాక్చాతుర్యం" },
+      { w:"Fascinate", pron:"/ˈfæs.ɪ.neɪt/", type:"Verb", mean:"Draw irresistibly the attention and interest of (someone).", ex:"The stars in the night sky fascinated the young boy.", ta:"கவரும்", ml:"ആകർഷിക്കുക", te:"ఆకర్షించు" },
+      { w:"Genuine", pron:"/ˈdʒen.ju.ɪn/", type:"Adjective", mean:"Truly what something is said to be; authentic.", ex:"This jacket is made of genuine leather.", ta:"உண்மையான", ml:"യഥാർത്ഥമായ", te:"నిజమైన" },
+      { w:"Hostile", pron:"/ˈhɒs.taɪl/", type:"Adjective", mean:"Unfriendly; antagonistic.", ex:"The new rules met a hostile reaction from the staff.", ta:"பகைமை உணர்வு", ml:"ശത്രുതാപരമായ", te:"శత్రుత్వం" },
+      { w:"Immense", pron:"/ɪˈmens/", type:"Adjective", mean:"Extremely large in size or scale; vast.", ex:"Building the pyramid required immense effort.", ta:"பிரமாண்டமான", ml:"അളവറ്റ", te:"అపారమైన" },
+      { w:"Jovial", pron:"/ˈdʒəʊ.vi.əl/", type:"Adjective", mean:"Cheerful and friendly.", ex:"He was in a highly jovial mood after winning the game.", ta:"மகிழ்ச்சியான", ml:"സന്തോഷവാനായ", te:"సంతోషంగా" }
+    ];
+
+    let currentIdx = 0;
+
+    function buildSelector() {
+      let h = '';
+      for(let i=0; i<30; i++) {
+        h += `<button class="d-btn ${i===currentIdx ? 'active':''}" onclick="setDay(${i})">${i+1}</button>`;
+      }
+      document.getElementById('daySelector').innerHTML = h;
+    }
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderCard();
+    }
+
+    function renderCard() {
+      const w = words[currentIdx];
+      
+      document.getElementById('fDay').innerText = `DAY ${currentIdx+1}`;
+      document.getElementById('fWord').innerText = w.w;
+      document.getElementById('fPron').innerText = w.pron;
+      
+      document.getElementById('bWord').innerText = w.w;
+      document.getElementById('bType').innerText = w.type;
+      document.getElementById('bMean').innerText = w.mean;
+      document.getElementById('bEx').innerText = `"${w.ex}"`;
+
+      let trans = "";
+      if(window.LANG === 'ta') trans = "🇮🇳 Tamil: " + w.ta;
+      else if(window.LANG === 'ml') trans = "🇮🇳 Malayalam: " + w.ml;
+      else if(window.LANG === 'te') trans = "🇮🇳 Telugu: " + w.te;
+      
+      const bTrans = document.getElementById('bTrans');
+      if(trans) {
+        bTrans.innerText = trans;
+        bTrans.style.display = 'block';
+      } else {
+        bTrans.style.display = 'none';
+      }
+
+      // remove flip if flipped
+      document.getElementById('card').classList.remove('flipped');
+    }
+
+    function setDay(i) {
+      currentIdx = i;
+      buildSelector();
+      renderCard();
+    }
+
+    function prevDay() {
+      if(currentIdx > 0) setDay(currentIdx - 1);
+    }
+
+    function nextDay() {
+      if(currentIdx < 29) setDay(currentIdx + 1);
+    }
+
+    function speakWord() {
+      if(!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const st = new SpeechSynthesisUtterance(words[currentIdx].w);
+      st.lang = 'en-US';
+      st.rate = 0.8;
+      window.speechSynthesis.speak(st);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildSelector();
+      renderCard();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

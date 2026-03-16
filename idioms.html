@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential English Idioms — SpokenMaster</title>
+  <meta name="description" content="Learn 50 essential English idioms to sound like a native speaker. Searchable list with meanings and translations.">
+  <meta name="keywords" content="english idioms, idioms and phrases, speak english fluently">
+  <meta property="og:title" content="50 Essential English Idioms">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/idioms.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--purple), var(--pink)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#fff; margin-bottom:12px; text-shadow:0 2px 10px rgba(0,0,0,0.2); }
+    .section-hero p { color:rgba(255,255,255,0.9); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1000px; margin:40px auto; padding:0 24px; }
+    
+    .controls { display:flex; justify-content:space-between; margin-bottom:30px; align-items:center; flex-wrap:wrap; gap:15px; }
+    .search-wrap { position:relative; flex:1; max-width:500px; }
+    .search-input { width:100%; padding:14px 20px 14px 45px; border-radius:30px; border:1px solid var(--border); background:var(--bg-card); color:white; font-size:15px; outline:none; transition:0.3s; }
+    .search-input:focus { border-color:var(--purple); box-shadow:0 0 15px rgba(108,99,255,0.3); }
+    .search-icon { position:absolute; left:18px; top:50%; transform:translateY(-50%); font-size:16px; color:var(--text-muted); }
+    .stats { font-size:14px; font-weight:600; color:var(--text-muted); }
+
+    .ad-slot { text-align:center; margin-bottom:40px; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
+    
+    .i-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:25px; transition:0.3s; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+    .i-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:var(--purple); }
+    .i-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:linear-gradient(to bottom, var(--purple), var(--pink)); opacity:0.5; transition:0.3s; }
+    .i-card:hover::before { opacity:1; }
+
+    .i-term { font-family:var(--font-heading); font-size:22px; color:white; margin-bottom:10px; }
+    .i-mean { font-size:14px; color:var(--cyan); margin-bottom:15px; font-weight:500; }
+    
+    .i-ex { font-size:13px; color:var(--text-muted); line-height:1.6; font-style:italic; border-top:1px dashed var(--border); padding-top:15px; margin-top:auto;}
+    .i-ex strong { color:#ddd; font-weight:600; display:block; margin-bottom:4px; text-transform:uppercase; font-size:11px; letter-spacing:1px;}
+    
+    .i-trans { margin-top:15px; padding:10px; background:rgba(255,255,255,0.03); border-radius:8px; font-size:13px; color:var(--mint); display:none; }
+
+    .no-res { text-align:center; padding:50px; color:var(--text-muted); font-size:16px; display:none; grid-column:1/-1; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item active" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>💡 Master English Idioms</h1>
+    <p>Sound like a native speaker by mastering these 50 essential idioms. Direct translation can be funny, understand the deep meaning.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil Meanings</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam Meanings</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu Meanings</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="controls">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="searchInp" placeholder="Search idioms (e.g. piece of cake)..." onkeyup="filterIdioms()">
+      </div>
+      <div class="stats" id="statsCount">Showing 50 Idioms</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+
+    <div class="grid" id="iGrid">
+      <!-- Generated via JS -->
+      <div class="no-res" id="noRes">No idioms found matching your search. Try another word.</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="margin-top:40px;"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;height:280px;display:flex;align-items:center;justify-content:center;">Advertisement (336x280)</div></div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="idioms.html">Idioms</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const idioms = [
+      { i:"Piece of cake", m:"Something very easy to do.", ex:"The math test was a piece of cake.", ta:"மிகவும் எளிதான செயல்", ml:"വളരെ എളുപ്പമുള്ള കാര്യം", te:"చాలా సులభమైన పని" },
+      { i:"Break a leg", m:"Good luck (used before a performance).", ex:"Break a leg on your interview today!", ta:"நல்ல அதிர்ஷ்டம் உண்டாகட்டும்", ml:"നല്ലത് വരട്ടെ (ആശംസ)", te:"విజయం సాధించు (శుభాకాంక్ష)" },
+      { i:"Bite the bullet", m:"To endure a painful or difficult situation bravely.", ex:"I hate going to the dentist, but I'll just have to bite the bullet.", ta:"சிரமத்தை தைரியமாக எதிர்கொள்வது", ml:"ഒരു വിഷമാവസ്ഥയെ ധൈര്യപൂർവ്വം നേരിടുക", te:"కష్టమైన పరిస్థితిని ధైర్యంగా ఎదుర్కోవడం" },
+      { i:"Under the weather", m:"Feeling slightly ill.", ex:"I'm feeling a bit under the weather today, I'll stay home.", ta:"உடல்நிலை சரியில்லாமல் இருப்பது", ml:"നേരിയ അസുഖം തോന്നുക", te:"కొంచెం అనారోగ్యంగా ఉండటం" },
+      { i:"Cost an arm and a leg", m:"To be very expensive.", ex:"This designer bag cost an arm and a leg.", ta:"மிகவும் விலை உயர்ந்தது", ml:"വളരെ വില കൂടിയത്", te:"చాలా ఖరీదైనది" },
+      { i:"Burn the midnight oil", m:"To work late into the night.", ex:"I have to burn the midnight oil to finish this project.", ta:"நள்ளிரவு வரை கண்விழித்து வேலை செய்வது", ml:"രാത്രി വൈകിയും ജോലി ചെയ്യുക", te:"రాత్రి ఆలస్యంగా వరకు పనిచేయడం" },
+      { i:"Let the cat out of the bag", m:"To reveal a secret carelessly.", ex:"I wanted it to be a surprise, but she let the cat out of the bag.", ta:"ரகசியத்தை வெளியிடுவது", ml:"രഹസ്യം വെളിപ്പെടുത്തുക", te:"రహస్యం చెప్పేయడం" },
+      { i:"Hit the nail on the head", m:"To describe exactly what is causing a situation or problem.", ex:"He hit the nail on the head when he said the process lacks efficiency.", ta:"சரியாக கணித்து சொல்லுதல்", ml:"കൃത്യമായ കാരണം കണ്ടെത്തുക", te:"సరిగ్గా చెప్పడం" },
+      { i:"Kill two birds with one stone", m:"To achieve two things with a single action.", ex:"I read the news while I eat breakfast, killing two birds with one stone.", ta:"ஒரே கல்லில் இரண்டு மாங்காய்", ml:"ഒരേയടിക്ക് രണ്ട് കാര്യങ്ങൾ സാധിക്കുക", te:"ఒక దెబ్బకు రెండు పిట్టలు" },
+      { i:"Call it a day", m:"To stop working on something.", ex:"We've been working for 10 hours, let's call it a day.", ta:"இன்றைய வேலையை முடித்துக்கொள்வது", ml:"ജോലി അവസാനിപ്പിക്കുക", te:"ఈ రోజుకి పని ఆపడం" },
+      { i:"A blessing in disguise", m:"A good thing that seemed bad at first.", ex:"Losing that job was a blessing in disguise; I found a better one.", ta:"மறைமுகமான நன்மை", ml:"തുടക്കത്തിൽ മോശമെന്നു തോന്നിയ ഒരു നല്ല കാര്യം", te:"మొదట చెడుగా అనిపించిన ఒక మంచి విషయం" },
+      { i:"Once in a blue moon", m:"Happens very rarely.", ex:"I eat junk food once in a blue moon.", ta:"அரிதாக நடக்கும் ஒரு விஷயம்", ml:"വളരെ അപൂർവ്വമായി സംഭവിക്കുന്നത്", te:"అరుదుగా జరిగేది" },
+      { i:"Cut corners", m:"To do something poorly in order to save time or money.", ex:"They cut corners when building this house, now the roof is leaking.", ta:"பணம் அல்லது நேரத்தை மிச்சப்படுத்த தரத்தை குறைப்பது", ml:"പണമോ സമയമോ ലാഭിക്കാൻ നിലവാരം കുറയ്ക്കുക", te:"నాణ్యతను తగ్గించడం" },
+      { i:"Make a long story short", m:"Come to the point; leave out details.", ex:"To make a long story short, we broke up.", ta:"சுருக்கமாக சொல்வதானால்", ml:"ചുരുക്കത്തിൽ പറയുകയാണെങ്കിൽ", te:"సారాంశంలో చెప్పాలంటే" },
+      { i:"Spill the beans", m:"To give away a secret.", ex:"Come on, spill the beans! What did he say?", ta:"ரகசியத்தை கசியவிடுவது", ml:"രഹസ്യം പരസ്യമാക്കുക", te:"రహస్యాన్ని లీక్ చేయడం" },
+      // 15 done, adding 35 more to reach 50
+      { i:"Miss the boat", m:"It's too late.", ex:"If you don't buy the tickets now, you'll miss the boat.", ta:"தவறவிட்ட வாய்ப்பு", ml:"അവസരം നഷ്ടപ്പെടുത്തുക", te:"అవకాశం పోగొట్టుకోవడం" },
+      { i:"Pull someone's leg", m:"To joke with someone.", ex:"Relax, I was just pulling your leg.", ta:"ஒருவரை கேலி செய்வது", ml:"കളിയാക്കുക", te:"ఒకరిని ఆటపట్టించడం" },
+      { i:"On the ball", m:"Doing a good job, being quick to understand.", ex:"If you were on the ball, this wouldn't have happened.", ta:"விழிப்போடு இருப்பது", ml:"കാര്യങ്ങൾ കൃത്യമായി മനസ്സിലാക്കി പ്രവർത്തിക്കുക", te:"చురుకుగా ఉండటం" },
+      { i:"Straight from the horse's mouth", m:"Hearing something from the direct source.", ex:"I know it's true, I heard it straight from the horse's mouth.", ta:"நேரடியான மூலத்திலிருந்து தகவல் பெறுதல்", ml:"വിശ്വസനീയമായ ഉറവിടത്തിൽ നിന്നും കേൾക്കുക", te:"ప్రత్యక్ష వనరుల నుండి సమాచారం వినడం" },
+      { i:"Bite off more than you can chew", m:"To take on a task that is way too big.", ex:"I bit off more than I could chew by taking three extra classes.", ta:"முடியாத அளவுக்கு வேலையை ஏற்றுக்கொள்வது", ml:"ചെയ്യാൻ കഴിയുന്നതിലധികം കാര്യങ്ങൾ ഏറ്റെടുക്കുക", te:"సామర్థ్యానికి మించి భారం వేసుకోవడం" },
+      { i:"By the skin of your teeth", m:"Just barely making it.", ex:"I passed the test by the skin of my teeth.", ta:"நூலிழையில் தப்பிப்பது", ml:"തലനാരിഴയ്ക്ക് രക്ഷപ്പെടുക", te:"వెంట్రుకవాసిలో తప్పించుకోవడం" },
+      { i:"Beat around the bush", m:"Avoid saying what you mean.", ex:"Stop beating around the bush and tell me the problem.", ta:"சுற்றி வளைத்து பேசுவது", ml:"കാര്യം പറയാതെ വളച്ചു ചുറ്റി പറയുക", te:"చుట్టూ తిప్పి చెప్పడం" },
+      { i:"Cry over spilled milk", m:"To complain about a loss from the past.", ex:"It's broken now, no use crying over spilled milk.", ta:"முடிந்ததை நினைத்து கவலைப்படுவது", ml:"സംഭവിച്ചുപോയതിനെയോർത്ത് വിലപിക്കുക", te:"జరిగిన దానికి చింతించడం" },
+      { i:"Go back to the drawing board", m:"Start over.", ex:"The prototype failed, so we have to go back to the drawing board.", ta:"மீண்டும் முதலிலிருந்து தொடங்குவது", ml:"ആദ്യ പടിയിൽ നിന്നും വീണ്ടും തുടങ്ങുക", te:"తిరిగి మొదటి నుండి ప్రారంభించడం" },
+      { i:"Hit the sack", m:"Go to sleep.", ex:"I'm exhausted, it's time to hit the sack.", ta:"தூங்க செல்வது", ml:"ഉറങ്ങാൻ പോവുക", te:"పడుకోవడానికి వెళ్లడం" },
+      { i:"It's not rocket science", m:"It's not complicated.", ex:"Just plug it into the wall, it's not rocket science.", ta:"இது ஒன்னும் பெரிய கஷ்டமான விஷயம் இல்லை", ml:"ഇതത്ര വലിയ ബുദ്ധിമുട്ടുള്ള കാര്യമല്ല", te:"ఇది అంత కష్టం కాదు" },
+      { i:"Let someone off the hook", m:"To not hold someone responsible for something.", ex:"I'll let you off the hook this time, but don't do it again.", ta:"தண்டனையிலிருந்து தப்பிக்க விடுவது", ml:"ശിക്ഷയിൽ നിന്നും ഒഴിവാക്കുക", te:"శిక్ష నుంచి వదిలిపెట్టడం" },
+      { i:"No pain, no gain", m:"You have to work for what you want.", ex:"My legs hurt from running, but no pain, no gain.", ta:"உழைப்பின்றி ஊதியமில்லை", ml:"കഷ്ടപ്പെടാതെ നേട്ടങ്ങൾ ഉണ്ടാകില്ല", te:"శ్రమ లేకుండా ఫలితం లేదు" },
+      { i:"On cloud nine", m:"Very happy.", ex:"When she got the job offer, she was on cloud nine.", ta:"மிகுந்த மகிழ்ச்சியில் இருப்பது", ml:"വളരെയധികം സന്തോഷിക്കുക", te:"చాలా సంతోషంగా ఉండటం" },
+      { i:"To make matters worse", m:"To make a problem worse.", ex:"It started raining, and to make matters worse, my car broke down.", ta:"எரிகிற நெருப்பில் எண்ணெய் ஊற்றுவது போல", ml:"പ്രശ്നങ്ങൾ കൂടുതൽ വഷളാക്കുക", te:"సమస్యను మరింత తీవ్రతరం చేయడం" },
+      { i:"Wrap your head around something", m:"Understand something complicated.", ex:"I can't wrap my head around these new tax rules.", ta:"ஒரு சிக்கலான விஷயத்தை புரிந்துகொள்ள முயல்வது", ml:"സങ്കീർണ്ണമായ ഒരു കാര്യം മനസ്സിലാക്കുക", te:"ఒక క్లిష్టమైన విషయాన్ని అర్థం చేసుకోవడం" },
+      { i:"A dime a dozen", m:"Something common and not special.", ex:"Those antique toys are a dime a dozen.", ta:"மிகவும் சாதாரணமான", ml:"വളരെ സർവ്വസാധാരണമായ", te:"చాలా సాధారణమైన" },
+      { i:"A penny for your thoughts", m:"Tell me what you're thinking.", ex:"You've been quiet. A penny for your thoughts?", ta:"என்ன யோசிக்கிறாய் என சொல்?", ml:"നീ എന്തിനെക്കുറിച്ചാണ് ചിന്തിക്കുന്നത്?", te:"నీ ఆలోచన ఏంటి?" },
+      { i:"Add insult to injury", m:"To worsen an unfavorable situation.", ex:"First my flight was delayed, and to add insult to injury, they lost my luggage.", ta:"வெந்த புண்ணில் வேல் பாய்ச்சுவது", ml:"ശല്യം വർദ്ധിപ്പിക്കുക", te:"గాయానికి కారం పూయడం" },
+      { i:"Barking up the wrong tree", m:"Looking in the wrong place.", ex:"If you think I stole your book, you're barking up the wrong tree.", ta:"தவறான நபரைக் குறை சொல்வது", ml:"തെറ്റായ വഴിയിലൂടെ സഞ്ചരിക്കുക", te:"తప్పు వ్యక్తిని నిందించడం" },
+      { i:"Birds of a feather flock together", m:"People who are alike tend to stick together.", ex:"Those two troublemakers are always together. Birds of a feather.", ta:"ஒத்த குணம் கொண்டவர்கள் ஒன்றிணைவார்கள்", ml:"ഒരേ സ്വഭാവമുള്ളവർ ഒന്നിച്ചുചേരും", te:"ఒకే గుణం కలవారు కలుసుకుంటారు" },
+      { i:"Comparing apples to oranges", m:"Comparing two things that cannot be compared.", ex:"You can't compare swimming to running, it's like apples to oranges.", ta:"சம்பந்தமில்லாத இரண்டை ஒப்பிடுவது", ml:"ബന്ധമില്ലാത്ത രണ്ട് കാര്യങ്ങളെ താരതമ്യം ചെയ്യുക", te:"సంబంధం లేని రెండింటిని పోల్చడం" },
+      { i:"Do unto others as you would have them do unto you", m:"Treat people fairly.", ex:"Always be kind because you should do unto others...", ta:"உனக்கு எப்படி செய்யவேண்டுமோ அப்படியே மற்றவருக்கும் செய்", ml:"നിങ്ങളോട് മറ്റുള്ളവർ എങ്ങനെ പെരുമാറണമെന്ന് ആഗ്രഹിക്കുന്നുവോ, അങ്ങനെ പെരുമാറുക", te:"ఇతరులు నీకు ఎలా చేయాలనుకుంటున్నావో నువ్వూ అలా చెయ్యి" },
+      { i:"Don't count your chickens before they hatch", m:"Don't rely on it until you're sure of it.", ex:"I haven't got the job yet, I shouldn't count my chickens.", ta:"செயல் முடிகிற முன்பே பலனை எதிர்பார்க்காதே", ml:"കാര്യം നടക്കുന്നതിൻ മുൻപേ ഫലപ്രതീക്ഷ വേണ്ട", te:"పని పూర్తయ్యే ముందే లాభాన్ని ఆశించవద్దు" },
+      { i:"Don't put all your eggs in one basket", m:"Don't risk everything on one venture.", ex:"Apply to several colleges, don't put all your eggs in one basket.", ta:"எல்லா வாய்ப்புகளையும் ஒரே இடத்தில் முதலீடு செய்யாதே", ml:"എല്ലാ പ്രതീക്ഷകളും ഒരിടത്ത് മാത്രം കേന്ദ്രീകരിക്കാതിരിക്കുക", te:"అన్నింటిని ఒకే దానిపై పణంగా పెట్టొద్దు" },
+      { i:"Elephant in the room", m:"A big issue everyone is ignoring.", ex:"Let's discuss the elephant in the room: our lack of funding.", ta:"அனைவரும் தவிர்க்க நினைக்கும் முக்கிய பிரச்சனை", ml:"എല്ലാവരും അവഗണിക്കുന്ന ഒരു വലിയ പ്രശ്നം", te:"అందరూ తప్పించుకుంటున్న ఓ ప్రధాన సమస్య" },
+      { i:"Fit as a fiddle", m:"In good health.", ex:"My grandfather is 90 but he's fit as a fiddle.", ta:"நல்ல உடல் நலத்துடன் இருப்பது", ml:"നല്ല ആരോഗ്യത്തോടെ ഇരിക്കുക", te:"పూర్తి ఆరోగ్యంతో ఉండటం" },
+      { i:"Give the benefit of the doubt", m:"Believe someone's statement without proof.", ex:"I didn't see him do it, so I'll give him the benefit of the doubt.", ta:"சந்தேகத்தின் பலனை அளிப்பது", ml:"സംശയത്തിൻ്റെ ആനുകൂല്യം നൽകുക", te:"సందేహానికి అవకాశం ఇవ్వడం" },
+      { i:"Go out on a limb", m:"Put yourself in a tough position to support someone/something.", ex:"I went out on a limb for you to get this deal.", ta:"ஆபத்தான முடிவை எடுப்பது", ml:"ഏറെ വെല്ലുവിളിയുള്ളൊരു കാര്യം ഏറ്റെടുക്കുക", te:"రిస్క్ తీసుకోవడం" },
+      { i:"Ignorance is bliss", m:"You're better off not knowing.", ex:"Sometimes, ignorance is bliss when it comes to politics.", ta:"அறியாமையே ஆனந்தம்", ml:"അറിയാതിരിക്കുന്നതാണ് നല്ലത്", te:"తెలియకపోవడమే మంచిది" },
+      { i:"Leave no stone unturned", m:"To look everywhere.", ex:"We will leave no stone unturned to find the missing keys.", ta:"எல்லா வழிகளிலும் முயற்சிப்பது", ml:"എല്ലാ വഴികളും നോക്കുക", te:"అన్ని విధాలా ప్రయత్నించడం" },
+      { i:"A match made in heaven", m:"Perfect harmony.", ex:"Coffee and donuts are a match made in heaven.", ta:"பொருத்தமான ஜோடி", ml:"സ്വർഗ്ഗത്തിലൊരുക്കിയ ജോഡി", te:"పరమాద్భుతమైన జంట" },
+      { i:"On thin ice", m:"In a risky situation.", ex:"You are on thin ice for coming late again.", ta:"ஆபத்தான நிலையில்", ml:"അപകടകരമായ അവസ്ഥയിൽ", te:"ప్రమాదకరమైన స్థితిలో" },
+      { i:"Rain on someone's parade", m:"To spoil something.", ex:"I don't want to rain on your parade, but the picnic is cancelled.", ta:"ஒருவரின் சந்தோஷத்தைக் கெடுப்பது", ml:"മറ്റൊരാളുടെ സന്തോഷം കെടുത്തുക", te:"ఒకరి ఆనందాన్ని పాడుచేయడం" },
+      { i:"Take it with a grain of salt", m:"Don't take it too seriously.", ex:"He exaggerates, take his stories with a grain of salt.", ta:"முழுமையாக நம்பாதே", ml:"പൂർണ്ണമായും വിശ്വസിക്കാതിരിക്കുക", te:"పూర్తిగా నమ్మవద్దు" },
+      { i:"Through thick and thin", m:"In good times and bad times.", ex:"Friends stand together through thick and thin.", ta:"நல்ல மற்றும் கெட்ட நேரங்களில்", ml:"സുഖത്തിലും ദുഃഖത്തിലും", te:"మంచి చెడుల్లో" },
+      { i:"Under the weather", m:"Feeling sick.", ex:"I won't come to office, I am under the weather.", ta:"உடல்நிலை சரியில்லாமல்", ml:"അസുഖമായിട്ടിരിക്കുന്നു", te:"అనారోగ్యంగా" },
+      { i:"Time is money", m:"Work quickly.", ex:"Hurry up with the cargo, time is money.", ta:"நேரமே பணம்", ml:"സമയം വിലപ്പെട്ടതാണ്", te:"సమయమే ధనం" }
+    ];
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderIdioms();
+    }
+
+    function renderIdioms() {
+      const q = document.getElementById('searchInp').value.toLowerCase();
+      const grid = document.getElementById('iGrid');
+      const noRes = document.getElementById('noRes');
+      const stats = document.getElementById('statsCount');
+      
+      let h = '';
+      let count = 0;
+
+      // Taking the first 50 exactly (if array has more it takes up to 50)
+      const list = idioms.slice(0, 50);
+
+      list.forEach(w => {
+        if(q && !w.i.toLowerCase().includes(q) && !w.m.toLowerCase().includes(q)) return;
+        count++;
+
+        let transText = '';
+        if(window.LANG === 'ta') transText = w.ta;
+        if(window.LANG === 'ml') transText = w.ml;
+        if(window.LANG === 'te') transText = w.te;
+
+        h += `
+        <div class="i-card">
+          <div class="i-term">${w.i}</div>
+          <div class="i-mean">${w.m}</div>
+          <div class="i-ex"><strong>Example:</strong> "${w.ex}"</div>
+          <div class="i-trans" style="display: ${window.LANG === 'en' ? 'none' : 'block'}">${transText}</div>
+        </div>`;
+      });
+
+      grid.innerHTML = h;
+      grid.appendChild(noRes);
+      
+      noRes.style.display = count === 0 ? 'block' : 'none';
+      stats.innerText = `Showing ${count} Idioms`;
+    }
+
+    function filterIdioms() {
+      renderIdioms();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderIdioms);
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master English Pronunciation — SpokenMaster</title>
+  <meta name="description" content="Learn the IPA (International Phonetic Alphabet), vowels, consonants, and minimal pairs to fix your English accent.">
+  <meta name="keywords" content="english pronunciation, ipa chart, minimal pairs english">
+  <meta property="og:title" content="Ultimate English Pronunciation Guide">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/pronunciation.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--cyan); color:#000; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--cyan); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .section-hero { background:linear-gradient(135deg, var(--cyan), var(--blue)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; text-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1000px; margin:40px auto; padding:0 24px; }
+    
+    .tab-bar { display:flex; border-bottom:1px solid var(--border); margin-bottom:30px; overflow-x:auto; }
+    .tab { padding:15px 25px; cursor:pointer; font-weight:600; color:var(--text-muted); transition:0.3s; border-bottom:3px solid transparent; white-space:nowrap; }
+    .tab:hover { color:white; }
+    .tab.active { color:var(--cyan); border-bottom-color:var(--cyan); }
+    
+    .tab-content { display:none; animation:fadeIn 0.4s ease; }
+    .tab-content.active { display:block; }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+    .ad-slot { text-align:center; margin-bottom:30px; }
+
+    /* IPA Grid */
+    .ipa-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:15px; }
+    .ipa-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:20px; text-align:center; cursor:pointer; transition:0.3s; }
+    .ipa-card:hover { transform:translateY(-5px); border-color:var(--cyan); box-shadow:0 5px 20px rgba(0,201,255,0.15); }
+    .ipa-sym { font-family:var(--font-heading); font-size:36px; color:var(--cyan); margin-bottom:10px; }
+    .ipa-card:hover .ipa-sym { color:white; }
+    .ipa-ex { font-size:16px; color:white; font-weight:600; margin-bottom:5px; }
+    .ipa-hl { color:var(--pink); }
+    .ipa-desc { font-size:12px; color:var(--text-muted); }
+
+    .section-title { font-family:var(--font-heading); font-size:24px; color:var(--yellow); margin:40px 0 20px; border-bottom:1px solid var(--border); padding-bottom:10px; }
+
+    /* Minimal Pairs */
+    .mp-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
+    .mp-col { background:var(--bg-card); border-radius:12px; border:1px solid var(--border); overflow:hidden; }
+    .mp-head { display:flex; justify-content:space-around; background:rgba(0,0,0,0.3); padding:15px; border-bottom:1px solid var(--border); }
+    .mp-head span { font-weight:700; color:var(--mint); font-size:18px; }
+    .mp-row { display:flex; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .mp-row:last-child { border-bottom:none; }
+    .mp-item { flex:1; padding:15px; text-align:center; border-right:1px solid rgba(255,255,255,0.05); position:relative; cursor:pointer; transition:0.2s;}
+    .mp-item:hover { background:rgba(255,255,255,0.05); }
+    .mp-item:last-child { border-right:none; }
+    .mp-word { font-size:18px; font-weight:600; color:white; display:block; margin-bottom:4px;}
+    .mp-pron { font-size:13px; color:var(--text-muted); font-family:monospace; }
+    .listen-btn { position:absolute; top:5px; right:5px; font-size:12px; background:transparent; border:none; cursor:pointer; opacity:0; transition:0.2s; }
+    .mp-item:hover .listen-btn { opacity:1; }
+
+    .tips-box { background:rgba(0,201,255,0.05); border:1px solid rgba(0,201,255,0.2); padding:20px; border-radius:12px; margin-bottom:30px; }
+    .tips-box h3 { color:var(--cyan); margin-bottom:10px; font-size:18px; }
+    .tips-box ul { padding-left:20px; color:var(--text-muted); line-height:1.6; font-size:14px; }
+    
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item active" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🗣 Pronunciation & Phonetics</h1>
+    <p>Tap on any symbol or word to hear how a native English speaker pronounces it.</p>
+  </section>
+
+  <div class="container">
+    
+    <div class="tab-bar">
+      <div class="tab active" onclick="openTab('vowels', this)">Vowels (Short & Long)</div>
+      <div class="tab" onclick="openTab('diphthongs', this)">Diphthongs</div>
+      <div class="tab" onclick="openTab('consonants', this)">Consonants</div>
+      <div class="tab" onclick="openTab('minimalPairs', this)">Minimal Pairs</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+    
+    <div class="tips-box">
+      <h3>💡 Pro Tips for Indian Learners</h3>
+      <ul>
+        <li>Differentiate between 'v' and 'w'. 'V' involves your teeth and lower lip. 'W' is rounding your lips.</li>
+        <li>Be careful with creating a strong 'r' sound. In British English, 'r' inside a word (car, water) is often silent.</li>
+        <li>English is a stress-timed language. Not all syllables have equal length or emphasize.</li>
+      </ul>
+    </div>
+
+    <!-- VOWELS -->
+    <div id="vowels" class="tab-content active">
+      <div class="section-title">Short Vowels</div>
+      <div class="ipa-grid" id="shortV">
+        <!-- Rendered via JS -->
+      </div>
+      
+      <div class="section-title">Long Vowels</div>
+      <div class="ipa-grid" id="longV">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- DIPHTHONGS -->
+    <div id="diphthongs" class="tab-content">
+      <div class="section-title">Diphthongs (Double Vowel Sounds)</div>
+      <div class="ipa-grid" id="diph">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- CONSONANTS -->
+    <div id="consonants" class="tab-content">
+      <div class="section-title">Consonants</div>
+      <div class="ipa-grid" id="cons">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- MINIMAL PAIRS -->
+    <div id="minimalPairs" class="tab-content">
+      <div class="section-title">Minimal Pairs Training</div>
+      <p style="color:var(--text-muted); margin-bottom:20px; font-size:14px;">Minimal pairs are two words that vary by a single sound. Practicing these will fix confusion between similar sounds (like P/B, V/W, S/SH).</p>
+      
+      <div class="mp-grid" id="mpGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="margin-top:40px;"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;height:280px;display:flex;align-items:center;justify-content:center;">Advertisement (336x280)</div></div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="pronunciation.html">Pronunciation</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const shortVowels = [
+      { sym:"ɪ", word:"ship", hl:"i", pron:"Short 'i' as in sit" },
+      { sym:"e", word:"pen", hl:"e", pron:"Short 'e' as in bed" },
+      { sym:"æ", word:"cat", hl:"a", pron:"Short 'a' as in hat" },
+      { sym:"ʌ", word:"cup", hl:"u", pron:"Short 'u' as in up" },
+      { sym:"ɒ", word:"dog", hl:"o", pron:"Short 'o' as in hot" },
+      { sym:"ʊ", word:"book", hl:"oo", pron:"Short 'oo' as in look" },
+      { sym:"ə", word:"about", hl:"a", pron:"Schwa, relaxed sound" }
+    ];
+
+    const longVowels = [
+      { sym:"iː", word:"sheep", hl:"ee", pron:"Long 'ee' as in see" },
+      { sym:"ɑː", word:"car", hl:"a", pron:"Long 'a' as in far" },
+      { sym:"ɔː", word:"door", hl:"oo", pron:"Long 'aw' as in law" },
+      { sym:"uː", word:"moon", hl:"oo", pron:"Long 'oo' as in food" },
+      { sym:"ɜː", word:"bird", hl:"ir", pron:"Long 'er' as in her" }
+    ];
+
+    const diphthongs = [
+      { sym:"eɪ", word:"wait", hl:"ai", pron:"Glide from 'e' to 'i'" },
+      { sym:"aɪ", word:"my", hl:"y", pron:"Glide from 'a' to 'i'" },
+      { sym:"ɔɪ", word:"boy", hl:"oy", pron:"Glide from 'o' to 'i'" },
+      { sym:"aʊ", word:"cow", hl:"ow", pron:"Glide from 'a' to 'u'" },
+      { sym:"əʊ", word:"show", hl:"ow", pron:"Glide from 'ə' to 'u'" },
+      { sym:"ɪə", word:"here", hl:"ere", pron:"Glide from 'i' to 'ə'" },
+      { sym:"eə", word:"hair", hl:"air", pron:"Glide from 'e' to 'ə'" },
+      { sym:"ʊə", word:"tour", hl:"our", pron:"Glide from 'u' to 'ə'" }
+    ];
+
+    const consonants = [
+      { sym:"p", word:"pig", hl:"p", pron:"Voiceless" },
+      { sym:"b", word:"bed", hl:"b", pron:"Voiced" },
+      { sym:"t", word:"time", hl:"t", pron:"Voiceless" },
+      { sym:"d", word:"do", hl:"d", pron:"Voiced" },
+      { sym:"k", word:"cat", hl:"c", pron:"Voiceless" },
+      { sym:"g", word:"go", hl:"g", pron:"Voiced" },
+      { sym:"f", word:"five", hl:"f", pron:"Voiceless" },
+      { sym:"v", word:"very", hl:"v", pron:"Voiced (Teeth on lower lip)" },
+      { sym:"θ", word:"think", hl:"th", pron:"Voiceless th" },
+      { sym:"ð", word:"the", hl:"th", pron:"Voiced th" },
+      { sym:"s", word:"sun", hl:"s", pron:"Voiceless" },
+      { sym:"z", word:"zoo", hl:"z", pron:"Voiced" },
+      { sym:"ʃ", word:"shoe", hl:"sh", pron:"Voiceless sh" },
+      { sym:"ʒ", word:"television", hl:"s", pron:"Voiced zh" },
+      { sym:"h", word:"hat", hl:"h", pron:"Voiceless" },
+      { sym:"m", word:"man", hl:"m", pron:"Nasal" },
+      { sym:"n", word:"no", hl:"n", pron:"Nasal" },
+      { sym:"ŋ", word:"sing", hl:"ng", pron:"Nasal" },
+      { sym:"l", word:"leg", hl:"l", pron:"Lateral" },
+      { sym:"r", word:"red", hl:"r", pron:"Approximant" },
+      { sym:"j", word:"yes", hl:"y", pron:"Approximant" },
+      { sym:"w", word:"wet", hl:"w", pron:"Round lips" },
+      { sym:"tʃ", word:"cheese", hl:"ch", pron:"Voiceless ch" },
+      { sym:"dʒ", word:"job", hl:"j", pron:"Voiced j" }
+    ];
+
+    const minimalPairs = [
+      { t:"V vs W", pairs:[{w1:"Vary", p1:"/ˈveə.ri/", w2:"Wary", p2:"/ˈweə.ri/"}, {w1:"Vet", p1:"/vet/", w2:"Wet", p2:"/wet/"}, {w1:"Vine", p1:"/vaɪn/", w2:"Wine", p2:"/waɪn/"}] },
+      { t:"S vs SH", pairs:[{w1:"See", p1:"/siː/", w2:"She", p2:"/ʃiː/"}, {w1:"Sell", p1:"/sel/", w2:"Shell", p2:"/ʃel/"}, {w1:"Sign", p1:"/saɪn/", w2:"Shine", p2:"/ʃaɪn/"}] },
+      { t:"P vs B", pairs:[{w1:"Pig", p1:"/pɪg/", w2:"Big", p2:"/bɪg/"}, {w1:"Park", p1:"/pɑːk/", w2:"Bark", p2:"/bɑːk/"}, {w1:"Pear", p1:"/peər/", w2:"Bear", p2:"/beər/"}] },
+      { t:"Short 'i' vs Long 'ee'", pairs:[{w1:"Ship", p1:"/ʃɪp/", w2:"Sheep", p2:"/ʃiːp/"}, {w1:"Fit", p1:"/fɪt/", w2:"Feet", p2:"/fiːt/"}, {w1:"Slip", p1:"/slɪp/", w2:"Sleep", p2:"/sliːp/"}] },
+      { t:"F vs P", pairs:[{w1:"Fast", p1:"/fɑːst/", w2:"Past", p2:"/pɑːst/"}, {w1:"Coffee", p1:"/ˈkɒf.i/", w2:"Copy", p2:"/ˈkɒp.i/"}] },
+      { t:"L vs R", pairs:[{w1:"Light", p1:"/laɪt/", w2:"Right", p2:"/raɪt/"}, {w1:"Load", p1:"/ləʊd/", w2:"Road", p2:"/rəʊd/"}] }
+    ];
+
+    function openTab(id, el) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      el.classList.add('active');
+    }
+
+    function buildIPA(arr, containerId) {
+      let h = '';
+      arr.forEach(a => {
+        let highlightedWord = a.word.replace(a.hl, `<span class="ipa-hl">${a.hl}</span>`);
+        h += `
+        <div class="ipa-card" onclick="speak('${a.word}')">
+          <div class="ipa-sym">${a.sym}</div>
+          <div class="ipa-ex">${highlightedWord}</div>
+          <div class="ipa-desc">${a.pron}</div>
+        </div>`;
+      });
+      document.getElementById(containerId).innerHTML = h;
+    }
+
+    function buildMinimalPairs() {
+      let h = '';
+      minimalPairs.forEach(m => {
+        let rows = '';
+        m.pairs.forEach(p => {
+          rows += `
+          <div class="mp-row">
+            <div class="mp-item" onclick="speak('${p.w1}')">
+              <span class="mp-word">${p.w1}</span>
+              <span class="mp-pron">${p.p1}</span>
+              <button class="listen-btn">🔊</button>
+            </div>
+            <div class="mp-item" onclick="speak('${p.w2}')">
+              <span class="mp-word">${p.w2}</span>
+              <span class="mp-pron">${p.p2}</span>
+              <button class="listen-btn">🔊</button>
+            </div>
+          </div>`;
+        });
+        
+        h += `
+        <div class="mp-col">
+          <div class="mp-head"><span>${m.t.split(' vs ')[0]}</span> <span>${m.t.split(' vs ')[1]}</span></div>
+          ${rows}
+        </div>`;
+      });
+      document.getElementById('mpGrid').innerHTML = h;
+    }
+
+    function speak(text) {
+      if(!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const st = new SpeechSynthesisUtterance(text);
+      st.lang = 'en-GB';
+      st.rate = 0.8;
+      window.speechSynthesis.speak(st);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildIPA(shortVowels, 'shortV');
+      buildIPA(longVowels, 'longV');
+      buildIPA(diphthongs, 'diph');
+      buildIPA(consonants, 'cons');
+      buildMinimalPairs();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Vocabulary Toolkit — SpokenMaster</title>
+  <meta name="description" content="Learn extremely common English vocabulary words grouped by 8 topics. Interactive flashcard system with audio delivery and translations.">
+  <meta name="keywords" content="english vocabulary, daily english words, 100 common words, flashcard vocabulary">
+  <meta property="og:title" content="Essential Vocabulary Toolkit">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/vocabulary.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--green); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--green); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; gap:30px; margin-top:40px; }
+    @media(max-width:900px) { .container { flex-direction:column; } }
+    
+    .section-hero { background:linear-gradient(135deg, var(--mint), var(--teal)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500; }
+
+    /* Layout */
+    .sidebar { flex:0 0 250px; }
+    .main-content { flex:1; }
+
+    .topic-list { display:flex; flex-direction:column; gap:10px; }
+    .topic-btn { background:var(--bg-card); border:1px solid var(--border); color:var(--text); padding:16px 20px; border-radius:12px; text-align:left; cursor:pointer; font-size:15px; font-weight:500; transition:0.3s; display:flex; align-items:center; gap:12px; }
+    .topic-btn:hover { background:var(--bg-card2); border-color:var(--green); }
+    .topic-btn.active { background:var(--green); color:#000; border-color:var(--green); font-weight:600; box-shadow:0 5px 15px rgba(67,233,123,0.3); }
+
+    /* Flashcards */
+    .view-modes { display:flex; justify-content:flex-end; gap:10px; margin-bottom:20px; }
+    .view-btn { padding:8px 16px; border-radius:8px; background:var(--bg-card); border:1px solid var(--border); color:white; cursor:pointer; font-size:13px; font-weight:600; transition:0.2s; }
+    .view-btn.active { background:var(--cyan); color:#000; border-color:var(--cyan); }
+
+    .flash-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:20px; }
+    
+    .f-card { background:transparent; perspective:1000px; height:160px; cursor:pointer; }
+    .f-inner { position:relative; width:100%; height:100%; text-align:center; transition:transform 0.6s; transform-style:preserve-3d; border-radius:16px; }
+    .f-card.flipped .f-inner { transform:rotateY(180deg); }
+    
+    .f-front, .f-back { position:absolute; width:100%; height:100%; backface-visibility:hidden; border-radius:16px; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:20px; border:1px solid var(--border); box-shadow:var(--shadow); }
+    .f-front { background:var(--bg-card); }
+    .f-back { background:linear-gradient(135deg, var(--bg-card2), #1a1a3a); transform:rotateY(180deg); border-color:var(--green); }
+
+    .f-word { font-family:var(--font-heading); font-size:26px; font-weight:700; color:var(--green); margin-bottom:10px; }
+    .f-type { font-size:11px; padding:3px 8px; border-radius:10px; background:rgba(255,255,255,0.1); color:var(--text-muted); }
+    .f-trans { font-size:18px; color:white; font-weight:600; margin-bottom:8px; }
+    .f-ex { font-size:12px; color:var(--text-muted); font-style:italic; line-height:1.4; }
+    
+    .listen-btn { position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.3); border:none; width:30px; height:30px; border-radius:50%; font-size:14px; cursor:pointer; transition:0.2s; z-index:2; display:flex; justify-content:center; align-items:center; }
+    .listen-btn:hover { background:var(--cyan); transform:scale(1.1); }
+    .listen-btn.playing { animation:pulse 1s infinite; background:var(--cyan); }
+
+    @keyframes pulse { 0% {transform:scale(1);} 50% {transform:scale(1.1);} 100% {transform:scale(1);} }
+
+    /* List View mode */
+    .list-view .flash-grid { grid-template-columns:1fr; }
+    .list-view .f-card { height:auto; cursor:default; }
+    .list-view .f-inner { transform:none !important; background:var(--bg-card); border-radius:12px; border:1px solid var(--border); padding:20px; display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:20px; text-align:left; box-shadow:var(--shadow); }
+    @media(max-width:600px) { .list-view .f-inner { flex-direction:column; align-items:flex-start; } }
+    .list-view .f-front, .list-view .f-back { position:static; transform:none; backface-visibility:visible; width:auto; height:auto; padding:0; border:none; box-shadow:none; background:transparent; align-items:flex-start; }
+    .list-view .f-back { flex:1; margin-top:0; border-left:2px solid var(--green); padding-left:20px; }
+    .list-view .f-tr-ex { margin-top:5px; }
+    .list-view .listen-btn { position:static; width:40px; height:40px; }
+
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item active" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>📚 Vocabulary Toolkit</h1>
+    <p>Memorize the most essential English words. Tap flashcards to see meaning and hear pronunciation.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" style="color:#000;border-color:#111" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="topic-list" id="topicList">
+        <!-- Categories via JS -->
+      </div>
+      
+      <!-- ADSENSE SLOT -->
+      <div class="ad-slot" style="margin-top:40px; text-align:center;">
+        <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;margin:0 auto;height:600px;display:flex;align-items:center;justify-content:center;">Ad (160x600)</div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="view-modes">
+        <button class="view-btn active" onclick="setViewMode('grid', this)">🎴 Flashcards</button>
+        <button class="view-btn" onclick="setViewMode('list', this)">📄 List View</button>
+      </div>
+      
+      <div id="flashContainer" class="flash-grid">
+        <!-- Words via JS -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="vocabulary.html">Vocabulary</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    let currentTopic = 'family';
+    let isListView = false;
+
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const topics = [
+      { id:'family', icon:'👨‍👩‍👧', name:'Family & People' },
+      { id:'jobs', icon:'👩‍⚕️', name:'Professions' },
+      { id:'food', icon:'🍔', name:'Food & Drinks' },
+      { id:'body', icon:'👁️', name:'Body Parts' },
+      { id:'house', icon:'🏠', name:'In the House' },
+      { id:'animals',icon:'🐶', name:'Animals' },
+      { id:'colors', icon:'🎨', name:'Colors' },
+      { id:'emotions',icon:'😊', name:'Emotions' }
+    ];
+
+    const vocabData = {
+      family: [
+        { en:"Mother", type:"Noun", ta:"அம்மா", ml:"അമ്മ", te:"తల్లి", ex:"My mother cooks well." },
+        { en:"Father", type:"Noun", ta:"அப்பா", ml:"അച്ഛൻ", te:"తండ్రి", ex:"His father is a teacher." },
+        { en:"Brother", type:"Noun", ta:"சகோதரன்", ml:"സഹോദരൻ", te:"సోదరుడు", ex:"I have one brother." },
+        { en:"Sister", type:"Noun", ta:"சகோதரி", ml:"സഹോദരി", te:"సోదరి", ex:"She is my elder sister." },
+        { en:"Uncle", type:"Noun", ta:"மாமா / சித்தப்பா", ml:"അമ്മാവൻ", te:"మామ", ex:"My uncle lives in Dubai." },
+        { en:"Aunt", type:"Noun", ta:"அத்தை / சித்தி", ml:"അമ്മായി", te:"అత్త", ex:"My aunt is coming today." },
+        { en:"Grandfather", type:"Noun", ta:"தாத்தா", ml:"മുത്തശ്ശൻ", te:"తాత", ex:"My grandfather is 80 years old." },
+        { en:"Grandmother", type:"Noun", ta:"பாட்டி", ml:"മുത്തശ്ശി", te:"నానమ్మ / అమ్మమ్మ", ex:"My grandmother tells stories." },
+        { en:"Cousin", type:"Noun", ta:"மாமன்/அத்தை மகன்/மகள்", ml:"കസിൻ", te:"కజిన్", ex:"He is my cousin." },
+        { en:"Friend", type:"Noun", ta:"நண்பன் / தோழி", ml:"സുഹൃത്ത്", te:"స్నేహితుడు / స్నేహితురాలు", ex:"She is my best friend." }
+      ],
+      jobs: [
+        { en:"Doctor", type:"Noun", ta:"மருத்துவர்", ml:"ഡോക്ടർ", te:"డాక్టర్", ex:"The doctor gave me medicine." },
+        { en:"Teacher", type:"Noun", ta:"ஆசிரியர்", ml:"അധ്യാപകൻ", te:"ఉపాధ్యాయుడు", ex:"Our teacher is very kind." },
+        { en:"Engineer", type:"Noun", ta:"பொறியாளர்", ml:"എഞ്ചിനീയർ", te:"ఇంజనీర్", ex:"He works as a software engineer." },
+        { en:"Farmer", type:"Noun", ta:"விவசாயி", ml:"കർഷകൻ", te:"రైతు", ex:"The farmer works in the field." },
+        { en:"Driver", type:"Noun", ta:"ஓட்டுநர்", ml:"ഡ്രൈവർ", te:"డ్రైవర్", ex:"The bus driver is careful." },
+        { en:"Lawyer", type:"Noun", ta:"வழக்கறிஞர்", ml:"വക്കീൽ", te:"లాయర్", ex:"He is a famous lawyer." },
+        { en:"Police", type:"Noun", ta:"காவலர்", ml:"പോലീസ്", te:"పోలీసు", ex:"The police caught the thief." },
+        { en:"Nurse", type:"Noun", ta:"செவிலியர்", ml:"നഴ്സ്", te:"నర్స్", ex:"The nurse cared for the patient." },
+        { en:"Tailor", type:"Noun", ta:"தையல்காரர்", ml:"തയ്യൽക്കാരൻ", te:"టైలర్", ex:"The tailor stitched my shirt." },
+        { en:"Shopkeeper", type:"Noun", ta:"கடைக்காரர்", ml:"കടക്കാരൻ", te:"దుకాణదారుడు", ex:"The shopkeeper sold the goods." }
+      ],
+      food: [
+        { en:"Water", type:"Noun", ta:"தண்ணீர்", ml:"വെള്ളം", te:"నీరు", ex:"Drink plenty of water." },
+        { en:"Rice", type:"Noun", ta:"அரிசி / சாதம்", ml:"അരി / ചോറ്", te:"అన్నం / బియ్యం", ex:"We eat rice every day." },
+        { en:"Bread", type:"Noun", ta:"ரொட்டி", ml:"ബ്രെഡ്", te:"బ్రెడ్", ex:"I had bread for breakfast." },
+        { en:"Milk", type:"Noun", ta:"பால்", ml:"പാൽ", te:"పాలు", ex:"The cat is drinking milk." },
+        { en:"Egg", type:"Noun", ta:"முட்டை", ml:"മുട്ട", te:"గుడ్డు", ex:"She boiled an egg." },
+        { en:"Meat", type:"Noun", ta:"கறி", ml:"ഇറച്ചി", te:"మాంసం", ex:"They eat meat on Sundays." },
+        { en:"Vegetable", type:"Noun", ta:"காய்கறி", ml:"പച്ചക്കറി", te:"కూరగాయ", ex:"Vegetables are good for health." },
+        { en:"Fruit", type:"Noun", ta:"பழம்", ml:"പഴം", te:"పండు", ex:"An apple is a fruit." },
+        { en:"Salt", type:"Noun", ta:"உப்பு", ml:"ഉപ്പ്", te:"ఉప్పు", ex:"Add some salt to the soup." },
+        { en:"Sugar", type:"Noun", ta:"சர்க்கரை", ml:"പഞ്ചസാര", te:"చక్కెర", ex:"Do not eat too much sugar." }
+      ],
+      body: [
+        { en:"Head", type:"Noun", ta:"தலை", ml:"തല", te:"తల", ex:"My head is aching." },
+        { en:"Eye", type:"Noun", ta:"கண்", ml:"കണ്ണ്", te:"కన్ను", ex:"Close your eyes." },
+        { en:"Ear", type:"Noun", ta:"காது", ml:"ചെവി", te:"చెవి", ex:"He has an ear infection." },
+        { en:"Nose", type:"Noun", ta:"மூக்கு", ml:"മൂക്ക്", te:"ముక్కు", ex:"She has a sharp nose." },
+        { en:"Mouth", type:"Noun", ta:"வாய்", ml:"വായ", te:"నోరు", ex:"Open your mouth." },
+        { en:"Hand", type:"Noun", ta:"கை", ml:"കൈ", te:"చెయ్యి", ex:"Raise your right hand." },
+        { en:"Finger", type:"Noun", ta:"விரல்", ml:"വിരൽ", te:"వేలు", ex:"She cut her finger." },
+        { en:"Leg", type:"Noun", ta:"கால்", ml:"കാല്", te:"కాలు", ex:"My leg is paining." },
+        { en:"Foot", type:"Noun", ta:"பாதம்", ml:"പാദം", te:"పాదం", ex:"He injured his foot." },
+        { en:"Stomach", type:"Noun", ta:"வயிறு", ml:"വയറ്", te:"కడుపు", ex:"My stomach is full." }
+      ],
+      house: [
+        { en:"Door", type:"Noun", ta:"கதவு", ml:"വാതിൽ", te:"తలుపు", ex:"Please close the door." },
+        { en:"Window", type:"Noun", ta:"ஜன்னல்", ml:"ജനാല", te:"కిటికీ", ex:"Open the window." },
+        { en:"Chair", type:"Noun", ta:"நாற்காலி", ml:"കസേര", te:"కుర్చీ", ex:"Sit on the chair." },
+        { en:"Table", type:"Noun", ta:"மேஜை", ml:"മേശ", te:"టేబుల్", ex:"The book is on the table." },
+        { en:"Bed", type:"Noun", ta:"படுக்கை", ml:"കട്ടിൽ", te:"మంచం", ex:"I am going to bed." },
+        { en:"Kitchen", type:"Noun", ta:"சமையலறை", ml:"അടുക്കള", te:"వంటగది", ex:"Mother is in the kitchen." },
+        { en:"Bathroom", type:"Noun", ta:"குளியலறை", ml:"കുളിമുറി", te:"బాత్రూమ్", ex:"The bathroom is clean." },
+        { en:"Mirror", type:"Noun", ta:"கண்ணாடி", ml:"കണ്ണാടി", te:"అద్దం", ex:"Look in the mirror." },
+        { en:"Wall", type:"Noun", ta:"சுவர்", ml:"ചുമർ", te:"గోడ", ex:"The wall is painted white." },
+        { en:"Floor", type:"Noun", ta:"தரை", ml:"തറ", te:"నేల", ex:"Sweep the floor." }
+      ],
+      animals: [
+        { en:"Dog", type:"Noun", ta:"நாய்", ml:"നായ", te:"కుక్క", ex:"The dog is barking." },
+        { en:"Cat", type:"Noun", ta:"பூனை", ml:"പൂച്ച", te:"పిల్లి", ex:"The cat is sleeping." },
+        { en:"Cow", type:"Noun", ta:"பசு", ml:"പശു", te:"ఆవు", ex:"The cow gives milk." },
+        { en:"Horse", type:"Noun", ta:"குதிரை", ml:"കുതിര", te:"గుర్రం", ex:"He rides a horse." },
+        { en:"Bird", type:"Noun", ta:"பறவை", ml:"പക്ഷി", te:"పక్షి", ex:"The bird is flying." },
+        { en:"Fish", type:"Noun", ta:"மீன்", ml:"മത്സ്യം", te:"చేప", ex:"Fish live in water." },
+        { en:"Tiger", type:"Noun", ta:"புலி", ml:"കടുവ", te:"పులి", ex:"The tiger is very fast." },
+        { en:"Lion", type:"Noun", ta:"சிங்கம்", ml:"സിംഹം", te:"సింహం", ex:"Lion is the king of the jungle." },
+        { en:"Elephant", type:"Noun", ta:"யானை", ml:"ആന", te:"ఏనుగు", ex:"The elephant is big." },
+        { en:"Monkey", type:"Noun", ta:"குரங்கு", ml:"കുരങ്ങ്", te:"కోతి", ex:"The monkey is eating a banana." }
+      ],
+      colors: [
+        { en:"Red", type:"Adj.", ta:"சிவப்பு", ml:"ചുവപ്പ്", te:"ఎరుపు", ex:"She is wearing a red dress." },
+        { en:"Blue", type:"Adj.", ta:"நீலம்", ml:"നീല", te:"నీలం", ex:"The sky is blue." },
+        { en:"Green", type:"Adj.", ta:"பச்சை", ml:"പച്ച", te:"ఆకుపచ్చ", ex:"Leaves are green." },
+        { en:"Yellow", type:"Adj.", ta:"மஞ்சள்", ml:"മഞ്ഞ", te:"పసుపు", ex:"The sun is yellow." },
+        { en:"Black", type:"Adj.", ta:"கருப்பு", ml:"കറുപ്പ്", te:"నలుపు", ex:"He has black hair." },
+        { en:"White", type:"Adj.", ta:"வெள்ளை", ml:"വെള്ള", te:"తెలుపు", ex:"Milk is white." },
+        { en:"Pink", type:"Adj.", ta:"இளஞ்சிவப்பு", ml:"പിങ്ക്", te:"పింక్", ex:"I like pink roses." },
+        { en:"Orange", type:"Adj.", ta:"ஆரஞ்சு", ml:"ഓറഞ്ച്", te:"ఆరెంజ్", ex:"He ate an orange." },
+        { en:"Brown", type:"Adj.", ta:"பழுப்பு", ml:"തവിട്ട്", te:"గోధుమ రంగు", ex:"The table is brown." },
+        { en:"Grey", type:"Adj.", ta:"சாம்பல்", ml:"ചാരനിറം", te:"బూడిద రంగు", ex:"The clouds are grey." }
+      ],
+      emotions: [
+        { en:"Happy", type:"Adj.", ta:"மகிழ்ச்சி", ml:"സന്തോഷം", te:"సంతోషం", ex:"I am very happy today." },
+        { en:"Sad", type:"Adj.", ta:"சோகம்", ml:"ദുഃഖം", te:"బాధ", ex:"Why are you sad?" },
+        { en:"Angry", type:"Adj.", ta:"கோபம்", ml:"ദേഷ്യം", te:"కోపం", ex:"He is angry with me." },
+        { en:"Surprised", type:"Adj.", ta:"ஆச்சரியம்", ml:"അത്ഭുതം", te:"ఆశ్చర్యం", ex:"She was surprised to see him." },
+        { en:"Scared", type:"Adj.", ta:"பயம்", ml:"പേടി", te:"భయం", ex:"I am not scared of the dark." },
+        { en:"Tired", type:"Adj.", ta:"சோர்வு", ml:"ക്ഷീണം", te:"అలసట", ex:"I am too tired to walk." },
+        { en:"Excited", type:"Adj.", ta:"உற்சாகம்", ml:"ആവേശം", te:"ఉత్సాహం", ex:"We are excited about the trip." },
+        { en:"Bored", type:"Adj.", ta:"சலிப்பு", ml:"മടുപ്പ്", te:"బోరుగా", ex:"I am feeling bored." },
+        { en:"Confused", type:"Adj.", ta:"குழப்பம்", ml:"ആശയക്കുഴപ്പം", te:"గందరగోళం", ex:"I am confused about this math problem." },
+        { en:"Nervous", type:"Adj.", ta:"பதற்றம்", ml:"പരിഭ്രമം", te:"కంగారు", ex:"She was nervous before the exam." }
+      ]
+    };
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => {b.classList.remove('active'); b.style.borderColor='#111';});
+      if(btn) { btn.classList.add('active'); btn.style.borderColor='white'; }
+      renderCards();
+    }
+
+    function playSound(text, btnEvent) {
+      if(btnEvent) {
+        btnEvent.stopPropagation();
+        const btn = btnEvent.currentTarget;
+        btn.classList.add('playing');
+        setTimeout(()=>btn.classList.remove('playing'), 1000);
+      }
+      if(!('speechSynthesis' in window)) return;
+      const ut = new SpeechSynthesisUtterance(text);
+      ut.lang = 'en-US';
+      ut.rate = 0.9;
+      window.speechSynthesis.speak(ut);
+    }
+
+    function buildSidebar() {
+      const container = document.getElementById('topicList');
+      let h = '';
+      topics.forEach(t => {
+        h += `<button class="topic-btn ${t.id === currentTopic ? 'active':''}" onclick="setTopic('${t.id}')">
+          <span style="font-size:20px;">${t.icon}</span> ${t.name}
+        </button>`;
+      });
+      container.innerHTML = h;
+    }
+
+    function setTopic(id) {
+      currentTopic = id;
+      buildSidebar();
+      renderCards();
+    }
+
+    function setViewMode(mode, btn) {
+      isListView = (mode === 'list');
+      document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const container = document.getElementById('flashContainer');
+      if(isListView) {
+        container.parentElement.classList.add('list-view');
+      } else {
+        container.parentElement.classList.remove('list-view');
+      }
+      renderCards();
+    }
+
+    function renderCards() {
+      const data = vocabData[currentTopic];
+      const container = document.getElementById('flashContainer');
+      let h = '';
+      
+      data.forEach(w => {
+        let trans = w.en;
+        if(window.LANG === 'ta') trans = w.ta;
+        if(window.LANG === 'ml') trans = w.ml;
+        if(window.LANG === 'te') trans = w.te;
+
+        h += `
+        <div class="f-card" onclick="this.classList.toggle('flipped')">
+          <div class="f-inner">
+            <div class="f-front">
+              <button class="listen-btn" onclick="playSound('${w.en.replace(/'/g,"\\'")}', event)">🔊</button>
+              <div class="f-word">${w.en}</div>
+              <div class="f-type">${w.type}</div>
+              ${isListView ? `
+                <div class="listen-btn" onclick="playSound('${w.en.replace(/'/g,"\\'")}', event)" style="position:static; margin-left:auto;">🔊</div>
+              ` : ''}
+            </div>
+            <div class="f-back">
+              <div class="f-trans" style="${window.LANG==='en'?'display:none':''}">${trans}</div>
+              <div class="f-ex">Example: "${w.ex}"</div>
+            </div>
+          </div>
+        </div>`;
+      });
+      container.innerHTML = h;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildSidebar();
+      renderCards();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model English Essays — SpokenMaster</title>
+  <meta name="description" content="Read 10 model English essays on common topics. Ideal for improving reading comprehension and spoken English structure.">
+  <meta name="keywords" content="english essays, model essays for students, english reading practice">
+  <meta property="og:title" content="10 Model English Essays">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/essays.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--orange); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--orange); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--orange), var(--yellow)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1200px; margin:40px auto; padding:0 24px; display:flex; gap:30px; align-items:flex-start; }
+    @media(max-width:900px) { .container { flex-direction:column; } }
+    
+    .sidebar { flex:0 0 300px; display:flex; flex-direction:column; gap:10px; position:sticky; top:80px; }
+    .topic-btn { background:var(--bg-card); border:1px solid var(--border); color:var(--text); padding:16px 20px; border-radius:12px; font-weight:600; text-align:left; cursor:pointer; transition:0.3s; display:flex; align-items:center; justify-content:space-between;}
+    .topic-btn:hover { background:var(--bg-card2); transform:translateX(5px); border-color:var(--orange); }
+    .topic-btn.active { background:linear-gradient(135deg, var(--orange), var(--red)); color:white; border-color:transparent; box-shadow:0 5px 15px rgba(250,130,49,0.3); transform:translateX(10px); }
+
+    .essay-area { flex:1; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow); }
+    
+    .e-title { font-family:var(--font-heading); font-size:32px; color:var(--orange); margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:15px; }
+    .e-body { font-size:16px; color:white; line-height:1.8; margin-bottom:30px; }
+    .e-body p { margin-bottom:15px; }
+
+    .vocab-box { background:rgba(0,0,0,0.3); border:1px solid var(--border); border-radius:12px; padding:20px; }
+    .vocab-title { font-size:14px; text-transform:uppercase; color:var(--yellow); font-weight:700; margin-bottom:15px; letter-spacing:1px; }
+    
+    .v-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:15px; }
+    .v-item { background:rgba(255,255,255,0.05); padding:12px; border-radius:8px; font-size:13px; }
+    .v-word { font-weight:700; color:var(--mint); display:block; margin-bottom:4px; font-size:14px; }
+    .v-mean { color:var(--text-muted); }
+
+    .summary-box { background:rgba(250,130,49,0.1); border-left:4px solid var(--orange); padding:20px; margin-top:30px; border-radius:0 8px 8px 0; font-style:italic; font-size:15px; display:none;}
+
+    .ad-slot { text-align:center; margin-bottom:40px; }
+    
+    .tts-btn { background:var(--orange); color:#111; border:none; padding:8px 16px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px; display:inline-flex; align-items:center; gap:6px; margin-bottom:20px; transition:0.3s; }
+    .tts-btn:hover { transform:scale(1.05); }
+
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item active" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>📝 Model Essays</h1>
+    <p>Read beautifully written essays on common topics. Enhance your reading flow, vocabulary, and grammar context natively.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English View</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil Summary</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam Summary</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu Summary</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="sidebar" id="topicList">
+      <!-- Buttons via JS -->
+    </div>
+
+    <div class="essay-area">
+      <!-- AD SLOT -->
+      <div class="ad-slot"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:10px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+
+      <button class="tts-btn" onclick="readEssay()">🔊 Read Aloud</button>
+      <div class="e-title" id="eTitle">Title Placeholder</div>
+      <div class="e-body" id="eBody">Body Placeholder</div>
+      
+      <div class="summary-box" id="eSummary"></div>
+
+      <div class="vocab-box">
+        <div class="vocab-title">Key Vocabulary</div>
+        <div class="v-grid" id="eVocab">
+          <!-- Vocab via JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="essays.html">Model Essays</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const essays = [
+      {
+        id:1, title:"The Impact of Social Media", icon:"📱",
+        body:`<p>In the twenty-first century, social media has revolutionized the way humanity communicates, shattering geographical barriers and enabling instantaneous connections. Platforms like Facebook, Instagram, and Twitter have become ubiquitous, allowing individuals to share their thoughts, experiences, and creativity with a global audience.</p>
+        <p>However, this digital connectivity is a double-edged sword. While it fosters a sense of global community and aids in the rapid dissemination of information, it also brings significant drawbacks. The constant exposure to idealized portrayals of life often leads to feelings of inadequacy, anxiety, and depression among users, particularly teenagers.</p>
+        <p>Furthermore, social media can be highly addictive, encroaching upon real-world relationships and reducing productivity. In conclusion, while social media is an invaluable tool for modern communication, it must be used with mindfulness and moderation to preserve mental well-being and genuine human connection.</p>`,
+        vocab:[{w:"Ubiquitous",m:"Found everywhere"}, {w:"Dissemination",m:"Spreading of information"}, {w:"Encroaching",m:"Intruding gradually"}],
+        ta:"சமூக ஊடகங்கள் உலகை இணைக்கின்றன, ஆனால் அவை மனச்சோர்வு மற்றும் அடிமைத்தனத்திற்கும் வழிவகுக்கும், எனவே கவனமாக பயன்படுத்த வேண்டும்.",
+        ml:"സോഷ്യൽ മീഡിയ ലോകത്തെ ബന്ധിപ്പിക്കുന്നു, എന്നാൽ അവ വിഷാദത്തിനും അടിമത്തത്തിനും കാരണമാകും, അതിനാൽ ശ്രദ്ധയോടെ ഉപയോഗിക്കണം.",
+        te:"సోషల్ మీడియా ప్రపంచాన్ని కలుపుతుంది, కానీ అవి నిరాశ మరియు బానిసత్వానికి దారితీస్తాయి, కాబట్టి వాటిని జాగ్రత్తగా వాడాలి."
+      },
+      {
+        id:2, title:"The Importance of Reading", icon:"📖",
+        body:`<p>Reading is a profound habit that acts as a gateway to imagination and knowledge. Unlike visual media, which presents a fixed narrative, reading compels the brain to actively construct imagery and concepts, thereby enhancing cognitive function and critical thinking.</p>
+        <p>A good book has the power to transport the reader to different eras, cultures, and dimensions. It fosters empathy by allowing us to experience life through the perspectives of diverse characters. Moreover, consistent reading significantly improves vocabulary, language skills, and concentration.</p>
+        <p>In an era dominated by fleeting digital distractions, dedicating time to read a book is a therapeutic practice. To summarize, cultivating a reading habit is not merely an academic exercise; it is a lifelong journey of personal enrichment and intellectual growth.</p>`,
+        vocab:[{w:"Profound",m:"Very deep or great"}, {w:"Compels",m:"Forces someone to do something"}, {w:"Fleeting",m:"Lasting for a very short time"}],
+        ta:"வாசிப்பு அறிவை வளர்த்து, சிந்தனைத் திறனை மேம்படுத்துகிறது. இது மன அமைதியைத் தரும் ஒரு சிறந்த பழக்கமாகும்.",
+        ml:"വായന അറിവ് വളർത്തുകയും ചിന്താശേഷി മെച്ചപ്പെടുത്തുകയും ചെയ്യുന്നു. ഇതൊരു മികച്ച ശീലമാണ്.",
+        te:"చదవడం జ్ఞానాన్ని పెంచుతుంది మరియు ఆలోచనా శక్తిని మెరుగుపరుస్తుంది. ఇది మానసిక ప్రశాంతతను ఇచ్చే మంచి అలవాటు."
+      },
+      {
+        id:3, title:"Protecting Our Environment", icon:"🌍",
+        body:`<p>The natural environment is the foundation of human existence, providing the air we breathe, the water we drink, and the resources we depend upon. Unfortunately, relentless industrialization and rapid urbanization have inflicted severe damage on our planet's delicate ecosystems.</p>
+        <p>Issues such as deforestation, pollution, and climate change are escalating at an alarming rate. Global warming is causing sea levels to rise and extreme weather patterns to become more frequent. If stringent measures are not implemented immediately, future generations will inherit a depleted and hostile Earth.</p>
+        <p>Environmental conservation is no longer a choice but an absolute necessity. By adopting sustainable practices—such as utilizing renewable energy, reducing waste, and conserving water—we can mitigate this damage. Protecting the environment requires a collective, unwavering commitment from both governments and individuals.</p>`,
+        vocab:[{w:"Relentless",m:"Unceasingly intense"}, {w:"Mitigate",m:"Make less severe"}, {w:"Unwavering",m:"Steady or resolute"}],
+        ta:"சுற்றுச்சூழல் பாதுகாப்பு நமது கடமை. காடழிப்பு மற்றும் மாசடைதல் உலகைக் கெடுக்கின்றன; நாம் இயற்கையைக் காப்பாற்ற வேண்டும்.",
+        ml:"പരിസ്ഥിതി സംരക്ഷണം നമ്മുടെ കടമയാണ്. മലിനീകരണവും വനനശീകരണവും ലോകത്തെ നശിപ്പിക്കുന്നു; നാം പ്രകൃതിയെ സംരക്ഷിക്കണം.",
+        te:"పర్యావరణ పరిరక్షణ మన బాధ్యత. అడవుల నరికివేత మరియు కాలుష్యం భూమిని నాశనం చేస్తున్నాయి; మనం ప్రకృతిని కాపాడాలి."
+      },
+      {
+        id:4, title:"The Role of Education", icon:"🎓",
+        body:`<p>Education is often described as the most potent weapon one can use to change the world. It serves as the cornerstone of societal progress, empowering individuals with the knowledge, skills, and ethical understanding necessary to navigate life effectively.</p>
+        <p>A robust education system goes beyond merely imparting academic facts; it nurtures critical thinking, moral values, and social responsibility. It eradicates ignorance and prejudices, paving the way for a more tolerant and inclusive society. Furthermore, education is the primary catalyst for economic development, allowing individuals to secure better livelihoods.</p>
+        <p>Ultimately, a society that invests heavily in the education of its youth is investing in a prosperous and harmonious future. Access to quality education should be a universal human right, not a privilege reserved for a select few.</p>`,
+        vocab:[{w:"Potent",m:"Having great power"}, {w:"Cornerstone",m:"An important quality or feature"}, {w:"Catalyst",m:"Something that causes change"}],
+        ta:"கல்வி சமூக முன்னேற்றத்தின் அடித்தளம். இது வறுமையை ஒழித்து, நற்பண்புகளை வளர்க்கிறது.",
+        ml:"വിദ്യാഭ്യാസം സാമൂഹിക പുരോഗതിയുടെ അടിസ്ഥാനമാണ്. ഇത് ദാരിദ്ര്യം ഇല്ലാതാക്കുകയും മൂല്യങ്ങൾ വളർത്തുകയും ചെയ്യുന്നു.",
+        te:"విద్య సామాజిక పురోగతికి ఆధారం. ఇది పేదరికాన్ని నిర్మూలించి, మంచి లక్షణాలను పెంపొందిస్తుంది."
+      },
+      {
+        id:5, title:"Health is Wealth", icon:"🥗",
+        body:`<p>The timeless proverb 'Health is Wealth' underscores a fundamental truth: physical and mental well-being hold far greater value than material riches. An individual possessing immense wealth but suffering from chronic illness cannot fully enjoy their prosperity.</p>
+        <p>In modern society, the pursuit of financial success often comes at the expense of health. Sedentary lifestyles, high-stress occupations, and the consumption of processed foods have led to a surge in preventable lifestyle diseases such as obesity, diabetes, and hypertension. Realizing our ambitions is impossible if our bodies succumb to fatigue and sickness.</p>
+        <p>Maintaining good health requires disciplined choices, including regular exercise, a balanced nutritional diet, and adequate rest. Prioritizing one's health is the ultimate investment, ensuring a vibrant, active, and fulfilling life journey.</p>`,
+        vocab:[{w:"Proverb",m:"A short, well-known saying"}, {w:"Sedentary",m:"Spending much time seated"}, {w:"Succumb",m:"Fail to resist"}],
+        ta:"உடல்நலமே செல்வம். பணத்தை விட ஆரோக்கியம் முக்கியம்; சரியான உணவு மற்றும் உடற்பயிற்சி அவசியம்.",
+        ml:"ആരോഗ്യമാണ് സമ്പത്ത്. പണത്തേക്കാൾ ആരോഗ്യത്തിനാണ് പ്രാധാന്യം; നല്ല ഭക്ഷണവും വ്യായാമവും ആവശ്യമാണ്.",
+        te:"ఆరోగ్యమే మహాభాగ్యం. డబ్బు కంటే ఆరోగ్యం ముఖ్యం; మంచి ఆహారం మరియు వ్యాయామం అవసరం."
+      },
+      {
+        id:6, title:"The Future of Artificial Intelligence", icon:"🤖",
+        body:`<p>Artificial Intelligence (AI) has rapidly transitioned from the realm of science fiction into our everyday reality. Technologies driven by AI, ranging from virtual assistants to self-driving cars, are reshaping industries and redefining human potential.</p>
+        <p>The advantages of AI are immense. It can process colossal amounts of data exponentially faster than the human brain, leading to breakthroughs in medicine, finance, and logistics. It automates repetitive tasks, freeing humans to focus on creative and complex problem-solving. However, this rapid advancement also sparks apprehensions regarding widespread job displacement and ethical concerns involving privacy.</p>
+        <p>As AI continues to evolve, it is paramount that humanity steers its development responsibly. Striking a balance between technological integration and human oversight will ensure that AI serves as a powerful ally rather than an uncontrollable adversary.</p>`,
+        vocab:[{w:"Colossal",m:"Extremely large"}, {w:"Apprehensions",m:"Anxiety or fear"}, {w:"Adversary",m:"One's opponent in a conflict"}],
+        ta:"செயற்கை நுண்ணறிவு பல நன்மைகளைத் தருகிறது. இருப்பினும், இது வேலையிழப்புகளை உருவாக்கும் வாய்ப்புள்ளது. இதனை கவனமாகக் கையாள வேண்டும்.",
+        ml:"നിർമ്മിത ബുദ്ധി ഏറെ നേട്ടങ്ങൾ നൽകുന്നു, എങ്കിലും ഇത് തൊഴിൽ നഷ്ടങ്ങൾക്ക് കാരണമായേക്കാം എന്ന ആശങ്കയുമുണ്ട്.",
+        te:"కృత్రిమ మేధస్సు (AI) అనేక ప్రయోజనాలను కలిగి ఉంది. అయితే ఇది ఉద్యోగాలు కోల్పోవడానికి దారితీసే అవకాశం ఉంది. కాబట్టి జాగ్రత్తగా వాడాలి."
+      },
+      {
+        id:7, title:"The Value of Friendship", icon:"🤝",
+        body:`<p>Friendship is an indispensable pillar of human life, providing emotional sustenance, unconditional support, and unquantifiable joy. Unlike familial bonds, which are inherited by birth, friendships are consciously chosen, making them uniquely special connections based on mutual respect and shared interests.</p>
+        <p>True friends act as a mirror, reflecting our strengths and gently pointing out our flaws. They stand by us steadfastly during moments of adversity and celebrate our triumphs with genuine enthusiasm. A life devoid of meaningful friendships can easily become an isolating and stressful experience.</p>
+        <p>Cultivating a deep, lasting friendship demands time, loyalty, and empathy. Ultimately, the quality of our friendships determines the quality of our lives, acting as a crucial sanctuary in a chaotic world.</p>`,
+        vocab:[{w:"Indispensable",m:"Absolutely necessary"}, {w:"Steadfastly",m:"With firm loyalty"}, {w:"Sanctuary",m:"A place of refuge or safety"}],
+        ta:"நட்பு என்பது வாழ்க்கையில் மிகவும் முக்கியமான ஒன்று. உண்மையான நண்பர்கள் கஷ்ட காலங்களில் நம்முடன் நிற்பார்கள்.",
+        ml:"സൗഹൃദം ജീവിതത്തിൽ ഒഴിവാക്കാനാവാത്ത ഒന്നാണ്. യഥാർത്ഥ സുഹൃത്തുക്കൾ നമ്മുടെ വിഷമഘട്ടങ്ങളിൽ കൂടെ നില്‍ക്കും.",
+        te:"స్నేహం జీవితంలో చాలా ముఖ్యమైనది. నిజమైన స్నేహితులు కష్టకాలంలో మనకు అండగా నిలబడతారు."
+      },
+      {
+        id:8, title:"Traveling as Learning", icon:"✈️",
+        body:`<p>Traveling transcends mere recreation; it is one of the most immersive forms of education available. Stepping outside the familiarity of one's hometown exposes an individual to novel cultures, traditions, and viewpoints that cannot be fully grasped through textbooks.</p>
+        <p>By interacting with diverse populations and navigating unfamiliar environments, travelers develop adaptability, open-mindedness, and self-confidence. It dismantles cultural prejudices and nurtures a profound appreciation for the rich tapestry of human diversity across the globe.</p>
+        <p>Whether navigating the bustling streets of a foreign metropolis or admiring ancient historical ruins, every journey implants indelible memories and life lessons. In essence, to travel is to relentlessly learn and evolve into a more informed global citizen.</p>`,
+        vocab:[{w:"Transcends",m:"Goes beyond the limits"}, {w:"Immersive",m:"Generating a deeply engaging state"}, {w:"Indelible",m:"Not able to be forgotten"}],
+        ta:"பயணம் என்பது ஒரு சிறந்த கல்வி. இது பல்வேறு கலாச்சாரங்களையும், மனிதர்களையும் புரிந்துகொள்ள உதவுகிறது.",
+        ml:"യാത്ര എന്നത് ഒരു വലിയ പാഠശാലയാണ്. വിഭിന്ന സംസ്കാരങ്ങളെയും മനുഷ്യരെയും മനസ്സിലാക്കാൻ ഇത് സഹായിക്കും.",
+        te:"ప్రయాణం అంటే ఒక గొప్ప విద్య. ఇది వివిధ సంస్కృతులను అర్థం చేసుకోవడానికి సహాయపడుతుంది."
+      },
+      {
+        id:9, title:"The Challenge of Overpopulation", icon:"📈",
+        body:`<p>The exponential growth of the global human population is arguably one of the most pressing challenges of our epoch. With the number of inhabitants on Earth continuing to surge, immense strain is being placed on the planet's finite and fragile resources.</p>
+        <p>Overpopulation directly exacerbates numerous global crises, including severe food and water scarcity, extensive deforestation, and escalating pollution levels. As cities become increasingly congested, the quality of life deteriorates, leading to higher unemployment rates and inadequate healthcare infrastructure.</p>
+        <p>Addressing this monumental challenge requires comprehensive strategies, such as enhancing access to education, particularly for women, and promoting family planning globally. Only through concerted, unified action can we stabilize population growth and secure a sustainable habitat for humanity.</p>`,
+        vocab:[{w:"Exponential",m:"Becoming more and more rapid"}, {w:"Exacerbates",m:"Make a problem worse"}, {w:"Scarcity",m:"The state of being scarce or in short supply"}],
+        ta:"மக்கள் தொகை பெருக்கம் வளங்களை குறைக்கிறது. இது வறுமை மற்றும் சுற்றுச்சூழல் அழிவுக்கு முக்கியக் காரணம்.",
+        ml:"ജനസംഖ്യാ വർദ്ധനവ് പ്രകൃതി വിഭവങ്ങളെ ഇല്ലാതാക്കുന്നു. ഇത് ദാരിദ്ര്യത്തിനും പരിസ്ഥിതി നാശത്തിനും കാരണമാകുന്നു.",
+        te:"జనాభా పెరుగుదల వల్ల వనరులు తగ్గిపోతాయి. దీనివల్ల వాతావరణం దెబ్బతింటుంది, పేదరికం పెరుగుతుంది."
+      },
+      {
+        id:10, title:"The Magic of Music", icon:"🎵",
+        body:`<p>Music is a universal language that possesses the extraordinary ability to convey emotions without the necessity of words. Across diverse cultures and civilizations, music has been a fundamental means of expression, celebration, and spiritual connection.</p>
+        <p>The psychological impact of music is profound. It can pacify an agitated mind, evoke deep-seated nostalgia, or energize individuals during physical exertion. Scientific studies have demonstrated that listening to or playing music enhances brain connectivity and elevates mood by triggering the release of dopamine.</p>
+        <p>Whether it takes the form of a classical symphony or a modern pop anthem, music profoundly enriches our daily existence. It remains an invisible yet palpable force that binds humanity together in harmony.</p>`,
+        vocab:[{w:"Universal",m:"Applicable to all cases"}, {w:"Pacify",m:"Quell the anger or agitation"}, {w:"Palpable",m:"Able to be touched or felt (metaphorically clear)"}],
+        ta:"இசை என்பது ஒரு உலகளாவிய மொழி. அது மனதை அமைதிப்படுத்தி மகிழ்ச்சியைத் தருகிறது.",
+        ml:"സംഗീതം ഒരു സാർവ്വലൗകിക ഭാഷയാണ്. അത് മനസ്സിന് ശാന്തിയും സന്തോഷവും നൽകുന്നു.",
+        te:"సంగీతం ఒక విశ్వ భాష. ఇది మనసుకు ప్రశాంతతను మరియు ఉల్లాసాన్ని ఇస్తుంది."
+      }
+    ];
+
+    let currentE = essays[0];
+
+    function buildList() {
+      let h = '';
+      essays.forEach((e) => {
+        h += `<div class="topic-btn ${e.id === currentE.id ? 'active':''}" onclick="selectEssay(${e.id})">
+          <span>${e.title}</span> <span>${e.icon}</span>
+        </div>`;
+      });
+      document.getElementById('topicList').innerHTML = h;
+    }
+
+    function selectEssay(id) {
+      currentE = essays.find(e => e.id === id);
+      buildList();
+      renderEssay();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.speechSynthesis.cancel();
+    }
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderEssay();
+    }
+
+    function renderEssay() {
+      document.getElementById('eTitle').innerText = currentE.title;
+      document.getElementById('eBody').innerHTML = currentE.body;
+      
+      let vH = '';
+      currentE.vocab.forEach(v => {
+        vH += `<div class="v-item"><span class="v-word">${v.w}</span><span class="v-mean">${v.m}</span></div>`;
+      });
+      document.getElementById('eVocab').innerHTML = vH;
+
+      const summaryDiv = document.getElementById('eSummary');
+      let tText = '';
+      if(window.LANG === 'ta') tText = "<strong>தமிழ் சுருக்கம்:</strong> " + currentE.ta;
+      else if(window.LANG === 'ml') tText = "<strong>മലയാളം സംഗ്രഹം:</strong> " + currentE.ml;
+      else if(window.LANG === 'te') tText = "<strong>తెలుగు సారాంశం:</strong> " + currentE.te;
+
+      if(window.LANG !== 'en') {
+        summaryDiv.innerHTML = tText;
+        summaryDiv.style.display = 'block';
+      } else {
+        summaryDiv.style.display = 'none';
+      }
+    }
+
+    function readEssay() {
+      if(!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      let textToRead = document.getElementById('eTitle').innerText + ". " + document.getElementById('eBody').innerText;
+      const st = new SpeechSynthesisUtterance(textToRead);
+      st.lang = 'en-US';
+      st.rate = 0.9;
+      window.speechSynthesis.speak(st);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildList();
+      renderEssay();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

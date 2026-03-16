@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar Quiz — SpokenMaster</title>
+  <meta name="description" content="Test your English grammar with our 40-question quiz. Includes timer, score tracking, and detailed results.">
+  <meta name="keywords" content="english grammar quiz, test english level, english mcq test">
+  <meta property="og:title" content="English Grammar Mastery Quiz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/quiz.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--cyan); color:#000; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--cyan); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .section-hero { background:linear-gradient(135deg, var(--cyan), var(--blue)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:800px; margin:40px auto; padding:0 24px; }
+    
+    #setupScreen { text-align:center; }
+    .start-btn { background:var(--cyan); color:#000; font-family:var(--font-heading); font-size:24px; font-weight:700; padding:16px 40px; border-radius:30px; border:none; cursor:pointer; box-shadow:0 10px 20px rgba(0,201,255,0.3); transition:0.3s; margin-top:30px; }
+    .start-btn:hover { transform:translateY(-5px); box-shadow:0 15px 30px rgba(0,201,255,0.4); }
+
+    #quizScreen { display:none; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow); position:relative; overflow:hidden; }
+    
+    .q-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; padding-bottom:15px; border-bottom:1px solid var(--border); }
+    .q-number { font-size:18px; font-weight:600; color:var(--cyan); }
+    .q-timer { font-size:18px; font-weight:600; background:rgba(255,71,87,0.1); color:var(--red); padding:5px 12px; border-radius:20px; border:1px solid rgba(255,71,87,0.3); display:flex; align-items:center; gap:8px;}
+    .timer-warn { animation:pulseRed 1s infinite; background:var(--red); color:#fff; }
+
+    @keyframes pulseRed { 0% {transform:scale(1);} 50% {transform:scale(1.05);} 100% {transform:scale(1);} }
+
+    .q-text { font-family:var(--font-heading); font-size:26px; color:white; margin-bottom:30px; line-height:1.4; }
+    
+    .options { display:flex; flex-direction:column; gap:16px; }
+    .opt-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:16px 20px; border-radius:12px; font-size:16px; font-weight:500; text-align:left; cursor:pointer; transition:0.3s; display:flex; align-items:center; gap:15px;}
+    .opt-btn:hover:not(:disabled) { border-color:var(--cyan); background:rgba(0,201,255,0.05); transform:translateX(5px); }
+    .opt-btn.correct { background:rgba(67,233,123,0.1); border-color:var(--green); color:var(--green); }
+    .opt-btn.wrong { background:rgba(255,71,87,0.1); border-color:var(--red); color:var(--red); }
+    .opt-btn:disabled { cursor:not-allowed; }
+    
+    .opt-label { width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; justify-content:center; align-items:center; font-weight:700; font-size:13px; flex-shrink:0; }
+    .opt-btn.correct .opt-label { background:var(--green); color:#000; }
+    .opt-btn.wrong .opt-label { background:var(--red); color:#fff; }
+
+    .footer-action { margin-top:30px; text-align:right; }
+    .next-btn { background:var(--cyan); color:#000; border:none; padding:12px 30px; border-radius:30px; font-weight:700; font-size:16px; cursor:pointer; display:none; transition:0.3s; }
+    .next-btn:hover { background:white; }
+
+    #resultScreen { display:none; text-align:center; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:50px; }
+    .r-circle { width:150px; height:150px; border-radius:50%; margin:0 auto 20px; display:flex; justify-content:center; align-items:center; font-family:var(--font-heading); font-size:48px; font-weight:700; color:#fff; border:8px solid var(--cyan); box-shadow:0 0 30px rgba(0,201,255,0.2); }
+    .r-msg { font-size:24px; font-weight:600; color:white; margin-bottom:10px; }
+    .r-desc { color:var(--text-muted); margin-bottom:30px; }
+    .r-btn { background:transparent; border:2px solid var(--cyan); color:var(--cyan); padding:12px 30px; border-radius:30px; font-weight:600; cursor:pointer; transition:0.3s; }
+    .r-btn:hover { background:var(--cyan); color:#000; }
+    
+    .progress-bar { width:100%; height:6px; background:rgba(255,255,255,0.1); position:absolute; bottom:0; left:0; }
+    .progress-fill { height:100%; background:var(--cyan); width:0%; transition:0.3s; }
+
+    .ad-slot { text-align:center; margin:30px 0; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item active" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🧠 Master English Quiz</h1>
+    <p>40 essential English questions to test your grammar, prepositions, tenses, and vocabulary.</p>
+  </section>
+
+  <div class="container">
+    
+    <div id="setupScreen">
+      <div class="ad-slot"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+      <h2 style="font-family:var(--font-heading); color:white; font-size:32px; margin-bottom:15px;">Are you ready?</h2>
+      <p style="color:var(--text-muted); line-height:1.6; max-width:500px; margin:0 auto;">You will face 40 handpicked questions from Basic to Advanced English. You have 30 seconds for each question.</p>
+      <button class="start-btn" onclick="startQuiz()">Start Quiz Now</button>
+      <div class="ad-slot" style="margin-top:40px;"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;height:280px;display:flex;align-items:center;justify-content:center;">Advertisement (336x280)</div></div>
+    </div>
+
+    <div id="quizScreen">
+      <div class="progress-bar"><div class="progress-fill" id="pFill"></div></div>
+      <div class="q-header">
+        <div class="q-number" id="qNum">Question 1/40</div>
+        <div class="q-timer" id="qTimer">⏱ 30s</div>
+      </div>
+      <div class="q-text" id="qText">What is the correct answer?</div>
+      <div class="options" id="qOpts">
+        <!-- Buttons injected via JS -->
+      </div>
+      <div class="footer-action">
+        <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next Question ➔</button>
+      </div>
+    </div>
+
+    <div id="resultScreen">
+      <div class="r-circle" id="rScore">0%</div>
+      <div class="r-msg" id="rMsg">Good effort!</div>
+      <div class="r-desc" id="rDesc">You answered X out of 40 correctly. Keep practicing daily to improve.</div>
+      <button class="r-btn" onclick="location.reload()">↺ Retake Quiz</button>
+      
+      <div class="ad-slot" style="margin-top:40px;"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="quiz.html">Grammar Quiz</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const quizData = [
+      { q: "She ___ to the market every Saturday.", o:["go", "goes", "going", "gone"], a: 1 },
+      { q: "I have been living here ___ 2010.", o:["for", "from", "since", "until"], a: 2 },
+      { q: "He prefers coffee ___ tea.", o:["than", "to", "over", "from"], a: 1 },
+      { q: "They ___ playing football when it started raining.", o:["are", "was", "were", "have"], a: 2 },
+      { q: "Did you ___ the email I sent yesterday?", o:["receive", "received", "receives", "receiving"], a: 0 },
+      { q: "I am looking forward to ___ you.", o:["meet", "meeting", "met", "meets"], a: 1 },
+      { q: "Where ___ you born?", o:["are", "did", "was", "were"], a: 3 },
+      { q: "We ___ complete the project by tomorrow.", o:["has to", "have to", "having to", "had to"], a: 1 },
+      { q: "If I ___ a bird, I would fly.", o:["am", "was", "were", "be"], a: 2 },
+      { q: "The train had already left before we ___ the station.", o:["reach", "reached", "reaching", "will reach"], a: 1 },
+      { q: "He is good ___ playing chess.", o:["in", "at", "for", "with"], a: 1 },
+      { q: "I am not used to ___ up so early.", o:["wake", "woke", "waking", "wakes"], a: 2 },
+      { q: "Choose the correct spelling:", o:["Accommodate", "Acommodate", "Accomodate", "Acomodate"], a: 0 },
+      { q: "___ the weather was bad, we enjoyed our trip.", o:["Because", "Due to", "Although", "In spite of"], a: 2 },
+      { q: "He ___ me that he was busy.", o:["told", "said", "ask", "speak"], a: 0 },
+      { q: "Neither John ___ his friends were present.", o:["or", "and", "nor", "with"], a: 2 },
+      { q: "I wish I ___ more money.", o:["have", "having", "has", "had"], a: 3 },
+      { q: "She asked me what my name ___.", o:["is", "was", "has", "are"], a: 1 },
+      { q: "You should avoid ___ fast food.", o:["to eat", "eating", "eat", "eaten"], a: 1 },
+      { q: "By next year, I ___ from college.", o:["will graduate", "graduated", "will have graduated", "have graduated"], a: 2 },
+      // 20
+      { q: "Let's discuss ___ the current issue.", o:["about", "on", "(no preposition)", "for"], a: 2 },
+      { q: "The news ___ very shocking.", o:["was", "were", "are", "have been"], a: 0 },
+      { q: "My father is ___ honest man.", o:["a", "an", "the", "no article"], a: 1 },
+      { q: "I gave him ___ useful advice.", o:["a", "an", "some", "any"], a: 2 },
+      { q: "She has been working ___ morning.", o:["since", "for", "from", "during"], a: 0 },
+      { q: "He speaks English ___.", o:["good", "well", "better", "best"], a: 1 },
+      { q: "We must abide ___ the rules.", o:["with", "to", "by", "for"], a: 2 },
+      { q: "Hardly had I reached the station ___ the train started.", o:["than", "when", "then", "while"], a: 1 },
+      { q: "She is the girl ___ won the prize.", o:["who", "whom", "which", "whose"], a: 0 },
+      { q: "I bought this pen ___ 50 rupees.", o:["in", "by", "for", "at"], a: 2 },
+      { q: "One of my friends ___ going to Australia.", o:["is", "are", "has", "were"], a: 0 },
+      { q: "I didn't ___ anything to him.", o:["say", "said", "saying", "says"], a: 0 },
+      { q: "I am married ___ a doctor.", o:["with", "to", "by", "for"], a: 1 },
+      { q: "It's high time you ___ studying.", o:["start", "starting", "started", "will start"], a: 2 },
+      { q: "Every student ___ doing their homework.", o:["is", "are", "have", "were"], a: 0 },
+      { q: "Can you tell me where ___?", o:["is the bank", "the bank is", "does the bank", "the bank does"], a: 1 },
+      { q: "The car needs ___.", o:["wash", "to wash", "washing", "washed"], a: 2 },
+      { q: "I usually go to work ___ bus.", o:["in", "by", "on", "from"], a: 1 },
+      { q: "Choose the synonym of 'Furious':", o:["Happy", "Angry", "Sad", "Tired"], a: 1 },
+      { q: "I congratulate you ___ your success.", o:["for", "on", "in", "to"], a: 1 }
+    ];
+
+    let currentQ = 0;
+    let score = 0;
+    let timeLeft = 30;
+    let timerInterval;
+
+    function startQuiz() {
+      document.getElementById('setupScreen').style.display = 'none';
+      document.getElementById('quizScreen').style.display = 'block';
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const qNum = document.getElementById('qNum');
+      const qText = document.getElementById('qText');
+      const qOpts = document.getElementById('qOpts');
+      const nextBtn = document.getElementById('nextBtn');
+      const pFill = document.getElementById('pFill');
+      
+      const q = quizData[currentQ];
+      
+      qNum.innerText = `Question ${currentQ + 1} of ${quizData.length}`;
+      qText.innerText = q.q;
+      
+      const letters = ['A', 'B', 'C', 'D'];
+      let oHtml = '';
+      q.o.forEach((opt, idx) => {
+        oHtml += `<button class="opt-btn" onclick="checkAnswer(${idx}, this)">
+          <span class="opt-label">${letters[idx]}</span> ${opt}
+        </button>`;
+      });
+      qOpts.innerHTML = oHtml;
+      
+      nextBtn.style.display = 'none';
+      pFill.style.width = ((currentQ) / quizData.length * 100) + '%';
+      
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      timeLeft = 30;
+      const tEl = document.getElementById('qTimer');
+      tEl.innerText = `⏱ 30s`;
+      tEl.classList.remove('timer-warn');
+      
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        tEl.innerText = `⏱ ${timeLeft}s`;
+        if(timeLeft <= 5) tEl.classList.add('timer-warn');
+        if(timeLeft <= 0) {
+          clearInterval(timerInterval);
+          autoFail();
+        }
+      }, 1000);
+    }
+
+    function autoFail() {
+      const btns = document.querySelectorAll('.opt-btn');
+      btns.forEach(b => b.disabled = true);
+      const q = quizData[currentQ];
+      btns[q.a].classList.add('correct');
+      document.getElementById('nextBtn').style.display = 'inline-block';
+    }
+
+    function checkAnswer(idx, btn) {
+      clearInterval(timerInterval);
+      const q = quizData[currentQ];
+      const btns = document.querySelectorAll('.opt-btn');
+      btns.forEach(b => b.disabled = true);
+      
+      if(idx === q.a) {
+        btn.classList.add('correct');
+        score++;
+      } else {
+        btn.classList.add('wrong');
+        btns[q.a].classList.add('correct');
+      }
+      
+      document.getElementById('nextBtn').style.display = 'inline-block';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if(currentQ >= quizData.length) {
+        showResults();
+      } else {
+        loadQuestion();
+      }
+    }
+
+    function showResults() {
+      document.getElementById('quizScreen').style.display = 'none';
+      const rs = document.getElementById('resultScreen');
+      rs.style.display = 'block';
+      
+      const pct = Math.round((score / quizData.length) * 100);
+      const rScore = document.getElementById('rScore');
+      rScore.innerText = pct + '%';
+      
+      const rMsg = document.getElementById('rMsg');
+      if(pct >= 90) { rMsg.innerText = "Outstanding! 🏆"; rScore.style.borderColor = "var(--green)"; }
+      else if(pct >= 70) { rMsg.innerText = "Great Job! 🌟"; rScore.style.borderColor = "var(--mint)"; }
+      else if(pct >= 50) { rMsg.innerText = "Good Effort! 👍"; rScore.style.borderColor = "var(--yellow)"; }
+      else { rMsg.innerText = "Needs Practice! 📚"; rScore.style.borderColor = "var(--red)"; }
+      
+      document.getElementById('rDesc').innerText = `You answered ${score} out of ${quizData.length} correctly. Review the grammar rules and try again tomorrow.`;
+    }
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily English Tasks — SpokenMaster</title>
+  <meta name="description" content="Complete 15 daily English tasks to improve fluency. Track your progress with our local storage habit tracker.">
+  <meta name="keywords" content="daily english practice, english learning routine, speak english fluently">
+  <meta property="og:title" content="Daily English Habit Tracker">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/daily-tasks.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--mint); color:#111; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--mint); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+
+    .section-hero { background:linear-gradient(135deg, var(--green), var(--teal)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:900px; margin:40px auto; padding:0 24px; }
+
+    .progress-panel { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:30px; margin-bottom:30px; text-align:center; box-shadow:var(--shadow); position:sticky; top:80px; z-index:100;backdrop-filter:blur(10px); }
+    .p-title { font-size:18px; font-weight:600; color:white; margin-bottom:15px; }
+    
+    .p-bar-bg { width:100%; height:20px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; position:relative; border:1px solid var(--border); }
+    .p-bar-fill { height:100%; width:0%; background:linear-gradient(90deg, var(--mint), var(--green)); transition:width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    .p-text { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; font-size:11px; font-weight:700; color:#fff; text-shadow:0 1px 2px rgba(0,0,0,0.5); }
+
+    .btn-reset { display:inline-block; margin-top:15px; background:transparent; border:1px solid var(--border); color:var(--text-muted); padding:6px 16px; border-radius:20px; font-size:12px; cursor:pointer; transition:0.2s; }
+    .btn-reset:hover { background:rgba(255,71,87,0.1); color:var(--red); border-color:var(--red); }
+
+    .task-list { display:flex; flex-direction:column; gap:15px; }
+    .task-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:20px; display:flex; align-items:center; gap:20px; transition:0.3s; cursor:pointer; }
+    .task-card:hover { border-color:var(--mint); transform:translateX(5px); }
+    .task-card.completed { background:rgba(67,233,123,0.05); border-color:var(--green); opacity:0.8; }
+    
+    .checkbox-wrap { position:relative; width:30px; height:30px; flex-shrink:0; }
+    .task-checkbox { opacity:0; width:100%; height:100%; position:absolute; cursor:pointer; z-index:2; margin:0; }
+    .custom-box { position:absolute; top:0; left:0; width:100%; height:100%; border:2px solid var(--text-muted); border-radius:8px; transition:0.2s; display:flex; justify-content:center; align-items:center; }
+    .task-card.completed .custom-box { background:var(--green); border-color:var(--green); }
+    .custom-box::after { content:'✔'; color:#000; font-size:16px; font-weight:900; opacity:0; transition:0.2s; transform:scale(0); }
+    .task-card.completed .custom-box::after { opacity:1; transform:scale(1); }
+
+    .task-content { flex:1; }
+    .t-cat { font-size:11px; text-transform:uppercase; font-weight:700; color:var(--yellow); margin-bottom:4px; letter-spacing:1px; }
+    .task-card.completed .t-cat { color:var(--green); }
+    .t-name { font-size:18px; font-weight:600; color:white; margin-bottom:4px; transition:0.3s; }
+    .task-card.completed .t-name { text-decoration:line-through; color:var(--text-muted); }
+    .t-desc { font-size:13px; color:var(--text-muted); line-height:1.5; }
+    
+    .t-action { margin-left:15px; }
+    .t-btn { background:var(--bg-card2); color:white; padding:8px 16px; border-radius:8px; font-size:12px; border:1px solid var(--border); cursor:pointer; transition:0.2s; }
+    .t-btn:hover { background:var(--mint); color:#000; border-color:var(--mint); }
+    
+    .ad-slot { margin:30px 0; text-align:center; }
+    
+    .celebrate { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0); background:linear-gradient(135deg, var(--bg-card), var(--bg-card2)); border:2px solid var(--green); border-radius:20px; padding:40px; text-align:center; z-index:2000; opacity:0; transition:0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow:0 20px 50px rgba(0,0,0,0.8); }
+    .celebrate.show { transform:translate(-50%,-50%) scale(1); opacity:1; }
+    .cel-icon { font-size:60px; margin-bottom:15px; }
+    .cel-title { font-family:var(--font-heading); font-size:28px; color:var(--green); margin-bottom:10px; }
+    .cel-msg { color:var(--text-muted); margin-bottom:20px; }
+    .cel-btn { background:var(--green); color:#000; padding:10px 24px; border:none; border-radius:20px; font-weight:600; cursor:pointer; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item active" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>📅 Daily Task Tracker</h1>
+    <p>Consistency is key to fluency. Complete these 15 tasks every day to level up your English.</p>
+  </section>
+
+  <div class="container">
+    
+    <div class="progress-panel">
+      <div class="p-title" id="pTitle">Your Daily Progress: 0 / 15 Tasks</div>
+      <div class="p-bar-bg">
+        <div class="p-bar-fill" id="pFill"></div>
+        <div class="p-text" id="pText">0%</div>
+      </div>
+      <button class="btn-reset" onclick="resetTasks()">🔄 Reset All Tasks</button>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+    </div>
+
+    <div class="task-list" id="tList">
+      <!-- Tasks via JS -->
+    </div>
+
+  </div>
+
+  <div class="celebrate" id="celebrationModal">
+    <div class="cel-icon">🏆</div>
+    <div class="cel-title">Amazing Job!</div>
+    <div class="cel-msg">You have completed all 15 tasks today. Your English is improving! Come back tomorrow.</div>
+    <button class="cel-btn" onclick="document.getElementById('celebrationModal').classList.remove('show')">Close</button>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="daily-tasks.html">Daily Tracker</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const tasks = [
+      { id:"t1", cat:"Listening", name:"Listen to 1 English Conversation", desc:"Go to the Conversations page and replay one full dialog with audio.", link:"conversations.html" },
+      { id:"t2", cat:"Reading", name:"Read 10 Sentences Aloud", desc:"Go to the Sentences page, pick 10 sentences and say them loudly.", link:"sentences.html" },
+      { id:"t3", cat:"Grammar", name:"Review 1 Tense Formula", desc:"Go to the Tenses page and memorize the formula for one specific tense.", link:"tenses.html" },
+      { id:"t4", cat:"Vocabulary", name:"Learn 5 New Words", desc:"Open the Vocabulary page and flip 5 flashcards to learn their meanings.", link:"vocabulary.html" },
+      { id:"t5", cat:"Speaking", name:"Speak for 1 Minute", desc:"Use the Web Speech Recorder in Speaking Tasks to talk continuously.", link:"speaking-tasks.html" },
+      { id:"t6", cat:"Correction", name:"Fix 3 Common Mistakes", desc:"Read 3 sentences from the Fix Mistakes page and understand 'Why'.", link:"fix-mistakes.html" },
+      { id:"t7", cat:"Vocabulary", name:"Learn a Phrasal Verb", desc:"Study one new Phrasal Verb and try to use it in a sentence.", link:"phrasal-verbs.html" },
+      { id:"t8", cat:"Grammar", name:"Practise Modal Verbs", desc:"Create a sentence using 'Should' and 'Must'.", link:"modal-verbs.html" },
+      { id:"t9", cat:"Listening", name:"Word of the Day", desc:"Check today's Word of the Day and listen to its pronunciation.", link:"word-of-day.html" },
+      { id:"t10", cat:"Reading", name:"Read a Short Paragraph", desc:"Go to the Essays page and read the first paragraph of any essay.", link:"essays.html" },
+      { id:"t11", cat:"Grammar", name:"Review Conjunctions", desc:"Pick 2 conjunctions and connect two sentences with them.", link:"conjunctions.html" },
+      { id:"t12", cat:"Speaking", name:"Practise Greetings", desc:"Simulate a greeting chat on the Greetings page.", link:"greetings.html" },
+      { id:"t13", cat:"Vocabulary", name:"Learn 1 Idiom", desc:"Find an idiom on the Idioms page and understand its real meaning.", link:"idioms.html" },
+      { id:"t14", cat:"Grammar", name:"Prepositions Check", desc:"Construct 3 sentences using In, On, and At.", link:"prepositions.html" },
+      { id:"t15", cat:"Testing", name:"Take a Quick Quiz", desc:"Go to the Quiz section and answer at least 5 questions.", link:"quiz.html" }
+    ];
+
+    let completedTasks = JSON.parse(localStorage.getItem('spokenmaster_tasks')) || [];
+
+    function init() {
+      const container = document.getElementById('tList');
+      let h = '';
+      
+      tasks.forEach(t => {
+        const isD = completedTasks.includes(t.id);
+        h += `
+        <div class="task-card ${isD ? 'completed' : ''}" id="card-${t.id}" onclick="toggleTask('${t.id}')">
+          <div class="checkbox-wrap">
+            <input type="checkbox" class="task-checkbox" id="chk-${t.id}" ${isD ? 'checked' : ''}>
+            <div class="custom-box"></div>
+          </div>
+          <div class="task-content">
+            <div class="t-cat">${t.cat}</div>
+            <div class="t-name">${t.name}</div>
+            <div class="t-desc">${t.desc}</div>
+          </div>
+          <div class="t-action">
+            <button class="t-btn" onclick="event.stopPropagation(); window.location.href='${t.link}'">Do Task ➔</button>
+          </div>
+        </div>
+        `;
+      });
+      container.innerHTML = h;
+      updateProgress();
+    }
+
+    function toggleTask(id) {
+      const card = document.getElementById('card-'+id);
+      const chk = document.getElementById('chk-'+id);
+      
+      if(completedTasks.includes(id)) {
+        completedTasks = completedTasks.filter(tid => tid !== id);
+        card.classList.remove('completed');
+        chk.checked = false;
+      } else {
+        completedTasks.push(id);
+        card.classList.add('completed');
+        chk.checked = true;
+      }
+      
+      localStorage.setItem('spokenmaster_tasks', JSON.stringify(completedTasks));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = tasks.length;
+      const done = completedTasks.length;
+      const pct = Math.round((done / total) * 100);
+      
+      document.getElementById('pTitle').innerText = `Your Daily Progress: ${done} / ${total} Tasks`;
+      document.getElementById('pFill').style.width = pct + '%';
+      document.getElementById('pText').innerText = pct + '%';
+      
+      if(done === total && total > 0) {
+        setTimeout(() => {
+          document.getElementById('celebrationModal').classList.add('show');
+        }, 500);
+      }
+    }
+
+    function resetTasks() {
+      if(confirm("Are you sure you want to reset your daily progress?")) {
+        completedTasks = [];
+        localStorage.setItem('spokenmaster_tasks', JSON.stringify([]));
+        init();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

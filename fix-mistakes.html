@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Common English Mistakes — SpokenMaster</title>
+  <meta name="description" content="Stop making these 50 common English mistakes. Compare wrong and right sentences with translations and explanations.">
+  <meta name="keywords" content="common english mistakes, wrong and correct english sentences, english grammar correction">
+  <meta property="og:title" content="Fix Common English Mistakes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/fix-mistakes.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--red); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--red); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--red), var(--pink)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#fff; margin-bottom:12px; }
+    .section-hero p { color:rgba(255,255,255,0.9); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1000px; margin:40px auto; padding:0 24px; }
+    
+    .controls { display:flex; justify-content:space-between; margin-bottom:20px; align-items:center; gap:15px; flex-wrap:wrap; }
+    .search-input { padding:12px 20px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:white; flex:1; max-width:400px; font-size:15px; outline:none; }
+    .search-input::placeholder { color:var(--text-muted); }
+    .stats { font-size:14px; color:var(--text-muted); font-weight:600; }
+
+    .mistake-list { display:flex; flex-direction:column; gap:20px; }
+    
+    .m-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:0.3s; }
+    .m-card:hover { transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--pink); }
+    
+    .m-top { display:flex; border-bottom:1px solid var(--border); }
+    @media(max-width:600px) { .m-top { flex-direction:column; } }
+    
+    .m-wrong { flex:1; padding:20px; background:rgba(255,71,87,0.05); position:relative; }
+    .m-right { flex:1; padding:20px; background:rgba(67,233,123,0.05); position:relative; }
+    @media(min-width:601px) { .m-right { border-left:1px solid var(--border); } }
+
+    .m-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; display:inline-block; padding:3px 8px; border-radius:10px; }
+    .m-wrong .m-label { background:rgba(255,71,87,0.2); color:var(--red); }
+    .m-right .m-label { background:rgba(67,233,123,0.2); color:var(--green); }
+
+    .m-text { font-size:18px; font-weight:600; color:white; line-height:1.4; display:block;}
+    .m-wrong .m-text { text-decoration:line-through; text-decoration-color:rgba(255,71,87,0.5); }
+    
+    .m-why { padding:15px 20px; background:rgba(255,255,255,0.02); font-size:14px; color:var(--text-muted); display:flex; align-items:flex-start; gap:10px; }
+    .why-icon { font-size:18px; }
+    .translation { font-size:13px; color:var(--text-muted); margin-top:10px; font-style:italic;}
+
+    .ad-slot { text-align:center; padding:15px 0; margin-bottom:20px; }
+    .ad-box { background:rgba(255,255,255,0.03); border:1px dashed rgba(255,255,255,0.1); padding:20px; border-radius:8px; color:var(--text-muted); font-size:12px; margin:0 auto; max-width:728px; }
+
+    .no-res { text-align:center; padding:40px; color:var(--text-muted); display:none; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item active" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>✅ Fix Common Mistakes</h1>
+    <p>50 sentences where native speakers can spot learners. Learn the Right way to speak.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English Only</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil Info</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam Info</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu Info</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search a word (e.g. years, marry)..." onkeyup="filterMistakes()">
+      <div class="stats" id="statsTxt">Showing 50 Mistakes</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot"><div class="ad-box">Advertisement (728x90)</div></div>
+
+    <div class="mistake-list" id="mistakeList">
+      <!-- Generated via JS -->
+    </div>
+    
+    <div class="no-res" id="noRes">No mistakes found matching your search.</div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="margin-top:30px;"><div class="ad-box" style="max-width:336px;height:280px;display:flex;align-items:center;justify-content:center;">Ad (336x280)</div></div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="fix-mistakes.html">Fix Mistakes</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    // Generating 50 sentences precisely for the requested feature
+    const data = [
+      { w:"I am 25 years.", r:"I am 25 years old.", why:"When mentioning age, we must add 'old' at the end or just say 'I am 25'.", ta:"என் வயது 25.", ml:"എനിക്ക് 25 വയസ്സുണ്ട്.", te:"నాకు 25 ఏళ్లు." },
+      { w:"I want to discuss about the project.", r:"I want to discuss the project.", why:"'Discuss' already means 'talk about', so using 'about' after it is redundant.", ta:"நான் திட்டத்தைப் பற்றி விவாதிக்க விரும்புகிறேன்.", ml:"എനിക്ക് ഈ പ്രോജക്റ്റിനെക്കുറിച്ച് ചർച്ച ചെയ്യണം.", te:"నేను ప్రాజెక్ట్ గురించి చర్చించాలనుకుంటున్నాను." },
+      { w:"He is married with a doctor.", r:"He is married to a doctor.", why:"We say married 'to' someone, not 'with' someone.", ta:"அவர் ஒரு மருத்துவரை மணந்தார்.", ml:"അദ്ദേഹം ഒരു ഡോക്ടറെയാണ് വിവാഹം കഴിച്ചിരിക്കുന്നത്.", te:"అతను ఒక డాక్టర్‌ను వివాహం చేసుకున్నాడు." },
+      { w:"Does she has a car?", r:"Does she have a car?", why:"After 'does' or 'do', we always use the base verb 'have'.", ta:"அவளிடம் கார் இருக்கிறதா?", ml:"അവൾക്ക് കാറുണ്ടോ?", te:"ఆమె వద్ద కారు ఉందా?" },
+      { w:"I look forward to meet you.", r:"I look forward to meeting you.", why:"'Look forward to' is always followed by a verb+ing (gerund).", ta:"உங்களை சந்திக்க ஆவலுடன் காத்திருக்கிறேன்.", ml:"നിങ്ങളെ കാണാൻ ഞാൻ ആകാംക്ഷയോടെ കാത്തിരിക്കുന്നു.", te:"నేను మిమ్మల్ని కలవడానికి ఎదురుచూస్తున్నాను." },
+      { w:"She didn't wrote the letter.", r:"She didn't write the letter.", why:"After 'did not/didn't', we use the root form of the verb.", ta:"அவள் கடிதம் எழுதவில்லை.", ml:"അവൾ കത്തെഴുതിയില്ല.", te:"ఆమె లేఖ రాయలేదు." },
+      { w:"I am agree.", r:"I agree.", why:"'Agree' is a main verb. We don't need the 'am' helping verb here.", ta:"நான் ஒப்புக்கொள்கிறேன்.", ml:"ഞാൻ സമ്മതിക്കുന്നു.", te:"నేను అంగీకరిస్తున్నాను." },
+      { w:"Every students like the teacher.", r:"Every student likes the teacher.", why:"'Every' is followed by a singular countable noun.", ta:"ஒவ்வொரு மாணவரும் ஆசிரியரை விரும்புகிறார்கள்.", ml:"എല്ലാ വിദ്യാർത്ഥികൾക്കും അധ്യാപകനെ ഇഷ്ടമാണ്.", te:"ప్రతి విద్యార్థి ఉపాధ్యాయుడిని ఇష్టపడతాడు." },
+      { w:"One of my friend is coming.", r:"One of my friends is coming.", why:"The phrase 'One of my' requires a plural noun because it's 'one out of many'.", ta:"என் நண்பர்களில் ஒருவர் வருகிறார்.", ml:"എൻ്റെ സുഹൃത്തുക്കളിൽ ഒരാൾ വരുന്നുണ്ട്.", te:"నా స్నేహితుల్లో ఒకరు వస్తున్నారు." },
+      { w:"I did a mistake.", r:"I made a mistake.", why:"We 'make' mistakes, we don't 'do' them. It's a colocation rule.", ta:"நான் ஒரு தவறு செய்தேன்.", ml:"എനിക്കൊരു തെറ്റ് പറ്റി.", te:"నేను ఒక తప్పు చేశాను." },
+      { w:"He explained me the problem.", r:"He explained the problem to me.", why:"The verb 'explain' cannot take a direct personal object without 'to'.", ta:"அவர் எனக்கு பிரச்சனையை விளக்கினார்.", ml:"അദ്ദേഹം എന്നോട് പ്രശ്നം വിശദീകരിച്ചു.", te:"అతను నాకు సమస్యను వివరించాడు." },
+      { w:"They will return back soon.", r:"They will return soon.", why:"'Return' means 'come back', so adding 'back' is redundant.", ta:"அவர்கள் விரைவில் திரும்புவார்கள்.", ml:"അവർ ഉടൻ മടങ്ങിയെത്തും.", te:"వారు త్వరలో తిరిగి వస్తారు." },
+      { w:"I prefer tea than coffee.", r:"I prefer tea to coffee.", why:"We use 'prefer X to Y', not 'than'.", ta:"காபியை விட டீயை நான் விரும்புகிறேன்.", ml:"കോഫിയേക്കാളും എനിക്ക് ചായയാണ് ഇഷ്ടം.", te:"కాఫీ కంటే టీని నేను ఇష్టపడతాను." },
+      { w:"Myself I am John.", r:"I am John.", why:"'Myself' is a reflexive pronoun. It cannot be used as a subject.", ta:"நான் ஜான்.", ml:"ഞാൻ ജോൺ.", te:"నేను జాన్." },
+      { w:"I need an advice.", r:"I need some advice.", why:"'Advice' is an uncountable noun, so we cannot use 'a' or 'an'.", ta:"எனக்கு சில அறிவுரைகள் தேவை.", ml:"എനിക്കൽപം ഉപദേശം വേണം.", te:"నాకు కొంత సలహా కావాలి." },
+      { w:"We are 4 people in our family.", r:"There are 4 people in our family.", why:"To state existence or quantity, we use 'There are', not 'We are'.", ta:"எங்கள் குடும்பத்தில் 4 பேர் உள்ளோம்.", ml:"ഞങ്ങളുടെ കുടുംബത്തിൽ 4 പേരുണ്ട്.", te:"మా కుటుంబంలో 4 మంది ఉన్నారు." },
+      { w:"I didn't went to the office.", r:"I didn't go to the office.", why:"'didn't' is already past tense. The main verb must be in V1 (present base).", ta:"நான் அலுவலகத்திற்கு செல்லவில்லை.", ml:"ഞാൻ ഓഫീസിൽ പോയില്ല.", te:"నేను ఆఫీసుకు వెళ్లలేదు." },
+      { w:"She listens music every day.", r:"She listens to music every day.", why:"'Listen' is always followed by the preposition 'to' when indicating the object.", ta:"அவள் தினமும் இசை கேட்கிறாள்.", ml:"അവളെന്നും പാട്ട് കേൾക്കാറുണ്ട്.", te:"ఆమె ప్రతిరోజూ సంగీతం వింటుంది." },
+      { w:"Reply me fast.", r:"Reply to me fast.", why:"'Reply' is an intransitive verb and needs 'to' before the personal object.", ta:"எனக்கு விரைவாக பதிலளிக்கவும்.", ml:"എനിക്ക് വേഗം മറുപടി തരൂ.", te:"నాకు త్వరగా సమాధానం చెప్పండి." },
+      { w:"I have visited London last year.", r:"I visited London last year.", why:"For specific past times like 'last year', we use Simple Past, not Present Perfect.", ta:"கடந்த ஆண்டு நான் லண்டனுக்குச் சென்றேன்.", ml:"കഴിഞ്ഞ വർഷം ഞാൻ ലണ്ടൻ സന്ദർശിച്ചു.", te:"గత ఏడాది లండన్ వెళ్లాను." },
+      { w:"He don't know the answer.", r:"He doesn't know the answer.", why:"With He/She/It in the present tense, we use 'doesn't', not 'don't'.", ta:"அவனுக்கு விடை தெரியாது.", ml:"അവനുത്തരമറിയില്ല.", te:"అతనికి సమాధానం తెలియదు." },
+      { w:"Please revert back.", r:"Please revert.", why:"'Revert' means 'reply back', so adding 'back' is incorrect redundancy.", ta:"தயவுசெய்து பதிலளிக்கவும்.", ml:"ദയവായി മറുപടി നൽകുക.", te:"దయచేసి తిరిగి స్పందించండి." },
+      { w:"I am having two brothers.", r:"I have two brothers.", why:"For possession/relationships, 'have' acts as a state verb and shouldn't be 'having' (-ing).", ta:"எனக்கு இரண்டு சகோதரர்கள் உள்ளனர்.", ml:"എനിക്ക് രണ്ട് സഹോദരന്മാരുണ്ട്.", te:"నాకు ఇద్దరు సోదరులు ఉన్నారు." },
+      { w:"I will call you when I will arrive.", r:"I will call you when I arrive.", why:"In time clauses (after when, if, easily), we don't use 'will'. We use present tense.", ta:"நான் வந்ததும் உங்களை அழைக்கிறேன்.", ml:"ഞാനെത്തുമ്പോൾ നിങ്ങളെ വിളിക്കാം.", te:"నేను వచ్చిన తర్వాత మీకు కాల్ చేస్తాను." },
+      { w:"She is more taller than me.", r:"She is taller than I am (or me).", why:"'Taller' is already a comparative. We cannot use 'more' with 'taller' (double comparative).", ta:"அவள் என்னை விட உயரமானவள்.", ml:"അവളെന്നെക്കാളും ഉയരമുള്ളവളാണ്.", te:"ఆమె నాకంటే పొడవుగా ఉంది." },
+      { w:"He works good.", r:"He works well.", why:"'Good' is an adjective. 'Well' is an adverb that describes the verb 'works'.", ta:"அவர் நன்றாக வேலை செய்கிறார்.", ml:"അദ്ദേഹം നന്നായി ജോലി ചെയ്യുന്നു.", te:"అతను బాగా పని చేస్తాడు." },
+      { w:"I gave an exam yesterday.", r:"I took an exam yesterday.", why:"In English, teachers 'give' exams, students 'take' exams.", ta:"நான் நேற்று ஒரு தேர்வு எழுதினேன்.", ml:"ഞാനിന്നലെ ഒരു പരീക്ഷയെഴുതി.", te:"నేను నిన్న పరీక్ష రాశాను." },
+      { w:"Where I can buy this?", r:"Where can I buy this?", why:"In a question, the helping verb (can) must come before the subject (I).", ta:"இதை நான் எங்கே வாங்க முடியும்?", ml:"എനിക്കിതെവിടെ നിന്നു വാങ്ങാം?", te:"నేను దీన్ని ఎక్కడ కొనగలను?" },
+      { w:"The police is coming.", r:"The police are coming.", why:"'Police' is treated as a plural collective noun.", ta:"போலீசார் வருகின்றனர்.", ml:"പോലീസ് വരുന്നുണ്ട്.", te:"పోలీసులు వస్తున్నారు." },
+      { w:"I am boring.", r:"I am bored.", why:"'Boring' means you cause boredom. 'Bored' means you feel the boredom.", ta:"நான் சலிப்படைந்துள்ளேன்.", ml:"എനിക്ക് ബോറടിക്കുന്നു.", te:"నాకు విసుగుగా ఉంది." },
+      { w:"Let's order for pizza.", r:"Let's order pizza.", why:"'Order' does not take a preposition like 'for' when referring to food.", ta:"பீட்சா ஆர்டர் செய்வோம்.", ml:"നമുക്ക് പിസ്സ ഓർഡർ ചെയ്യാം.", te:"పిజ్జా ఆర్డర్ చేద్దాం." },
+      { w:"I have a good news.", r:"I have good news.", why:"'News' is uncountable, so you cannot use 'a' before it.", ta:"எனக்கு ஒரு நல்ல செய்தி உள்ளது.", ml:"എനിക്കൊരു നല്ല വാർത്ത പറയാനുണ്ട്.", te:"నాకొక శుభవార్త ఉంది." },
+      { w:"He is in the school.", r:"He is at school.", why:"To say someone is studying there generally, we use 'at school'. 'In the school' means inside the physical building.", ta:"அவன் பள்ளியில் இருக்கிறான்.", ml:"അവൻ സ്കൂളിലാണ്.", te:"అతను బడిలో ఉన్నాడు." },
+      { w:"I came by walk.", r:"I came on foot.", why:"We don't say 'by walk'. The transport mode is 'on foot'.", ta:"நான் நடந்து வந்தேன்.", ml:"ഞാൻ നടന്നിട്ടാണ് വന്നത്.", te:"నేను నడిచి వచ్చాను." },
+      { w:"Don't go in the sun.", r:"Don't go out in the sun.", why:"To say 'outside in sunlight', we use 'out in the sun'.", ta:"வெயிலில் செல்ல வேண்டாம்.", ml:"വെയിലത്തു പോകരുത്.", te:"ఎండలోకి వెళ్లవద్దు." },
+      { w:"He is my cousin brother.", r:"He is my cousin.", why:"'Cousin' covers both male and female. Adding 'brother' or 'sister' is incorrect Indian English.", ta:"அவன் என் வாரிசு உறவினர்.", ml:"അവൻ എൻ്റെ കസിനാണ്.", te:"అతను నా కజిన్." },
+      { w:"I suggest you to go.", r:"I suggest that you go.", why:"'Suggest' is never followed by an infinitive (to + verb).", ta:"நீங்கள் செல்ல வேண்டும் என்று நான் பரிந்துரைக்கிறேன்.", ml:"നിങ്ങൾ പോകണമെന്നാണ് എൻ്റെ അഭിപ്രായം.", te:"మీరు వెళ్ళాలని నేను సూచిస్తున్నాను." },
+      { w:"I am working here since 2015.", r:"I have been working here since 2015.", why:"Action started in past and continuing needs Present Perfect Continuous.", ta:"நான் 2015 முதல் இங்கு வேலை செய்து வருகிறேன்.", ml:"ഞാൻ 2015 മുതൽ ഇവിടെ ജോലി ചെയ്യുകയാണ്.", te:"నేను 2015 నుండి ఇక్కడ పని చేస్తున్నాను." },
+      { w:"Do you know who is he?", r:"Do you know who he is?", why:"In embedded questions (after 'do you know'), the word order is subject + verb.", ta:"அவர் யார் என்று உங்களுக்குத் தெரியுமா?", ml:"അവനാരെന്ന് നിങ്ങൾക്കറിയാമോ?", te:"అతను ఎవరో మీకు తెలుసా?" },
+      { w:"He plays piano.", r:"He plays the piano.", why:"Instruments always take the definite article 'the' when talking about playing them.", ta:"அவன் பியானோ வாசிப்பான்.", ml:"അവൻ പിയാനോ വായിക്കും.", te:"అతను పియానో వాయిస్తాడు." },
+      { w:"I cut my hair.", r:"I got my hair cut.", why:"'I cut my hair' means you physically used scissors on yourself. Use causative 'got' for barbers.", ta:"நான் முடி வெட்டிக்கொண்டேன்.", ml:"ഞാൻ മുടി വെട്ടി.", te:"నేను జుట్టు కత్తిరించుకున్నాను." },
+      { w:"Are you knowing him?", r:"Do you know him?", why:"'Know' is a state verb and is not used in the continuous (-ing) tense.", ta:"உங்களுக்கு அவரைத் தெரியுமா?", ml:"നിങ്ങൾക്കവനെ അറിയാമോ?", te:"మీకు అతను తెలుసా?" },
+      { w:"I bought this for 500.", r:"I bought this for 500 rupees.", why:"In English, quantities involving money need the currency unit to be spoken.", ta:"இதை 500 ரூபாய்க்கு வாங்கினேன்.", ml:"ഞാനിത് 500 രൂപയ്ക്കാണ് വാങ്ങിയത്.", te:"నేను దీన్ని 500 రూపాయలకు కొన్నాను." },
+      { w:"My hairs are black.", r:"My hair is black.", why:"'Hair' is considered uncountable in English. We don't say 'hairs' for a whole set.", ta:"என் முடி கருப்பு நிறம்.", ml:"എൻ്റെ മുടി കറുപ്പാണ്.", te:"నా జుట్టు నల్లగా ఉంటుంది." },
+      { w:"I met him in the way.", r:"I met him on the way.", why:"The idiom is 'on the way'.", ta:"அவனை வழியில் சந்தித்தேன்.", ml:"ഞാനവനെ വഴിയിൽ വെച്ചു കണ്ടു.", te:"అతన్ని దారిలో కలిశాను." },
+      { w:"Do one mistake.", r:"Make a mistake.", why:"Collocation rule. You 'make' a mistake, not 'do' a mistake.", ta:"ஒரு தவறு செய்யுங்கள் (ஆங்கில பிழை).", ml:"ഒരു തെറ്റ് ചെയ്യുക (ഇംഗ്ലീഷിലെ തെറ്റ്).", te:"ఒక తప్పు చేయండి." },
+      { w:"He died from cancer.", r:"He died of cancer.", why:"You die 'of' a disease, not 'from' a disease.", ta:"அவர் புற்றுநோயால் இறந்தார்.", ml:"അദ്ദേഹം ക്യാൻസർ ബാധിച്ച് മരിച്ചു.", te:"అతను క్యాన్సర్‌తో చనిపోయాడు." },
+      { w:"Are you studying in college?", r:"Are you in college?", why:"'In college' naturally implies studying. 'Studying in' is a local translation habit.", ta:"நீங்கள் கல்லூரியில் படிக்கிறீர்களா?", ml:"നിങ്ങൾ കോളേജിലാണോ പഠിക്കുന്നത്?", te:"మీరు కాలేజీలో చదువుతున్నారా?" },
+      { w:"I will explain you.", r:"I will explain it to you.", why:"'Explain' needs an object and 'to' before the person.", ta:"நான் உங்களுக்கு விளக்குகிறேன்.", ml:"ഞാൻ നിങ്ങൾക്ക് വിശദീകരിച്ചു തരാം.", te:"నేను మీకు వివరిస్తాను." },
+      { w:"Thanks you.", r:"Thank you / Thanks.", why:"We either say 'Thank you' or 'Thanks'. 'Thanks you' is a grammatical mixup.", ta:"நன்றி.", ml:"നന്ദി.", te:"ధన్యవాదాలు." }
+    ];
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderMistakes();
+    }
+
+    function renderMistakes() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const container = document.getElementById('mistakeList');
+      const noRes = document.getElementById('noRes');
+      const stats = document.getElementById('statsTxt');
+      
+      let h = '';
+      let count = 0;
+
+      data.forEach((m, i) => {
+        if(q && !m.w.toLowerCase().includes(q) && !m.r.toLowerCase().includes(q)) return;
+        count++;
+
+        let trans = m.en || '';
+        if(window.LANG === 'ta') trans = m.ta;
+        if(window.LANG === 'ml') trans = m.ml;
+        if(window.LANG === 'te') trans = m.te;
+
+        h += `
+        <div class="m-card">
+          <div class="m-top">
+            <div class="m-wrong">
+              <span class="m-label">❌ Don't Say</span>
+              <span class="m-text">${m.w}</span>
+            </div>
+            <div class="m-right">
+              <span class="m-label">✅ Say This</span>
+              <span class="m-text">${m.r}</span>
+              ${window.LANG !== 'en' ? `<div class="translation">${trans}</div>` : ''}
+            </div>
+          </div>
+          <div class="m-why">
+            <div class="why-icon">💡</div>
+            <div><strong>Why?</strong> ${m.why}</div>
+          </div>
+        </div>`;
+      });
+
+      container.innerHTML = h;
+      stats.innerText = `Showing ${count} Mistakes`;
+      noRes.style.display = count === 0 ? 'block' : 'none';
+    }
+
+    function filterMistakes() {
+      renderMistakes();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderMistakes);
+
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet & Phonics — SpokenMaster</title>
+  <meta name="description" content="Master the 26 letters of the English alphabet and their accurate sounds to drastically improve pronunciation in Tamil, Malayalam, and Telugu.">
+  <meta name="keywords" content="english alphabet, english phonics, vowels and consonants, pronunciation guide">
+  <meta property="og:title" content="Alphabet & Phonics — SpokenMaster">
+  <meta property="og:description" content="Learn English alphabet sounds and phonics rules.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/alphabet.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* SHARED CSS VARIABLES */
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --yellow: #FFC312; --hotpink: #FD79A8; --lavender: #A29BFE;
+      --teal: #00B894; --coral: #E17055; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; overflow-x:hidden; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    /* SHARED COMPONENTS */
+    @keyframes floatUp { 0% {transform:translateY(0) rotate(0deg); opacity:0.2;} 50% {opacity:0.4;} 100% {transform:translateY(-110vh) rotate(720deg); opacity:0;} }
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+    @keyframes ripple { to {width:300px; height:300px; opacity:0;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin:20px 0; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    
+    .section-hero { background:linear-gradient(135deg, var(--pink), var(--purple)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); animation:heroGlow 4s ease-in-out infinite alternate; }
+    @keyframes heroGlow { from{transform:scale(1)} to{transform:scale(1.1)} }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:white; text-shadow:0 2px 20px rgba(0,0,0,0.4); margin-bottom:12px; position:relative; z-index:1; }
+    .section-hero p { color:rgba(255,255,255,0.85); font-size:16px; max-width:600px; margin:0 auto; position:relative; z-index:1; }
+
+    /* Alphabet Grid */
+    .alpha-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:16px; margin:40px 0; }
+    .letter-btn { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px 10px; text-align:center; cursor:pointer; transition:0.3s; position:relative; overflow:hidden; }
+    .letter-btn:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(255,101,132,0.2); }
+    .letter-btn.highlight { border-color:white; box-shadow:0 0 0 2px white; }
+    .letter-big { font-family:var(--font-heading); font-size:36px; font-weight:700; margin-bottom:5px; }
+    .letter-word { font-size:13px; color:var(--text-muted); font-weight:500; }
+
+    /* Vowels Box */
+    .vowels-box { background:rgba(253,121,168,0.05); border:1px dashed var(--pink); border-radius:var(--radius); padding:24px; margin:40px 0; text-align:center; }
+    .vowels-row { display:flex; justify-content:center; gap:20px; margin-top:15px; flex-wrap:wrap; }
+    .vowel-card { background:linear-gradient(135deg, var(--bg-card), rgba(253,121,168,0.1)); padding:15px 25px; border-radius:12px; border:1px solid rgba(253,121,168,0.3); }
+    .vowel-card h3 { font-family:var(--font-heading); font-size:28px; color:var(--pink); }
+
+    /* Detail Box */
+    #letterDetail { display:none; background:var(--bg-card2); border:1px solid var(--border); border-radius:var(--radius); padding:40px; margin:20px 0 60px; box-shadow:var(--shadow); animation:pageIn 0.3s ease; }
+    .detail-head { display:flex; gap:30px; align-items:center; margin-bottom:30px; border-bottom:1px solid var(--border); padding-bottom:20px; }
+    @media(max-width:600px) { .detail-head { flex-direction:column; text-align:center; } }
+    .detail-letter { font-family:var(--font-heading); font-size:100px; line-height:1; background:linear-gradient(135deg, var(--pink), var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .detail-info h3 { font-size:32px; margin-bottom:5px; font-family:var(--font-heading); }
+    .detail-ipa { font-size:18px; color:var(--pink); font-family:monospace; margin-bottom:10px; }
+    .detail-case { font-size:13px; color:var(--text-muted); background:rgba(255,255,255,0.05); padding:4px 12px; border-radius:20px; display:inline-block; }
+    .detail-sents li { margin-bottom:12px; padding-left:20px; position:relative; line-height:1.5; font-size:15px; }
+    .detail-sents li::before { content:'▶'; position:absolute; left:0; color:var(--pink); font-size:12px; top:4px; }
+    .fact-box { background:rgba(255,195,18,0.1); border-left:4px solid var(--yellow); padding:16px; border-radius:r var(--radius); margin-top:20px; font-size:14px; }
+
+    .ph-table { width:100%; border-collapse:collapse; margin:20px 0; }
+    .ph-table th { padding:14px; text-align:left; background:rgba(255,255,255,0.03); }
+    .ph-table td { padding:14px; border-bottom:1px solid var(--border); }
+    .rule-card { background:var(--bg-card); padding:20px; border-radius:var(--radius); border:1px solid var(--border); margin-bottom:16px; }
+    .rule-card h4 { color:var(--pink); margin-bottom:10px; font-size:16px; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item active" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🔤 Alphabet & Phonics</h1>
+    <p>Master the 26 letters and their accurate sounds to drastically improve pronunciation.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <!-- ADSENSE SLOT -->
+  <div class="ad-slot ad-top" style="text-align:center;padding:10px 0;">
+    <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:10px auto;">Advertisement (728x90)</div>
+  </div>
+
+  <div class="container">
+    <div class="vowels-box">
+      <h2 style="font-family:var(--font-heading); margin-bottom:10px;">The 5 Vowels</h2>
+      <p style="color:var(--text-muted); font-size:14px;">Vowels are the most important sounds in English. Every word must have a vowel.</p>
+      <div class="vowels-row">
+        <div class="vowel-card"><h3>A</h3><div style="font-size:13px;color:var(--text-muted);margin-top:5px">Apple</div></div>
+        <div class="vowel-card" style="border-color:rgba(108,99,255,0.3)">
+          <h3 style="color:var(--purple)">E</h3><div style="font-size:13px;color:var(--text-muted);margin-top:5px">Elephant</div>
+        </div>
+        <div class="vowel-card" style="border-color:rgba(67,233,123,0.3)">
+          <h3 style="color:var(--green)">I</h3><div style="font-size:13px;color:var(--text-muted);margin-top:5px">Ice</div>
+        </div>
+        <div class="vowel-card" style="border-color:rgba(250,130,49,0.3)">
+          <h3 style="color:var(--orange)">O</h3><div style="font-size:13px;color:var(--text-muted);margin-top:5px">Orange</div>
+        </div>
+        <div class="vowel-card" style="border-color:rgba(0,201,255,0.3)">
+          <h3 style="color:var(--cyan)">U</h3><div style="font-size:13px;color:var(--text-muted);margin-top:5px">Umbrella</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alpha-grid" id="alphaGrid">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- DETAIL BOX -->
+    <div id="letterDetail">
+      <div class="detail-head">
+        <div class="detail-letter" id="detLetter">A</div>
+        <div class="detail-info">
+          <h3 id="detWord">Apple</h3>
+          <div class="detail-ipa" id="detIpa">/æpl/</div>
+          <div class="detail-case" id="detCase">Uppercase: A | Lowercase: a</div>
+        </div>
+      </div>
+      <h4 style="margin-bottom:15px;color:var(--pink);">Example Sentences:</h4>
+      <ul class="detail-sents" id="detSents" style="list-style:none;">
+        <!-- Generated by JS -->
+      </ul>
+      <div class="fact-box" id="detFact">
+        💡 <b>Phonics Fact:</b> "A" has a short sound like in Apple and a long sound like in Age.
+      </div>
+    </div>
+
+    <h2 style="font-family:var(--font-heading); margin:40px 0 20px;">Important Phonics Rules</h2>
+    <div class="grid-2">
+      <div class="rule-card">
+        <h4>1. Silent Letters</h4>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">Many English words have letters that are written but never spoken. Examples: <b>K</b>nee (nee), <b>W</b>rite (rite), Lam<b>b</b> (lam).</p>
+      </div>
+      <div class="rule-card">
+        <h4>2. The "TH" Sound</h4>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">TH has two sounds: a hard voiced sound (This, That, Then) and a soft voiceless sound (Think, Thank, Bath).</p>
+      </div>
+      <div class="rule-card">
+        <h4>3. Soft vs Hard C</h4>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">When C is followed by E, I, or Y, it sounds like 'S' (City, Center). Otherwise, it sounds like 'K' (Cat, Cup, Cold).</p>
+      </div>
+      <div class="rule-card">
+        <h4>4. Magic E (Silent E)</h4>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">An 'E' at the end of a word makes the inner vowel say its name instead of its sound. Example: mad → mad<b>e</b>, bit → bit<b>e</b>.</p>
+      </div>
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot ad-bottom" style="text-align:center;padding:10px 0;margin:60px auto;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">The world's best free Spoken English website. Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="tenses.html">Tenses</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language logic
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+    }
+
+    const alphabetData = [
+      { l:"A", w:"Apple", ipa:"/æ/", s:["She eats an apple every morning.", "An apple a day keeps the doctor away.", "I bought apples from the market.", "Apple juice is her favourite drink."], f:"'A' has a short sound like in Apple and a long sound like in Age.", c1:"#FF6584", c2:"#FD79A8" },
+      { l:"B", w:"Ball", ipa:"/b/", s:["The boys are playing with a ball.", "He threw the ball over the fence.", "Cricket is played with a bat and a ball.", "She caught the red ball."], f:"'B' is silent when it comes after 'M' (e.g., climb, lamb).", c1:"#00C9FF", c2:"#74B9FF" },
+      { l:"C", w:"Cat", ipa:"/k/ or /s/", s:["The cat is sleeping on the sofa.", "I saw a black cat crossing the street.", "Cats love to drink milk.", "My friend has a pet cat."], f:"'C' sounds like /S/ before E, I, Y (City). Otherwise /K/ (Cat).", c1:"#43E97B", c2:"#55EFC4" },
+      { l:"D", w:"Dog", ipa:"/d/", s:["The dog barked loudly at the stranger.", "Every dog has its day.", "She decided to adopt a rescue dog.", "Dogs are known as man's best friend."], f:"'D' is silent in words like Wednesday and handsome.", c1:"#FA8231", c2:"#FFBE57" },
+      { l:"E", w:"Egg", ipa:"/e/", s:["I eat a boiled egg for breakfast.", "Birds lay eggs in their nests.", "She dropped the egg on the floor.", "Do you know how to fry an egg?"], f:"A silent 'E' at the end of a word changes the inner vowel sound (mat vs mate).", c1:"#6C63FF", c2:"#A29BFE" },
+      { l:"F", w:"Fish", ipa:"/f/", s:["Fish cannot live without water.", "He caught a very big fish.", "I love eating fried fish.", "There are many colorful fish in the aquarium."], f:"'PH' combined creates the same /F/ sound (Phone, Photo).", c1:"#FFC312", c2:"#FFBE57" },
+      { l:"G", w:"Goat", ipa:"/g/ or /dʒ/", s:["A goat is eating grass on the hill.", "Goats give us milk.", "He tied the goat to the tree.", "The farmer bought a brown goat."], f:"'G' has a hard sound in Goat, but a soft /J/ sound in Giraffe.", c1:"#00B894", c2:"#55EFC4" },
+      { l:"H", w:"Hat", ipa:"/h/", s:["He wore a black hat to the party.", "The wind blew away her hat.", "Don't forget to wear a hat in the sun.", "That is a very funny hat."], f:"'H' is completely silent in words like Honest, Hour, and Honor.", c1:"#E17055", c2:"#FA8231" },
+      { l:"I", w:"Ice", ipa:"/aɪ/", s:["Can I have some ice in my drink?", "Ice melts quickly in the hot sun.", "The lake was covered with solid ice.", "She slipped on the ice."], f:"'I' has a short sound in 'Sit' and a long sound in 'Site'.", c1:"#FF4757", c2:"#FF6584" },
+      { l:"J", w:"Jug", ipa:"/dʒ/", s:["Please pour water from the jug.", "The jug is full of fresh milk.", "He broke the glass jug.", "She bought a beautiful copper jug."], f:"'J' always makes the /dʒ/ sound and is never at the end of an English word.", c1:"#FF6584", c2:"#FD79A8" },
+      { l:"K", w:"Kite", ipa:"/k/", s:["The children are flying a kite.", "His kite went very high in the sky.", "Making a paper kite is easy.", "The wind tore the red kite."], f:"'K' is silent before an 'N' at the beginning of words (Knee, Knife, Know).", c1:"#6C63FF", c2:"#A29BFE" },
+      { l:"L", w:"Lion", ipa:"/l/", s:["The lion is the king of the jungle.", "We saw a lion in the zoo.", "A lion's roar is very loud.", "The lion slept under the tree."], f:"'L' is silent in words like Walk, Talk, Half, and Calm.", c1:"#43E97B", c2:"#55EFC4" },
+      { l:"M", w:"Monkey", ipa:"/m/", s:["A monkey jumped from the tree.", "Monkeys love eating bananas.", "The baby monkey was very cute.", "A monkey stole his fruit."], f:"'M' is a nasal consonant, meaning air escapes through the nose to make the sound.", c1:"#FA8231", c2:"#FFBE57" },
+      { l:"N", w:"Nest", ipa:"/n/", s:["The birds built a warm nest.", "There are three eggs in the nest.", "The nest fell from the branch.", "We saw a tiny bird's nest."], f:"'N' is silent when it comes after 'M' at the end of a word (Autumn, Column).", c1:"#00C9FF", c2:"#74B9FF" },
+      { l:"O", w:"Owl", ipa:"/aʊ/", s:["The owl hunts during the night.", "An owl has very big round eyes.", "I heard the sound of an owl.", "The snowy owl is beautiful."], f:"'O' makes many sounds (short in Dog, long in Bone, completely different in To).", c1:"#FFC312", c2:"#FFBE57" },
+      { l:"P", w:"Pen", ipa:"/p/", s:["I need a blue pen to write.", "This pen belongs to my teacher.", "She gifted me an expensive pen.", "The ink in the pen is empty."], f:"'P' is silent at the start of psychology and pneumonia.", c1:"#FD79A8", c2:"#FF6584" },
+      { l:"Q", w:"Queen", ipa:"/kw/", s:["The queen wore a golden crown.", "She is the queen of this country.", "A queen bee leads the hive.", "The story is about a cruel queen."], f:"In English, 'Q' is almost always followed by the letter 'U'.", c1:"#00B894", c2:"#55EFC4" },
+      { l:"R", w:"Rabbit", ipa:"/r/", s:["The rabbit ate all the carrots.", "A white rabbit ran past us.", "Rabbits sit very quietly.", "The rabbit has soft fur."], f:"In British English, 'R' at the end of words (Car, Water) is not pronounced strongly.", c1:"#A29BFE", c2:"#6C63FF" },
+      { l:"S", w:"Sun", ipa:"/s/", s:["The sun rises in the east.", "The sun is very hot today.", "Do not look directly at the sun.", "The sun gives us light and heat."], f:"'S' sounds like /Z/ at the ends of words after a voiced sound (Dogs, Plays).", c1:"#FF4757", c2:"#FF6584" },
+      { l:"T", w:"Tiger", ipa:"/t/", s:["The Bengal tiger is a beautiful animal.", "We saw a sleeping tiger.", "A tiger has black stripes.", "The tiger runs very fast."], f:"'T' makes a 'CH' sound in words ending in -ture (Picture, Nature, Future).", c1:"#FA8231", c2:"#E17055" },
+      { l:"U", w:"Umbrella", ipa:"/ʌ/", s:["Take an umbrella because it is raining.", "I lost my black umbrella.", "She bought a colorful umbrella.", "The umbrella protects from the sun."], f:"'U' can have a short /uh/ sound (Up) or a long /yu/ sound (Use).", c1:"#43E97B", c2:"#00B894" },
+      { l:"V", w:"Van", ipa:"/v/", s:["The school van is waiting outside.", "My uncle drives a white van.", "They loaded the boxes into the van.", "The delivery van broke down."], f:"No English word ends with the letter V, they add a silent E (Have, Give, Love).", c1:"#00C9FF", c2:"#74B9FF" },
+      { l:"W", w:"Watch", ipa:"/w/", s:["He wears an expensive wrist watch.", "I lost my watch yesterday.", "Check the time on your watch.", "My grandfather gave me this watch."], f:"'W' is silent before 'R' at the start of a word (Write, Wrong, Wrist).", c1:"#6C63FF", c2:"#A29BFE" },
+      { l:"X", w:"X-ray", ipa:"/ks/", s:["The doctor asked for an X-ray.", "An X-ray shows your bones.", "The X-ray report is normal.", "I got an X-ray of my hand."], f:"'X' usually makes the 'KS' sound (Box, Fox) but can make a 'Z' sound at the start (Xylophone).", c1:"#FF6584", c2:"#FD79A8" },
+      { l:"Y", w:"Yellow", ipa:"/j/", s:["She wore a yellow dress.", "The sun looks yellow.", "Bananas are yellow when ripe.", "Yellow is my favourite colour."], f:"'Y' often acts as a vowel at the end of a word, making an 'I' or 'E' sound (Fly, Happy).", c1:"#FFC312", c2:"#FA8231" },
+      { l:"Z", w:"Zebra", ipa:"/z/", s:["The zebra has black and white stripes.", "We saw a baby zebra in the zoo.", "A zebra belongs to the horse family.", "The zebra ran fast."], f:"American English pronounces it 'Zee', British Indian English pronounces it 'Zed'.", c1:"#00B894", c2:"#55EFC4" }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Create particles
+      const bgColors = ['#6C63FF','#FF6584','#43E97B','#FA8231','#00C9FF','#FFC312'];
+      for(let i=0; i<15; i++) {
+        const p = document.createElement('div');
+        p.style.cssText = `position:fixed;width:${3+Math.random()*5}px;height:${3+Math.random()*5}px;background:${bgColors[Math.floor(Math.random()*bgColors.length)]};border-radius:50%;left:${Math.random()*100}vw;top:${100+Math.random()*20}vh;opacity:${0.15+Math.random()*0.25};animation:floatUp ${8+Math.random()*12}s linear ${Math.random()*8}s infinite;pointer-events:none;z-index:0;`;
+        document.body.appendChild(p);
+      }
+
+      const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+      document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+      const grid = document.getElementById('alphaGrid');
+      alphabetData.forEach((item, index) => {
+        const btn = document.createElement('div');
+        btn.className = 'letter-btn';
+        btn.innerHTML = `<div class="letter-big" style="background:linear-gradient(135deg, ${item.c1}, ${item.c2});-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${item.l}</div>
+                         <div class="letter-word">${item.w}</div>`;
+        
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('highlight'));
+          btn.classList.add('highlight');
+          
+          document.getElementById('detLetter').textContent = item.l;
+          document.getElementById('detLetter').style.background = `linear-gradient(135deg, ${item.c1}, ${item.c2})`;
+          document.getElementById('detLetter').style.webkitBackgroundClip = 'text';
+          
+          document.getElementById('detWord').textContent = item.w;
+          document.getElementById('detIpa').textContent = item.ipa;
+          document.getElementById('detCase').textContent = `Uppercase: ${item.l} | Lowercase: ${item.l.toLowerCase()}`;
+          
+          const sents = document.getElementById('detSents');
+          sents.innerHTML = '';
+          item.s.forEach(sent => {
+            const li = document.createElement('li');
+            li.textContent = sent;
+            sents.appendChild(li);
+          });
+          
+          document.getElementById('detFact').innerHTML = `💡 <b>Phonics Fact:</b> ${item.f}`;
+          
+          const detBox = document.getElementById('letterDetail');
+          detBox.style.display = 'block';
+          detBox.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        });
+        
+        grid.appendChild(btn);
+      });
+      
+      // Select 'A' initially
+      grid.firstChild.click();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

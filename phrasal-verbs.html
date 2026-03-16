@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Phrasal Verbs — SpokenMaster</title>
+  <meta name="description" content="Learn 40 essential English phrasal verbs used in everyday conversations. Includes meanings and rich examples.">
+  <meta name="keywords" content="phrasal verbs in english, english vocabulary, speak english naturally">
+  <meta property="og:title" content="40 Essential Phrasal Verbs">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/phrasal-verbs.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; display:flex; flex-direction:column; }
+    ::selection { background:var(--pink); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--pink); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:auto; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--pink), var(--orange)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#fff; margin-bottom:12px; text-shadow:0 2px 10px rgba(0,0,0,0.2); }
+    .section-hero p { color:rgba(255,255,255,0.9); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1000px; margin:40px auto; padding:0 24px; }
+    
+    .controls { display:flex; justify-content:space-between; margin-bottom:30px; align-items:center; flex-wrap:wrap; gap:15px; }
+    .search-wrap { position:relative; flex:1; max-width:500px; }
+    .search-input { width:100%; padding:14px 20px 14px 45px; border-radius:30px; border:1px solid var(--border); background:var(--bg-card); color:white; font-size:15px; outline:none; transition:0.3s; }
+    .search-input:focus { border-color:var(--pink); box-shadow:0 0 15px rgba(255,101,132,0.3); }
+    .search-icon { position:absolute; left:18px; top:50%; transform:translateY(-50%); font-size:16px; color:var(--text-muted); }
+    .stats { font-size:14px; font-weight:600; color:var(--text-muted); }
+
+    .ad-slot { text-align:center; margin-bottom:40px; }
+
+    .list { display:flex; flex-direction:column; gap:20px; }
+    
+    .pv-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:25px; transition:0.3s; display:flex; align-items:center; gap:30px; }
+    @media(max-width:768px) { .pv-card { flex-direction:column; align-items:flex-start; gap:15px;} }
+    .pv-card:hover { transform:translateX(5px); box-shadow:var(--shadow); border-color:var(--pink); }
+
+    .pv-left { flex:0 0 250px; }
+    .pv-term { font-family:var(--font-heading); font-size:26px; color:white; margin-bottom:6px; }
+    .pv-mean { font-size:14px; color:var(--pink); font-weight:500; }
+    
+    .pv-right { flex:1; padding-left:30px; border-left:1px solid var(--border); }
+    @media(max-width:768px) { .pv-right { padding-left:0; border-left:none; border-top:1px solid var(--border); padding-top:15px;} }
+    
+    .pv-ex { font-size:15px; color:#ddd; line-height:1.6; font-style:italic; margin-bottom:10px; }
+    .pv-trans { font-size:13px; color:var(--mint); background:rgba(255,255,255,0.03); padding:8px 15px; border-radius:8px; display:inline-block; }
+
+    .no-res { text-align:center; padding:50px; color:var(--text-muted); font-size:16px; display:none; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item active" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🔀 Phrasal Verbs</h1>
+    <p>Phrasal verbs combine a verb and a preposition to create a new meaning. Master these to sound native.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil Meanings</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam Meanings</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu Meanings</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="controls">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="searchInp" placeholder="Search (e.g. give up, look after)..." onkeyup="filterVerbs()">
+      </div>
+      <div class="stats" id="statsCount">Showing 40 Verbs</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div></div>
+
+    <div class="list" id="vList">
+      <!-- Generated via JS -->
+      <div class="no-res" id="noRes">No phrasal verbs found matching your search.</div>
+    </div>
+
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="margin-top:40px;"><div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;height:280px;display:flex;align-items:center;justify-content:center;">Advertisement (336x280)</div></div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="phrasal-verbs.html">Phrasal Verbs</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const phrasalVerbs = [
+      { v:"Break down", m:"Stop working (machine).", ex:"My car broke down on the highway.", ta:"(இயந்திரம்) பழுதடைதல்", ml:"(യന്ത്രം) തകരാറിലാകുക", te:"(యంత్రం) చెడిపోవడం" },
+      { v:"Bring up", m:"To mention a topic.", ex:"Don't bring up the budget during the meeting.", ta:"ஒரு விஷயத்தை பற்றி பேசுதல்", ml:"ഒരു വിഷയം സംസാരിച്ചു തുടങ്ങുക", te:"ఒక విషయాన్ని ప్రస్తావించడం" },
+      { v:"Call off", m:"Cancel something.", ex:"They had to call off the wedding due to rain.", ta:"ரத்து செய்தல்", ml:"റദ്ദാക്കുക", te:"రద్దు చేయడం" },
+      { v:"Carry on", m:"Continue doing something.", ex:"Please carry on with your work while I'm away.", ta:"தொடர்ந்து செய்தல்", ml:"തുടരുക", te:"కొనసాగించడం" },
+      { v:"Catch up", m:"To get to the same point as someone else.", ex:"You walk so fast, I can't catch up with you.", ta:"சமன் செய்தல்/பின்பற்றி வருதல்", ml:"ഒപ്പം എത്തുക", te:"సమాన స్థాయికి రావడం" },
+      { v:"Check in", m:"Register at a hotel or airport.", ex:"We need to check in two hours before the flight.", ta:"பதிவு செய்தல் (ஹோட்டல்/விமானம்)", ml:"രജിസ്റ്റർ ചെയ്യുക", te:"నమోదు చేయడం" },
+      { v:"Cheer up", m:"Become happier.", ex:"Cheer up! The worst is over.", ta:"மகிழ்ச்சியடைதல்", ml:"സന്തോഷവാനാകുക", te:"సంతోషపడటం" },
+      { v:"Come across", m:"Find unexpectedly.", ex:"I came across an old photo while cleaning my room.", ta:"எதிர்பாராமல் கண்டுபிடித்தல்", ml:"അപ്രതീക്ഷിതമായി കണ്ടെത്തുക", te:"అకస్మాత్తుగా కనుగొనడం" },
+      { v:"Cut down", m:"Reduce the amount.", ex:"My doctor told me to cut down on sugar.", ta:"அளவைக் குறைப்பது", ml:"അളവ് കുറയ്ക്കുക", te:"మొత్తం తగ్గించడం" },
+      { v:"Drop off", m:"Deliver someone or something.", ex:"Can you drop me off at the station?", ta:"இறக்கி விடுவது", ml:"ഇറക്കി വിടുക", te:"దింపడం" },
+      { v:"Figure out", m:"Understand or solve a problem.", ex:"It took me hours to figure out how to build it.", ta:"புரிந்துகொள்வது / தீர்வு காண்பது", ml:"മനസ്സിലാക്കുക / പരിഹാരം കണ്ടെത്തുക", te:"అర్థం చేసుకోవడం / పరిష్కరించడం" },
+      { v:"Fill out", m:"Complete a form.", ex:"Please fill out this application form.", ta:"படிவத்தை நிரப்புதல்", ml:"ഫോം പൂരിപ്പിക്കുക", te:"ఫారం నింపడం" },
+      { v:"Find out", m:"Discover information.", ex:"I need to find out what time the bus leaves.", ta:"தகவலைக் கண்டறிதல்", ml:"വിവരങ്ങൾ കണ്ടെത്തുക", te:"వివరాలు కనుక్కోవడం" },
+      { v:"Get along", m:"Have a good relationship.", ex:"I don't get along well with my new coworker.", ta:"இணக்கமாக பழகுவது", ml:"നല്ല ബന്ധം പുലർത്തുക", te:"కలిసిపోవడం" },
+      { v:"Get away", m:"Escape or go on vacation.", ex:"We hope to get away for a few days next month.", ta:"தப்பிச் செல்வது / விடுமுறைக்குச் செல்வது", ml:"രക്ഷപ്പെടുക / യാത്ര പോവുക", te:"తప్పించుకోవడం / సెలవులకు వెళ్లడం" },
+      { v:"Get over", m:"Recover from an illness or disappointment.", ex:"It took her a long time to get over the flu.", ta:"மீண்டு வருவது", ml:"രോഗത്തിൽ നിന്നും മുക്തനാകുക", te:"కోలుకోవడం" },
+      { v:"Give up", m:"Quit doing something.", ex:"He gave up smoking three years ago.", ta:"கைவிடுவது", ml:"ഉപേക്ഷിക്കുക", te:"వదిలేయడం" },
+      { v:"Go on", m:"Continue happening.", ex:"The show must go on despite the rain.", ta:"தொடர்ந்து நடப்பது", ml:"തുടരുക", te:"కొనసాగడం" },
+      { v:"Grow up", m:"Become an adult.", ex:"What do you want to be when you grow up?", ta:"வளர்வது (பெரியவர் ஆவது)", ml:"വളർന്നു വലുതാകുക", te:"పెరగడం (పెద్దవాళ్లవడం)" },
+      { v:"Hold on", m:"Wait a moment.", ex:"Hold on, I'll be right back.", ta:"காத்திருங்கள்", ml:"കാത്തിരിക്കുക", te:"ఆగండి" },
+      { v:"Keep on", m:"Continue doing something.", ex:"Keep on working hard and you'll succeed.", ta:"தொடர்ந்து செய்தல்", ml:"തുടർന്നും ചെയ്യുക", te:"కొనసాగించడం" },
+      { v:"Look after", m:"Take care of.", ex:"Can you look after my cat while I'm away?", ta:"கவனித்துக்கொள்வது", ml:"പരിപാലിക്കുക", te:"పట్టించుకోవడం" },
+      { v:"Look forward to", m:"Be excited about the future.", ex:"I am looking forward to our trip to Paris.", ta:"ஆவலுடன் எதிர்பார்த்திருத்தல்", ml:"ആകാംക്ഷയോടെ കാത്തിരിക്കുക", te:"ఆత్రుతగా ఎదురుచూడటం" },
+      { v:"Look up", m:"Search for information.", ex:"If you don't know the word, look it up in a dictionary.", ta:"தகவலை தேடுதல்", ml:"വിവരങ്ങൾ തിരയുക", te:"సమాచారం కోసం వెతకడం" },
+      { v:"Make up", m:"Invent a story or lie.", ex:"My son loves to make up a story before bedtime.", ta:"கதையை உருவாக்குவது", ml:"കഥ മെനയുക", te:"కథను కల్పించడం" },
+      { v:"Pass away", m:"Die (polite way).", ex:"His grandfather passed away last night.", ta:"இறந்துவிடுவது", ml:"മരണപ്പെടുക", te:"చనిపోవడం" },
+      { v:"Pass out", m:"Faint or lose consciousness.", ex:"It was so hot that she passed out.", ta:"மயக்கமடைதல்", ml:"ബോധം കെടുത്തുക", te:"మూర్ఛపోవడం" },
+      { v:"Pick up", m:"Collect someone or learn something new.", ex:"I'll pick you up at 7 PM.", ta:"அழைத்துச் செல்வது / கற்பது", ml:"കൂട്ടിക്കൊണ്ട് പോവുക / പുതിയ കാര്യങ്ങൾ പഠിക്കുക", te:"తీసుకెళ్లడం / కొత్తగా నేర్చుకోవడం" },
+      { v:"Put off", m:"Postpone.", ex:"We had to put off the meeting until tomorrow.", ta:"தள்ளிவைப்பது", ml:"മാറ്റിവെക്കുക", te:"వాయిదా వేయడం" },
+      { v:"Put up with", m:"Tolerate.", ex:"I can't put up with his bad behavior anymore.", ta:"பொறுத்துக்கொள்வது", ml:"സഹിക്കുക", te:"భరించడం" },
+      { v:"Run out of", m:"Have none left.", ex:"We have run out of milk, I need to buy some.", ta:"தீர்ந்துபோகுதல்", ml:"തീർന്നുപോവുക", te:"అయిపోవడం" },
+      { v:"Set up", m:"Arrange or establish.", ex:"They set up a new business in the city.", ta:"ஏற்பாடு செய்வது / நிறுவுவது", ml:"സ്ഥാപിക്കുക", te:"స్థాపించడం" },
+      { v:"Show off", m:"Try to impress others.", ex:"He likes to show off his new car.", ta:"பகட்டு காட்டுவது", ml:"പൊങ്ങച്ചം കാണിക്കുക", te:"గొప్పలు చెప్పుకోవడం" },
+      { v:"Show up", m:"Arrive.", ex:"He didn't show up for the interview.", ta:"வருவது / ஆஜராவது", ml:"വന്നെത്തുക", te:"రావడం" },
+      { v:"Stand out", m:"Be easily noticeable.", ex:"Her red dress made her stand out in the crowd.", ta:"தனித்துத் தெரிவது", ml:"വ്യത്യസ്തമായി നിൽക്കുക", te:"ప్రత్యేకంగా కనిపించడం" },
+      { v:"Take off", m:"Remove clothing or airplane leaves ground.", ex:"Please take off your shoes inside the house.", ta:"கழற்றுவது / விமானம் புறப்படுவது", ml:"ഊരുക / വിമാനം പറന്നുയരുക", te:"తొలగించడం / విమానం బయల్దేరడం" },
+      { v:"Take over", m:"Take control of.", ex:"The giant company will take over the small business.", ta:"பொறுப்பேற்பது", ml:"ചുമതല ഏറ്റെടുക്കുക", te:"బాధ్యతలు తీసుకోవడం" },
+      { v:"Turn down", m:"Decrease volume or reject.", ex:"They turned down my job application.", ta:"நிராகரிப்பது / சத்தத்தை குறைப்பது", ml:"നിരസിക്കുക / ശബ്ദം കുറയ്ക്കുക", te:"తిరస్కరించడం / వాల్యూమ్ తగ్గించడం" },
+      { v:"Turn out", m:"Result or end up.", ex:"The cake turned out to be delicious.", ta:"முடிவுறுவது", ml:"ഒരു കാര്യം അവസാനിക്കുന്നത്", te:"ఫలితంగా మారడం" },
+      { v:"Work out", m:"Exercise or solve a problem.", ex:"I work out at the gym three times a week.", ta:"உடற்பயிற்சி செய்வது / தீர்வு காண்பது", ml:"വ്യായാമം ചെയ്യുക / പരിഹാരം കണ്ടെത്തുക", te:"వ్యాయామం చేయడం / పరిష్కరించడం" }
+    ];
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderVerbs();
+    }
+
+    function renderVerbs() {
+      const q = document.getElementById('searchInp').value.toLowerCase();
+      const list = document.getElementById('vList');
+      const noRes = document.getElementById('noRes');
+      const stats = document.getElementById('statsCount');
+      
+      let h = '';
+      let count = 0;
+
+      phrasalVerbs.forEach(v => {
+        if(q && !v.v.toLowerCase().includes(q) && !v.m.toLowerCase().includes(q)) return;
+        count++;
+
+        let transText = '';
+        if(window.LANG === 'ta') transText = v.ta;
+        if(window.LANG === 'ml') transText = v.ml;
+        if(window.LANG === 'te') transText = v.te;
+
+        h += `
+        <div class="pv-card">
+          <div class="pv-left">
+            <div class="pv-term">${v.v}</div>
+            <div class="pv-mean">${v.m}</div>
+          </div>
+          <div class="pv-right">
+            <div class="pv-ex">" ${v.ex} "</div>
+            <div class="pv-trans" style="display: ${window.LANG === 'en' ? 'none' : 'inline-block'}">${transText}</div>
+          </div>
+        </div>`;
+      });
+
+      list.innerHTML = h;
+      list.appendChild(noRes);
+      
+      noRes.style.display = count === 0 ? 'block' : 'none';
+      stats.innerText = `Showing ${count} Verbs`;
+    }
+
+    function filterVerbs() {
+      renderVerbs();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderVerbs);
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

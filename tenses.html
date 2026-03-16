@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All 12 English Tenses — SpokenMaster</title>
+  <meta name="description" content="Ultimate guide to Present, Past, and Future tenses with formulas, rules, and examples in Tamil, Malayalam, and Telugu.">
+  <meta name="keywords" content="12 tenses, english tenses formula, present tense, past tense, future tense, spoken english tenses">
+  <meta property="og:title" content="All 12 English Tenses">
+  <meta property="og:description" content="Master all English tenses with formulas and examples in 4 languages.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/tenses.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --yellow: #FFC312; --hotpink: #FD79A8; --lavender: #A29BFE;
+      --teal: #00B894; --coral: #E17055; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; overflow-x:hidden; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--purple); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--purple); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes floatUp { 0% {transform:translateY(0) rotate(0deg); opacity:0.2;} 50% {opacity:0.4;} 100% {transform:translateY(-110vh) rotate(720deg); opacity:0;} }
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; margin-bottom:10px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    
+    .section-hero { background:linear-gradient(135deg, var(--orange), var(--red)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); animation:heroGlow 4s ease-in-out infinite alternate; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:white; text-shadow:0 2px 20px rgba(0,0,0,0.4); margin-bottom:12px; position:relative; z-index:1; }
+    .section-hero p { color:rgba(255,255,255,0.85); font-size:16px; max-width:600px; margin:0 auto; position:relative; z-index:1; }
+
+    /* Category Tabs */
+    .cat-tabs { display:flex; gap:10px; justify-content:center; margin:30px 0; }
+    .cat-tab { padding:14px 30px; border-radius:30px; border:none; background:var(--bg-card); color:white; cursor:pointer; font-size:16px; font-weight:600; transition:0.3s; }
+    .cat-tab.active.p { background:var(--cyan); box-shadow:0 0 15px rgba(0,201,255,0.4); }
+    .cat-tab.active.pa { background:var(--pink); box-shadow:0 0 15px rgba(255,101,132,0.4); }
+    .cat-tab.active.f { background:var(--purple); box-shadow:0 0 15px rgba(108,99,255,0.4); }
+
+    .tense-list { display:none; animation:pageIn 0.3s ease; }
+    .tense-list.active { display:block; }
+
+    /* Tense Card */
+    .tense-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:40px; box-shadow:var(--shadow); overflow:hidden; }
+    .t-header { padding:24px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    .t-title { font-family:var(--font-heading); font-size:28px; font-weight:700; }
+    .t-usage { font-size:14px; color:var(--text-muted); margin-top:6px; }
+    
+    .t-body { padding:24px; }
+    .t-formula { font-family:monospace; background:rgba(255,255,255,0.03); padding:10px 15px; border-left:4px solid var(--yellow); border-radius:4px; font-size:15px; margin-bottom:20px; color:var(--yellow); }
+    .t-time { font-size:13px; color:var(--cyan); margin-bottom:24px; padding:10px; background:rgba(0,201,255,0.1); border-radius:6px; }
+
+    .ex-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    @media(max-width:768px) { .ex-grid { grid-template-columns:1fr; } }
+    .ex-box { padding:16px; border-radius:12px; background:var(--bg-card2); border:1px solid var(--border); position:relative; }
+    .ex-box.pos { border-top:3px solid var(--green); }
+    .ex-box.neg { border-top:3px solid var(--red); }
+    .ex-box.que { border-top:3px solid var(--orange); }
+    .ex-type { font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:10px; opacity:0.7; }
+    .ex-box.pos .ex-type { color:var(--green); }
+    .ex-box.neg .ex-type { color:var(--red); }
+    .ex-box.que .ex-type { color:var(--orange); }
+    .ex-en { font-size:16px; color:white; font-weight:500; margin-bottom:6px; display:block; }
+    .ex-tr { font-size:13px; color:var(--text-muted); }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item active" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>⏱ All 12 English Tenses</h1>
+    <p>The ultimate guide with formulas, rules, and enormous examples.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cat-tabs">
+      <button class="cat-tab p active" onclick="switchCat('pr', this)">1. Present</button>
+      <button class="cat-tab pa" onclick="switchCat('pa', this)">2. Past</button>
+      <button class="cat-tab f" onclick="switchCat('fu', this)">3. Future</button>
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot" style="text-align:center;padding:10px 0;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto 30px;">Advertisement (728x90)</div>
+    </div>
+
+    <!-- PRESENT TENSES -->
+    <div id="cat-pr" class="tense-list active">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- PAST TENSES -->
+    <div id="cat-pa" class="tense-list">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- FUTURE TENSES -->
+    <div id="cat-fu" class="tense-list">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot ad-bottom" style="text-align:center;padding:10px 0;margin:40px auto;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;">Advertisement (336x280)</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="tenses.html">Tenses</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // System
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderTenses();
+    }
+
+    function switchCat(catId, btn) {
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tense-list').forEach(l => l.classList.remove('active'));
+      document.getElementById('cat-'+catId).classList.add('active');
+    }
+
+    const tensesData = [
+      // PRESENT
+      { cat:"pr", name:"Simple Present Tense",
+        usage:"Used for habits, daily routines, facts, and universal truths.",
+        formula:"Subject + V1 (s/es) + Object",
+        time:"Always, Every day, Usually, Often, Sometimes, Never",
+        clr:"var(--cyan)",
+        ex:[
+          { type:"pos", en:"I play cricket every day.", ta:"நான் தினமும் கிரிக்கெட் விளையாடுகிறேன்.", ml:"ഞാൻ ദിവസവും ക്രിക്കറ്റ് കളിക്കാറുണ്ട്.", te:"నేను ప్రతిరోజు క్రికెట్ ఆడుతాను." },
+          { type:"neg", en:"She does not eat meat.", ta:"அவள் மாமிசம் சாப்பிடுவதில்லை.", ml:"അവൾ മാംസം കഴിക്കാറില്ല.", te:"ఆమె మాంసం తినదు." },
+          { type:"que", en:"Do you like coffee?", ta:"உங்களுக்கு காபி பிடிக்குமா?", ml:"നിങ്ങൾക്ക് കാപ്പി ഇഷ്ടമാണോ?", te:"నీకు కాఫీ ఇష్టమా?" }
+        ]
+      },
+      { cat:"pr", name:"Present Continuous Tense",
+        usage:"Used for actions happening exactly right now at the time of speaking.",
+        formula:"Subject + am/is/are + V(ing) + Object",
+        time:"Now, Right now, At the moment, Currently",
+        clr:"var(--cyan)",
+        ex:[
+          { type:"pos", en:"I am watching a movie right now.", ta:"நான் இப்போது ஒரு திரைப்படம் பார்த்துக் கொண்டிருக்கிறேன்.", ml:"ഞാൻ ഇപ്പോൾ ഒരു സിനിമ കാണുകയാണ്.", te:"నేను ఇప్పుడు సినిమా చూస్తున్నాను." },
+          { type:"neg", en:"He is not listening properly.", ta:"அவன் சரியாக கவனிக்கவில்லை.", ml:"അവൻ ശ്രദ്ധിക്കുന്നില്ല.", te:"అతను సరిగ్గా వినడం లేదు." },
+          { type:"que", en:"Are they coming to the party?", ta:"அவர்கள் விருந்துக்கு வருகிறார்களா?", ml:"അവർ പാർട്ടിക്ക് വരുന്നുണ്ടോ?", te:"వారు పార్టీకి వస్తున్నారా?" }
+        ]
+      },
+      { cat:"pr", name:"Present Perfect Tense",
+        usage:"Used for completed actions that have an effect on the present. Time is not specified.",
+        formula:"Subject + have/has + V3 + Object",
+        time:"Just, Already, Yet, Recently, So far",
+        clr:"var(--cyan)",
+        ex:[
+          { type:"pos", en:"I have finished my dinner.", ta:"நான் என் இரவு உணவை முடித்துவிட்டேன்.", ml:"ഞാൻ എൻ്റെ അത്താഴം കഴിച്ചു കഴിഞ്ഞു.", te:"నేను నా రాత్రి భోజనం పూర్తి చేసాను." },
+          { type:"neg", en:"She has not submitted the report yet.", ta:"அவள் இன்னும் அறிக்கையை சமர்ப்பிக்கவில்லை.", ml:"അവൾ ഇതുവരെ റിപ്പോർട്ട് സമർപ്പിച്ചിട്ടില്ല.", te:"ఆమె ఇంకా రిపోర్టు సమర్పించలేదు." },
+          { type:"que", en:"Have you seen this movie?", ta:"இந்த திரைப்படத்தை நீங்கள் பார்த்திருக்கிறீர்களா?", ml:"നിങ്ങൾ ഈ സിനിമ കണ്ടിട്ടുണ്ടോ?", te:"నువ్వు ఈ సినిమా చూశావా?" }
+        ]
+      },
+      { cat:"pr", name:"Present Perfect Continuous Tense",
+        usage:"Used for actions that started in the past and are still continuing right now.",
+        formula:"Subject + have/has + been + V(ing) + Object + since/for",
+        time:"Since (point of time), For (duration of time), All day",
+        clr:"var(--cyan)",
+        ex:[
+          { type:"pos", en:"It has been raining since morning.", ta:"காலை முதல் மழை பெய்து கொண்டே இருக்கிறது.", ml:"രാവിലെ മുതൽ മഴ പെയ്യുകയാണ്.", te:"ఉదయం నుండి వర్షం పడుతూనే ఉంది." },
+          { type:"neg", en:"They have not been talking for two days.", ta:"அவர்கள் இரண்டு நாட்களாக பேசிக் கொள்ளவில்லை.", ml:"അവർ രണ്ടു ദിവസമായി സംസാരിക്കുന്നില്ല.", te:"వారు రెండు రోజుల నుండి మాట్లాడుకోవడం లేదు." },
+          { type:"que", en:"How long have you been waiting here?", ta:"நீங்கள் எவ்வளவு நேரமாக இங்கே காத்துக்கொண்டிருக்கிறீர்கள்?", ml:"നിങ്ങൾ എത്ര കാലമായി ഇവിടെ കാത്തിരിക്കുന്നു?", te:"నువ్వు ఇక్కడ ఎంతసేపుగా ఎదురుచూస్తున్నావు?" }
+        ]
+      },
+      // PAST
+      { cat:"pa", name:"Simple Past Tense",
+        usage:"Used for completely finished actions at a specific time in the past.",
+        formula:"Subject + V2 + Object",
+        time:"Yesterday, Last night, Two days ago, In 2010",
+        clr:"var(--pink)",
+        ex:[
+          { type:"pos", en:"I bought a new car yesterday.", ta:"நான் நேற்று ஒரு புதிய கார் வாங்கினேன்.", ml:"ഞാൻ ഇന്നലെ പുതിയൊരു കാർ വാങ്ങി.", te:"నేను నిన్న కొత్త కారు కొన్నాను." },
+          { type:"neg", en:"We did not go to school.", ta:"நாங்கள் பள்ளிக்கு செல்லவில்லை.", ml:"ഞങ്ങൾ സ്കൂളിൽ പോയില്ല.", te:"మేము స్కూలుకు వెళ్ళలేదు." },
+          { type:"que", en:"Did you call him last night?", ta:"நேற்று இரவு அவனுக்கு போன் செய்தாயா?", ml:"ഇന്നലെ രാത്രി നീ അവനെ വിളിച്ചോ?", te:"నిన్న రాత్రి అతనికి కాల్ చేశావా?" }
+        ]
+      },
+      { cat:"pa", name:"Past Continuous Tense",
+        usage:"Used to describe a continuous action that was happening at a specific past time.",
+        formula:"Subject + was/were + V(ing) + Object",
+        time:"At that time, When I arrived, While I was sleeping",
+        clr:"var(--pink)",
+        ex:[
+          { type:"pos", en:"She was sleeping when I called.", ta:"நான் அழைத்தபோது அவள் தூங்கிக் கொண்டிருந்தாள்.", ml:"ഞാൻ വിളിച്ചപ്പോൾ അവൾ ഉറങ്ങുകയായിരുന്നു.", te:"నేను కాల్ చేసినప్పుడు ఆమె నిద్రపోతోంది." },
+          { type:"neg", en:"They were not studying yesterday evening.", ta:"அவர்கள் நேற்று மாலை படித்துக் கொண்டிருக்கவில்லை.", ml:"അവർ ഇന്നലെ വൈകുന്നേരം പഠിക്കുകയായിരുന്നില്ല.", te:"వాళ్ళు నిన్న సాయంత్రం చదువుకోవడం లేదు." },
+          { type:"que", en:"What were you doing at 9 PM?", ta:"இரவு 9 மணிக்கு நீங்கள் என்ன செய்து கொண்டிருந்தீர்கள்?", ml:"രാത്രി 9 മണിക്ക് നിങ്ങൾ എന്തെടുക്കുകയായിരുന്നു?", te:"రాత్రి 9 గంటలకు నువ్వు ఏంచేస్తున్నావు?" }
+        ]
+      },
+      { cat:"pa", name:"Past Perfect Tense",
+        usage:"Used when two actions happened in the past. Shows which action happened FIRST.",
+        formula:"Subject + had + V3 + Object",
+        time:"Before, After, By the time, Already",
+        clr:"var(--pink)",
+        ex:[
+          { type:"pos", en:"The train had left before I reached the station.", ta:"நான் நிலையத்தை அடைவதற்கு முன்பே ரயில் சென்றுவிட்டது.", ml:"ഞാൻ റെയിൽവേസ്റ്റേഷനിൽ എത്തുന്നതിനു മുൻപേ ട്രെയിൻ പോയിരുന്നു.", te:"నేను స్టేషన్ కి చేరుకునేలోపు ట్రైన్ వెళ్లిపోయింది." },
+          { type:"neg", en:"He had not prepared well for the exam.", ta:"அவன் தேர்வுக்கு நன்றாக தயாராகவில்லை.", ml:"അവൻ പരീക്ഷയ്ക്ക് നന്നായി തയാറെടുത്തിരുന്നില്ല.", te:"అతను పరీక్షకి సరిగ్గా అవ్వలేదు." },
+          { type:"que", en:"Had she informed you earlier?", ta:"அவள் உன்னிடம் முன்பே தெரிவித்திருந்தாளா?", ml:"അവളോട് മുൻകൂട്ടി പറഞ്ഞിരുന്നോ?", te:"ఆమె ముందుగా నీకు చెప్పిందా?" }
+        ]
+      },
+      { cat:"pa", name:"Past Perfect Continuous Tense",
+        usage:"Shows that an action was continuing in the past up until another past action.",
+        formula:"Subject + had been + V(ing)",
+        time:"For hours, Since morning (in the past context)",
+        clr:"var(--pink)",
+        ex:[
+          { type:"pos", en:"He had been working there for five years before he resigned.", ta:"அவன் ராஜினாமா செய்வதற்கு முன்பு அங்கு ஐந்து வருடங்களாக வேலை பார்த்து வந்தான்.", ml:"അവൻ രാജി വയ്ക്കുന്നതിന് മുൻപായി അവിടെ അഞ്ചു വർഷം ജോലി ചെയ്തിരുന്നു.", te:"రాజీనామా చేయడానికి ముందు అతను అక్కడ ఐదేళ్ళగా పనిచేస్తున్నాడు." },
+          { type:"neg", en:"They had not been talking for long when he came.", ta:"அவன் வந்தபோது அவர்கள் வெகுநேரமாக பேசிக்கொண்டிருக்கவில்லை.", ml:"അവൻ എത്തുമ്പോൾ അവർ അധികനേരമായി സംസാരിക്കുകയായിരുന്നില്ല.", te:"అతను వచ్చినప్పుడు వాళ్ళు ఎక్కువసేపు మాట్లాడుకోవడం లేదు." },
+          { type:"que", en:"Had you been waiting long before the bus arrived?", ta:"பேருந்து வருவதற்கு முன்பு நீங்கள் நீண்ட நேரமாக காத்திருந்தீர்களா?", ml:"ബസ് വരുന്നതിന് മുൻപ് നിങ്ങൾ വളരെ നേരമായി കാത്തിരിക്കുകയായിരുന്നോ?", te:"బస్సు వచ్చేముందు నువ్వు చాలాసేపుగా ఎదురుచూస్తున్నావా?" }
+        ]
+      },
+      // FUTURE
+      { cat:"fu", name:"Simple Future Tense",
+        usage:"Used for future facts, predictions, and sudden decisions.",
+        formula:"Subject + will + V1 + Object",
+        time:"Tomorrow, Next week, Next year, Soon",
+        clr:"var(--purple)",
+        ex:[
+          { type:"pos", en:"I will meet him tomorrow.", ta:"நான் அவனை நாளை சந்திப்பேன்.", ml:"ഞാൻ അവനെ നാളെ കാണും.", te:"నేను రేపు అతన్ని కలుస్తాను." },
+          { type:"neg", en:"She will not attend the meeting.", ta:"அவள் கூட்டத்தில் கலந்து கொள்ள மாட்டாள்.", ml:"അവൾ മീറ്റിംഗിൽ പങ്കെടുക്കില്ല.", te:"ఆమె మీటింగ్ కి హాజరవదు." },
+          { type:"que", en:"Will you help me with this box?", ta:"இந்த பெட்டியை தூக்க எனக்கு உதவுவீர்களா?", ml:"ഈ പെട്ടിയെടുക്കാൻ എന്നെ സഹായിക്കാമോ?", te:"ఈ పెట్టెను ఎత్తడానికి నాకు సహాయం చేస్తావా?" }
+        ]
+      },
+      { cat:"fu", name:"Future Continuous Tense",
+        usage:"Used to describe a continuous action happening completely in the future.",
+        formula:"Subject + will be + V(ing) + Object",
+        time:"At this time tomorrow, Next Monday evening",
+        clr:"var(--purple)",
+        ex:[
+          { type:"pos", en:"I will be travelling to Mumbai tomorrow.", ta:"நான் நாளை மும்பைக்கு பயணம் செய்து கொண்டிருப்பேன்.", ml:"ഞാൻ നാളെ മുംബൈയിലേക്ക് യാത്ര ചെയ്യുകയായിരിക്കും.", te:"నేను రేపు ముంబైకి ప్రయాణిస్తూ ఉంటాను." },
+          { type:"neg", en:"They will not be playing at 5 PM.", ta:"அவர்கள் மாலை 5 மணிக்கு விளையாடிக் கொண்டிருக்க மாட்டார்கள்.", ml:"വൈകുന്നേരം 5 മണിക്ക് അവർ കളിക്കുകയായിരിക്കില്ല.", te:"సాయంత్రం 5 గంటలకు వారు ఆడుకుంటూ ఉండరు." },
+          { type:"que", en:"Will she be sleeping when I arrive?", ta:"நான் வரும்போது அவள் தூங்கிக் கொண்டிருப்பாளா?", ml:"ഞാൻ എത്തുമ്പോൾ അവൾ ഉറങ്ങുകയായിരിക്കുമോ?", te:"నేను వచ్చేసరికి ఆమె నిద్రపోతూ ఉంటుందా?" }
+        ]
+      },
+      { cat:"fu", name:"Future Perfect Tense",
+        usage:"Used to show that an action will already be completely finished BEFORE a specified future time.",
+        formula:"Subject + will have + V3 + Object",
+        time:"By next month, By 10 PM, By the end of this year",
+        clr:"var(--purple)",
+        ex:[
+          { type:"pos", en:"I will have finished the project before Friday.", ta:"வெள்ளிக்கிழமைக்கு முன்பாக நான் திட்டத்தை முடித்திருப்பேன்.", ml:"വെള്ളിയാഴ്ചക്ക് മുൻപായി ഞാൻ എൻ്റെ പ്രോജക്ട് ചെയ്ത് തീർത്തിട്ടുണ്ടാകും.", te:"శుక్రవారం నాటికి నేను ఆ ప్రాజెక్ట్ పూర్తి చేసేస్తాను." },
+          { type:"neg", en:"He will not have reached home by 8 PM.", ta:"அவன் இரவு 8 மணிக்குள் வீட்டை அடைந்திருக்க மாட்டான்.", ml:"രാത്രി 8 മണി ആകുമ്പോഴേക്കും അവൻ വീട്ടിൽ എത്തിയിട്ടുണ്ടാവില്ല.", te:"రాత్రి 8 లోపు అతను ఇల్లు చేరుకోడు." },
+          { type:"que", en:"Will you have completed the course by next year?", ta:"அடுத்த வருடத்திற்குள் நீங்கள் இந்த படிப்பை முடித்திருப்பீர்களா?", ml:"അടുത്ത വർഷത്തോടെ നിങ്ങൾ കോഴ്സ് പൂർത്തിയാക്കിയിരിക്കുമോ?", te:"వచ్చే ఏడాదికల్లా నువ్వు కోర్సు పూర్తిచేసేస్తావా?" }
+        ]
+      },
+      { cat:"fu", name:"Future Perfect Continuous Tense",
+        usage:"Used for an ongoing future action up to a certain point in the future. Heavily focuses on duration.",
+        formula:"Subject + will have been + V(ing)",
+        time:"By next year, for 5 years",
+        clr:"var(--purple)",
+        ex:[
+          { type:"pos", en:"By next month, I will have been working here for three years.", ta:"அடுத்த மாதத்துடன், நான் இங்கே மூன்று வருடங்களாக வேலை செய்து கொண்டிருப்பேன்.", ml:"അടുത്ത മാസം ഞാനിവിടെ ജോലി ചെയ്യാൻ തുടങ്ങിയിട്ട് 3 വർഷമാകും.", te:"వచ్చే నెలకి నేను ఇక్కడ మూడేళ్ళుగా పనిచేస్తూ ఉంటాను." },
+          { type:"neg", en:"She will not have been studying for long when we reach.", ta:"நாம் சென்றடையும்போது அவள் நீண்ட நேரமாக படித்திருக்க மாட்டாள்.", ml:"നാം എത്തുമ്പോഴേക്കും അവൾ ഏറെ നേരമായി പഠിക്കുകയായിരിക്കില്ല.", te:"మనం వెళ్ళేసరికి ఆమె చాలాసేపుగా చదువుతూ ఉండదు." },
+          { type:"que", en:"How long will you have been living here by 2026?", ta:"2026 ஆம் ஆண்டுடன் நீங்கள் எவ்வளவு காலமாக இங்கே வசித்து வருவீர்கள்?", ml:"2026 ആകുമ്പോഴേക്കും നിങ്ങൾ എത്ര വർഷമായി ഇവിടെ ജീവിക്കുന്നുണ്ടാകും?", te:"2026 నాటికి నువ్వు ఇక్కడ ఎంతకాలంగా నివసిస్తూ ఉంటావు?" }
+        ]
+      }
+    ];
+
+    function renderTenses() {
+      let pr = '', pa = '', fu = '';
+      
+      tensesData.forEach(t => {
+        let exHtml = '';
+        t.ex.forEach(x => {
+          let trans = '';
+          if(window.LANG === 'ta') trans = x.ta;
+          if(window.LANG === 'ml') trans = x.ml;
+          if(window.LANG === 'te') trans = x.te;
+          
+          let tLabel = x.type === 'pos' ? 'Positive (+)' : x.type === 'neg' ? 'Negative (-)' : 'Question (?)';
+          
+          exHtml += `
+            <div class="ex-box ${x.type}">
+              <span class="ex-type">${tLabel}</span>
+              <span class="ex-en">${x.en}</span>
+              <span class="ex-tr" style="display:${trans ? 'block':'none'}">${trans}</span>
+            </div>
+          `;
+        });
+
+        let card = `
+        <div class="tense-card">
+          <div class="t-header" style="border-top:5px solid ${t.clr}">
+            <div>
+              <div class="t-title">${t.name}</div>
+              <div class="t-usage">🗓 Usage: ${t.usage}</div>
+            </div>
+          </div>
+          <div class="t-body">
+            <div class="t-formula">Formula: ${t.formula}</div>
+            <div class="t-time">Time Identifiers: ${t.time}</div>
+            <div class="ex-grid">
+              ${exHtml}
+            </div>
+          </div>
+        </div>`;
+
+        if(t.cat === 'pr') pr += card;
+        if(t.cat === 'pa') pa += card;
+        if(t.cat === 'fu') fu += card;
+      });
+
+      document.getElementById('cat-pr').innerHTML = pr;
+      document.getElementById('cat-pa').innerHTML = pa;
+      document.getElementById('cat-fu').innerHTML = fu;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Particles
+      const bgColors = ['#6C63FF','#FF6584','#43E97B','#FA8231','#00C9FF','#FFC312'];
+      for(let i=0; i<10; i++) {
+        const p = document.createElement('div');
+        p.style.cssText = `position:fixed;width:${3+Math.random()*5}px;height:${3+Math.random()*5}px;background:${bgColors[Math.floor(Math.random()*bgColors.length)]};border-radius:50%;left:${Math.random()*100}vw;top:${100+Math.random()*20}vh;opacity:${0.15+Math.random()*0.25};animation:floatUp ${8+Math.random()*12}s linear ${Math.random()*8}s infinite;pointer-events:none;z-index:0;`;
+        document.body.appendChild(p);
+      }
+      renderTenses();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

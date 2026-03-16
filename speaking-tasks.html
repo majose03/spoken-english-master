@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical Speaking Tasks — SpokenMaster</title>
+  <meta name="description" content="Practice speaking English with our interactive Web Speech API recorder. 8 daily topics with script hints.">
+  <meta name="keywords" content="english speaking tasks, speaking practice online, english voice recorder">
+  <meta property="og:title" content="Practical Speaking Tasks">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/speaking-tasks.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--blue); color:#fff; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--blue); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .section-hero { background:linear-gradient(135deg, var(--cyan), var(--blue)); padding:40px 24px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:#111; margin-bottom:12px; }
+    .section-hero p { color:rgba(0,0,0,0.8); font-size:16px; max-width:600px; margin:0 auto; font-weight:500;}
+
+    .container { max-width:1200px; margin:40px auto; padding:0 24px; display:flex; gap:30px; }
+    @media(max-width:900px) { .container { flex-direction:column; } }
+
+    .task-list { flex:0 0 320px; display:flex; flex-direction:column; gap:15px; }
+    .t-card { background:var(--bg-card); border:1px solid var(--border); padding:20px; border-radius:12px; cursor:pointer; transition:0.3s; }
+    .t-card:hover { border-color:var(--cyan); transform:translateY(-3px); box-shadow:var(--shadow); }
+    .t-card.active { border-color:var(--cyan); background:var(--bg-card2); }
+    .t-title { font-family:var(--font-heading); font-size:18px; font-weight:700; color:white; margin-bottom:6px; display:flex; justify-content:space-between; }
+    .t-desc { font-size:13px; color:var(--text-muted); line-height:1.4; }
+
+    .task-workspace { flex:1; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:30px; }
+    
+    .w-header { margin-bottom:30px; }
+    .w-title { font-family:var(--font-heading); font-size:28px; color:var(--cyan); margin-bottom:10px; }
+    .w-prompt { font-size:16px; color:white; line-height:1.6; padding:15px; background:rgba(255,255,255,0.03); border-radius:8px; border-left:4px solid var(--cyan); }
+    
+    .hints { margin-bottom:30px; }
+    .hint-title { font-size:14px; color:var(--yellow); font-weight:600; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px; }
+    .hint-box { background:rgba(0,0,0,0.2); padding:20px; border-radius:8px; font-size:14px; color:var(--text-muted); line-height:1.6; }
+
+    .recorder-area { text-align:center; padding:30px; background:rgba(0,201,255,0.05); border:1px solid rgba(0,201,255,0.2); border-radius:12px; }
+    
+    .mic-btn { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg, var(--pink), var(--red)); border:none; color:white; font-size:32px; cursor:pointer; box-shadow:0 10px 20px rgba(255,71,87,0.3); transition:0.3s; margin-bottom:20px; }
+    .mic-btn:hover { transform:scale(1.05); }
+    .mic-btn.recording { animation:pulseMic 1.5s infinite; background:linear-gradient(135deg, var(--green), var(--teal)); box-shadow:0 10px 20px rgba(67,233,123,0.3); }
+
+    @keyframes pulseMic {
+      0% { box-shadow:0 0 0 0 rgba(67,233,123,0.7); }
+      70% { box-shadow:0 0 0 20px rgba(67,233,123,0); }
+      100% { box-shadow:0 0 0 0 rgba(67,233,123,0); }
+    }
+
+    .mic-status { font-size:14px; color:var(--text-muted); font-weight:600; margin-bottom:20px; text-transform:uppercase; }
+    
+    .transcript-box { min-height:100px; background:#000; border:1px solid var(--border); border-radius:8px; padding:15px; text-align:left; font-size:15px; color:white; line-height:1.6; }
+
+    .notice { margin-top:15px; font-size:12px; color:var(--orange); text-align:center; }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item active" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>🎤 Practical Speaking Lab</h1>
+    <p>Read the prompt, look at the hints, and record your voice for 1 minute to practice fluency.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" style="color:#000;border-color:#111" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil Hints</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam Hints</button>
+      <button class="lang-btn" style="color:#000;border-color:#111" onclick="setGlobalLang('te', this)">🇮🇳 Telugu Hints</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="task-list" id="taskList">
+      <!-- Generated via JS -->
+    </div>
+
+    <div class="task-workspace">
+      <div class="w-header">
+        <div class="w-title" id="tTitle">Task 1: Introduce Yourself</div>
+        <div class="w-prompt" id="tPrompt">Talk about yourself, your family, your job, and your hobbies for at least 1 minute.</div>
+      </div>
+      
+      <div class="hints">
+        <div class="hint-title">✏️ Helpful Phrases:</div>
+        <div class="hint-box" id="tHints"></div>
+      </div>
+
+      <div class="recorder-area">
+        <button class="mic-btn" id="micBtn" onclick="toggleRecording()">🎙️</button>
+        <div class="mic-status" id="micStatus">Click to Start Speaking</div>
+        
+        <div class="transcript-box" id="transcript">
+          <span style="color:#666; font-style:italic;">Your speech will appear here... Make sure you allow microphone access if prompted by your browser.</span>
+        </div>
+        <div class="notice">Note: Voice recognition works best in Chrome/Edge.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align:center; margin-bottom:40px;">
+    <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="speaking-tasks.html">Speaking Task</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    const taskData = [
+      {
+        id: 1, title: "Introduce Yourself", icon: "👋",
+        prompt: "Talk about yourself, your family, your job, and your hobbies for at least 30 seconds.",
+        en: "• My name is... and I am from...<br>• I live with my...<br>• I work as a... / I am studying...<br>• In my free time, I like to...",
+        ta: "• என் பெயர்... மற்றும் நான்... ஊரை சேர்ந்தவன்.<br>• நான் என்... உடன் வாழ்கிறேன்.<br>• நான் ... ஆக வேலை செய்கிறேன் / நான் ... படிக்கிறேன்.<br>• ஓய்வு நேரத்தில் நான்... செய்ய விரும்புகிறேன்.",
+        ml: "• എൻ്റെ പേര്... ഞാൻ വരുന്നത്...<br>• ഞാൻ താമസിക്കുന്നത് എൻ്റെ... നോടൊപ്പമാണ്.<br>• ഞാൻ... ആയി ജോലി ചെയ്യുന്നു / ഞാൻ... പഠിക്കുന്നു.<br>• എൻ്റെ ഒഴിവുസമയങ്ങളിൽ ഞാൻ... ചെയ്യാൻ ഇഷ്ടപ്പെടുന്നു.",
+        te: "• నా పేరు... మరియు నేను... నుండి వచ్చాను.<br>• నేను నా... తో నివసిస్తున్నాను.<br>• నేను... గా పని చేస్తున్నాను / నేను... చదువుతున్నాను.<br>• నా ఖాళీ సమయంలో, నేను... చేయడం ఇష్టం."
+      },
+      {
+        id: 2, title: "Your Daily Routine", icon: "⏰",
+        prompt: "Describe what you usually do from the time you wake up until you go to bed.",
+        en: "• I normally wake up at...<br>• After that, I have breakfast and...<br>• I start work/school at...<br>• Finally, I go to bed around...",
+        ta: "• நான் பொதுவாக ... மணிக்கு எழுந்திருப்பேன்.<br>• அதன் பிறகு நான் காலை உணவு சாப்பிட்டு...<br>• நான் வேலை/பள்ளியை ... மணிக்குத் தொடங்குகிறேன்.<br>• இறுதியாக நான் ... மணியளவில் தூங்கச் செல்கிறேன்.",
+        ml: "• ഞാൻ സാധാരണയായി... മണിക്ക് എഴുന്നേൽക്കും.<br>• അതിനുശേഷം ഞാൻ പ്രഭാതഭക്ഷണം കഴിച്ച്...<br>• എൻ്റെ ജോലി/ക്ലാസ്സ്... മണിക്ക് തുടങ്ങുന്നു.<br>• അവസാനം ഞാൻ... മണിയോടെ ഉറങ്ങാൻ പോകും.",
+        te: "• నేను సాధారణంగా... నిద్రలేస్తాను.<br>• ఆ తర్వాత అల్పాహారం తీసుకుని...<br>• నేను పని/చదువు... మొదలుపెడతాను.<br>• చివరగా, నేను... పడుకుంటాను."
+      },
+      {
+        id: 3, title: "Favorite Movie", icon: "🎬",
+        prompt: "Talk about your favorite movie. Why do you like it? Who are the actors?",
+        en: "• My favorite movie is...<br>• It is about...<br>• The main actors are...<br>• I love this movie because...",
+        ta: "• எனக்கு பிடித்த படம்...<br>• இது... பற்றியது.<br>• முக்கிய நடிகர்கள்...<br>• இந்த படம் எனக்கு பிடிக்கும் காரணம்...",
+        ml: "• എനിക്കേറ്റവും പ്രിയപ്പെട്ട സിനിമ...<br>• ഇതിൻ്റെ കഥ...<br>• പ്രധാന അഭിനേതാക്കൾ...<br>• എനിക്കീ സിനിമ ഇഷ്ടപ്പെടാൻ കാരണം...",
+        te: "• నాకు ఇష్టమైన సినిమా...<br>• ఇది... గురించి.<br>• ముఖ్య నటులు...<br>• నాకు ఈ సినిమా ఇష్టం ఎందుకంటే..."
+      },
+      {
+        id: 4, title: "A Memorable Trip", icon: "✈️",
+        prompt: "Describe a trip you took in the past. Where did you go and who was with you?",
+        en: "• Last year, I went to...<br>• I went there with my...<br>• We stayed at...<br>• The best part of the trip was...",
+        ta: "• கடந்த ஆண்டு, நான்... சென்றேன்.<br>• நான் என்... உடன் அங்கே சென்றேன்.<br>• நாங்கள்... தங்கினோம்.<br>• பயணத்தின் சிறந்த பகுதி...",
+        ml: "• കഴിഞ്ഞ വർഷം ഞാൻ... പോയിരുന്നു.<br>• ഞാൻ എൻ്റെ... നോടൊപ്പമാണ് പോയത്.<br>• ഞങ്ങൾ... താമസിച്ചു.<br>• ഈ യാത്രയിലെ ഏറ്റവും നല്ല അനുഭവം...",
+        te: "• గత సంవత్సరం, నేను... వెళ్ళాను.<br>• నేను నా... తో అక్కడికి వెళ్ళాను.<br>• మేము... బస చేశాము.<br>• ప్రయాణంలో ఉత్తమ భాగం..."
+      },
+      {
+        id: 5, title: "Your Hometown", icon: "🏙️",
+        prompt: "Talk about the place you grew up in. What is famous there?",
+        en: "• I grew up in a city/village called...<br>• It is located in...<br>• The weather there is usually...<br>• My hometown is famous for...",
+        ta: "• நான்... என்ற ஊரில் வளர்ந்தேன்.<br>• இது... அமைந்துள்ளது.<br>• அங்கு வானிலை பொதுவாக...<br>• என் ஊர்... க்கு பிரபலமானது.",
+        ml: "• ഞാൻ വളർന്നത്... എന്ന ഗ്രാമത്തിൽ/നഗരത്തിലാണ്.<br>• ഇത് സ്ഥിതി ചെയ്യുന്നത്...<br>• അവിടുത്തെ കാലാവസ്ഥ സാധാരണയായി...<br>• എൻ്റെ നാട്... ത്തിന് പ്രസിദ്ധമാണ്.",
+        te: "• నేను... అనే ఊరిలో పెరిగాను.<br>• ఇది... కలో ఉంది.<br>• అక్కడ వాతావరణం సాధారణంగా...<br>• నా ఊరు... కు ప్రసిద్ధి."
+      },
+      {
+        id: 6, title: "Future Goals", icon: "🎯",
+        prompt: "What do you want to achieve in the next 5 years?",
+        en: "• In the next 5 years, I plan to...<br>• I also want to improve my...<br>• My biggest dream is to...<br>• To achieve this, I am currently...",
+        ta: "• அடுத்த 5 ஆண்டுகளில், நான்... செய்ய திட்டமிட்டுள்ளேன்.<br>• நான் என்... மேம்படுத்தவும் விரும்புகிறேன்.<br>• என் மிகப்பெரிய கனவு...<br>• இதை அடைய, நான் தற்போது...",
+        ml: "• അടുത്ത 5 വർഷത്തിനുള്ളിൽ ഞാൻ... ചെയ്യാൻ ഉദ്ദേശിക്കുന്നു.<br>• എനിക്കെൻ്റെ... മെച്ചപ്പെടുത്താനും ആഗ്രഹമുണ്ട്.<br>• എൻ്റെ ഏറ്റവും വലിയ സ്വപ്നം...<br>• ഇതിനായി ഞാൻ ഇപ്പോൾ...",
+        te: "• రాబోయే 5 సంవత్సరాలలో, నేను... చేయాలని ప్లాన్ చేస్తున్నాను.<br>• నేను నా... మెరుగుపరచాలనుకుంటున్నాను.<br>• నా అతిపెద్ద కల...<br>• దీనిని సాధించడానికి, నేను ప్రస్తుతం..."
+      },
+      {
+        id: 7, title: "Best Friend", icon: "🤝",
+        prompt: "Describe your best friend. How long have you known them?",
+        en: "• My best friend's name is...<br>• We have known each other for...<br>• He/She is very... (describe personality)<br>• We usually spend time doing...",
+        ta: "• என் சிறந்த நண்பரின் பெயர்...<br>• நாங்கள் ஒருவரை ஒருவர்... காலமாக அறிவோம்.<br>• அவர்/அவள் மிகவும்... (குணத்தை விவரி)<br>• நாங்கள் பொதுவாக... செய்து நேரம் செலவிடுவோம்.",
+        ml: "• എൻ്റെ ഏറ്റവും നല്ല സുഹൃത്തിൻ്റെ പേര്...<br>• ഞങ്ങൾക്ക് പരസ്പരം... കാലമായിട്ടറിയാം.<br>• അവൻ/അവൾ വളരെ... (സ്വഭാവം വിവരിക്കുക)<br>• ഞങ്ങൾ സാധാരണയായി... ചെയ്തുകൊണ്ടാണ് സമയം ചിലവഴിക്കുന്നത്.",
+        te: "• నా బెస్ట్ ఫ్రెండ్ పేరు...<br>• మేమిద్దరం... నుండి పరిచయం.<br>• అతను/ఆమె చాలా... (గుణాన్ని వివరించు)<br>• మేము సాధారణంగా... బస చేస్తాము."
+      },
+      {
+        id: 8, title: "Favorite Festival", icon: "🎇",
+        prompt: "Talk about a festival or holiday you enjoy the most.",
+        en: "• My favorite festival is...<br>• We celebrate it by...<br>• Special foods we eat include...<br>• I love this festival because...",
+        ta: "• எனக்கு பிடித்த திருவிழா...<br>• நாங்கள் அதை... கொண்டாடுகிறோம்.<br>• நாங்கள் சாப்பிடும் சிறப்பு உணவுகள்...<br>• இந்த திருவிழா எனக்கு பிடிக்கும் காரணம்...",
+        ml: "• എനിക്ക് ഏറ്റവും ഇഷ്ടമുള്ള ഉത്സവം...<br>• ഞങ്ങൾ അത് ആഘോഷിക്കുന്നത്...<br>• ഞങ്ങൾ കഴിക്കുന്ന പ്രത്യേക ഭക്ഷണങ്ങൾ...<br>• എനിക്കീ ഉത്സവം ഇഷ്ടപ്പെടാൻ കാരണം...",
+        te: "• నాకు ఇష్టమైన పండుగ...<br>• మేము దానిని... జరుపుకుంటాము.<br>• మేము తినే ప్రత్యేక వంటకాలు...<br>• నాకు ఈ పండుగ ఇష్టం ఎందుకంటే..."
+      }
+    ];
+
+    let currentT = taskData[0];
+    let isRecording = false;
+    let recognition;
+    let finalTranscript = '';
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => {b.classList.remove('active'); b.style.borderColor='#111';});
+      if(btn) { btn.classList.add('active'); btn.style.borderColor='white'; }
+      updateWorkspace();
+    }
+
+    function buildList() {
+      let h = '';
+      taskData.forEach((t, i) => {
+        h += `
+        <div class="t-card ${t.id === currentT.id ? 'active':''}" onclick="selectTask(${t.id})">
+          <div class="t-title"><span>Task ${i+1}: ${t.title}</span> <span>${t.icon}</span></div>
+          <div class="t-desc">${t.prompt.substring(0, 50)}...</div>
+        </div>`;
+      });
+      document.getElementById('taskList').innerHTML = h;
+    }
+
+    function selectTask(id) {
+      if(isRecording) toggleRecording();
+      currentT = taskData.find(t => t.id === id);
+      buildList();
+      updateWorkspace();
+      document.getElementById('transcript').innerHTML = '<span style="color:#666; font-style:italic;">Your speech will appear here...</span>';
+    }
+
+    function updateWorkspace() {
+      document.getElementById('tTitle').innerText = "Task " + currentT.id + ": " + currentT.title;
+      document.getElementById('tPrompt').innerText = currentT.prompt;
+      
+      let langKey = window.LANG;
+      if(!currentT[langKey]) langKey = 'en'; // fallback
+      document.getElementById('tHints').innerHTML = currentT[langKey];
+    }
+
+    // Web Speech API Logic
+    function setupRecognition() {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        alert("Sorry, your browser doesn't support speech recognition. Please try Google Chrome or MS Edge.");
+        return;
+      }
+      
+      const SpeechR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechR();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onstart = function() {
+        isRecording = true;
+        document.getElementById('micBtn').classList.add('recording');
+        document.getElementById('micStatus').innerText = "Recording... Speak Now (English)";
+        finalTranscript = '';
+        document.getElementById('transcript').innerHTML = '';
+      };
+
+      recognition.onresult = function(event) {
+        let interimTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript + '. ';
+          } else {
+            interimTranscript += event.results[i][0].transcript;
+          }
+        }
+        document.getElementById('transcript').innerHTML = 
+          finalTranscript + '<i style="color:var(--cyan)">' + interimTranscript + '</i>';
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Speech recognition error", event.error);
+        if(event.error === 'not-allowed') {
+          alert('Microphone access denied. Please allow microphone permissions.');
+          toggleRecording();
+        }
+      };
+
+      recognition.onend = function() {
+        if(isRecording) {
+          // Restart if stopped by lack of sound automatically, but user didn't click stop
+          recognition.start();
+        }
+      };
+    }
+
+    function toggleRecording() {
+      if (!recognition) setupRecognition();
+      if (!recognition) return;
+
+      if (isRecording) {
+        isRecording = false;
+        recognition.stop();
+        document.getElementById('micBtn').classList.remove('recording');
+        document.getElementById('micStatus').innerText = "Click to Start Speaking";
+      } else {
+        try {
+          recognition.start();
+        } catch(e) { /* already started */ }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildList();
+      updateWorkspace();
+    });
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

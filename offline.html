@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline — SpokenMaster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --border: rgba(255,255,255,0.07);
+      --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --orange: #FA8231;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; position:relative; overflow:hidden;}
+    a { text-decoration:none; color:inherit; }
+
+    .logo { font-family:var(--font-heading); font-size:24px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; position:absolute; top:24px; left:24px;}
+    
+    .icon { font-size: 80px; margin-bottom: 20px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+    h1 { font-family:var(--font-heading); font-size:42px; margin-bottom:12px; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+    p { font-size:16px; color:rgba(255,255,255,0.8); max-width:500px; margin:0 auto 30px; line-height:1.6;}
+
+    .btn { background:linear-gradient(135deg, var(--purple), var(--pink)); color:white; padding:14px 30px; border-radius:30px; font-weight:600; text-transform:uppercase; letter-spacing:1px; display:inline-block; transition:0.3s; box-shadow:0 8px 32px rgba(108,99,255,0.4);}
+    .btn:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(108,99,255,0.6); }
+
+    .cached-links { margin-top: 50px; text-align: left; max-width: 600px; width:100%;}
+    .cached-links h3 { font-size: 14px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 15px; text-align:center; letter-spacing:1px;}
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+    .link-item { background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:12px; border-radius:12px; font-size:14px; font-weight:600; text-align:center; transition:0.3s;}
+    .link-item:hover { background:rgba(255,255,255,0.1); border-color:var(--purple); transform:translateY(-2px);}
+
+    .tip-box { margin-top: 40px; background:rgba(250,130,49,0.1); border:1px solid var(--orange); padding:15px 20px; border-radius:12px; font-size:13px; color:var(--text); max-width:600px;}
+
+    .particle { position:absolute; border-radius:50%; pointer-events:none; }
+  </style>
+</head>
+<body>
+
+  <div class="logo">📚 SpokenMaster</div>
+
+  <div class="icon">📵</div>
+  <h1>You are offline</h1>
+  <p>Don't worry! SpokenMaster works offline once loaded. Open any page you have visited before — it will load instantly.</p>
+  
+  <a href="index.html" class="btn">Go to Home</a>
+
+  <div class="cached-links">
+    <h3>Previously Visited Pages</h3>
+    <div class="links-grid">
+      <a href="index.html" class="link-item">🏠 Home</a>
+      <a href="tenses.html" class="link-item">⏱ Tenses</a>
+      <a href="quiz.html" class="link-item">🧠 Quiz</a>
+      <a href="vocabulary.html" class="link-item">📚 Vocabulary</a>
+      <a href="daily-tasks.html" class="link-item">📅 Daily Tasks</a>
+      <a href="conversations.html" class="link-item">🗣 Conversations</a>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> To use all pages offline, visit each page once while you have an active internet connection. The app will automatically save them for offline use!
+  </div>
+
+  <script>
+    const colors = ['#6C63FF','#FF6584','#43E97B','#FA8231','#00C9FF','#FFC312'];
+    for(let i=0; i<15; i++) {
+      let p = document.createElement('div');
+      p.className = 'particle';
+      p.style.width = (4 + Math.random()*6) + 'px';
+      p.style.height = p.style.width;
+      p.style.background = colors[Math.floor(Math.random()*colors.length)];
+      p.style.left = Math.random()*100 + 'vw';
+      p.style.top = Math.random()*100 + 'vh';
+      p.style.opacity = 0.1 + Math.random()*0.2;
+      document.body.appendChild(p);
+    }
+  </script>
+</body>
+</html>

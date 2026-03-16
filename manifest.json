@@ -1,0 +1,54 @@
+{
+  "name": "SpokenMaster — Free Spoken English",
+  "short_name": "SpokenMaster",
+  "description": "Learn Spoken English free — 12 Tenses, Quiz, Vocabulary in Tamil Malayalam Telugu",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#060614",
+  "theme_color": "#6C63FF",
+  "lang": "en",
+  "categories": ["education", "language"],
+  "screenshots": [],
+  "icons": [
+    { "src": "icons/icon-72.png",   "sizes": "72x72",   "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-96.png",   "sizes": "96x96",   "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-128.png",  "sizes": "128x128", "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-144.png",  "sizes": "144x144", "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-152.png",  "sizes": "152x152", "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-192.png",  "sizes": "192x192", "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-384.png",  "sizes": "384x384", "type": "image/png", "purpose": "maskable any" },
+    { "src": "icons/icon-512.png",  "sizes": "512x512", "type": "image/png", "purpose": "maskable any" }
+  ],
+  "shortcuts": [
+    {
+      "name": "12 Tenses",
+      "short_name": "Tenses",
+      "description": "Study all 12 English tenses",
+      "url": "tenses.html",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Live Quiz",
+      "short_name": "Quiz",
+      "description": "Test your English knowledge",
+      "url": "quiz.html",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Daily Tasks",
+      "short_name": "Tasks",
+      "description": "Your daily English practice checklist",
+      "url": "daily-tasks.html",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Vocabulary",
+      "short_name": "Vocab",
+      "description": "Tamil Malayalam Telugu vocabulary",
+      "url": "vocabulary.html",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Modal Verbs — SpokenMaster</title>
+  <meta name="description" content="Learn English Modal Verbs (Can, Could, Should, Must) easily with positive, negative, and question examples translated to Tamil, Malayalam, and Telugu.">
+  <meta name="keywords" content="english modal verbs, can could should must, spoken english grammar, english grammar translated">
+  <meta property="og:title" content="Modal Verbs Guide — SpokenMaster">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spokenmaster.com/modal-verbs.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060614; --bg-card: #0D0D2B; --bg-card2: #111133;
+      --border: rgba(255,255,255,0.07); --text: #E8E8F0; --text-muted: #8888AA;
+      --purple: #6C63FF; --pink: #FF6584; --green: #43E97B; --orange: #FA8231;
+      --cyan: #00C9FF; --blue: #74B9FF; --mint: #55EFC4; --red: #FF4757; --yellow: #FFC312;
+      --font-body: 'Poppins', sans-serif; --font-heading: 'Playfair Display', serif;
+      --radius: 14px; --shadow: 0 8px 32px rgba(0,0,0,0.45);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg-dark); color:var(--text); font-family:var(--font-body); min-height:100vh; animation: pageIn 0.4s ease; }
+    ::selection { background:var(--cyan); color:#000; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0a0a1a; }
+    ::-webkit-scrollbar-thumb { background:var(--cyan); border-radius:3px; }
+    a { text-decoration:none; color:inherit; }
+
+    @keyframes pageIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:none;} }
+
+    nav { position:sticky; top:0; background:rgba(6,6,20,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); z-index:1000; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-family:var(--font-heading); font-size:22px; font-weight:700; background:linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hamburger { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer;}
+    .nav-links { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+    .nav-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-item { padding:9px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; border:none; cursor:pointer; transition:0.2s; white-space:nowrap; }
+    .nav-item:hover, .nav-item.active { box-shadow:0 0 0 2px white; transform:scale(1.05); }
+    @media(max-width:992px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(6,6,20,0.98); padding:20px; align-items:flex-start; border-bottom:1px solid var(--border); }
+      .nav-links.active { display:flex; }
+      .nav-row { justify-content:flex-start; }
+    }
+
+    footer { background:#03030F; border-top:2px solid var(--purple); padding:48px 24px 32px; margin-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; max-width:1200px; margin:0 auto; }
+    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr; } }
+    .footer-title { font-family:var(--font-heading); font-size:20px; color:white; margin-bottom:16px; background:linear-gradient(135deg, var(--cyan), var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer-links a { font-size:13px; color:var(--text-muted); transition:0.2s; }
+    .footer-links a:hover { color:white; }
+    .footer-bottom { border-top:1px solid var(--border); margin-top:40px; padding-top:20px; text-align:center; font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+    .lang-switcher { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+    .lang-btn { background:var(--bg-card2); border:1px solid var(--border); color:var(--text); padding:8px 16px; border-radius:20px; cursor:pointer; font-weight:600; font-size:12px; transition:0.3s; }
+    .lang-btn.active { border-color:white; box-shadow:0 0 10px rgba(255,255,255,0.2); }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    
+    .section-hero { background:linear-gradient(135deg, var(--cyan), var(--blue)); padding:48px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+    .section-hero h1 { font-family:var(--font-heading); font-size:42px; color:white; text-shadow:0 2px 20px rgba(0,0,0,0.4); margin-bottom:12px; }
+    .section-hero p { color:rgba(255,255,255,0.85); font-size:16px; max-width:600px; margin:0 auto; }
+
+    .rule-banner { background:rgba(255,195,18,0.1); border-left:4px solid var(--yellow); padding:20px; border-radius:8px; margin:40px 0; }
+    .rule-title { color:var(--yellow); font-weight:700; margin-bottom:10px; font-size:18px; }
+
+    /* Modals Grid */
+    .modals-grid { display:grid; grid-template-columns:1fr; gap:30px; margin:40px 0; }
+    .modal-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+    .m-header { background:rgba(255,255,255,0.03); padding:20px 24px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    @media(max-width:600px) { .m-header { flex-direction:column; align-items:flex-start; gap:10px; } }
+    .m-title { font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--cyan); text-transform:uppercase; }
+    .m-usage { font-size:14px; background:rgba(0,201,255,0.1); color:var(--cyan); padding:6px 14px; border-radius:20px; font-weight:600; border:1px solid rgba(0,201,255,0.3); }
+    
+    .m-body { padding:24px; }
+    .m-desc { color:var(--text-muted); font-size:15px; margin-bottom:20px; line-height:1.6; }
+    
+    .ex-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    @media(max-width:900px) { .ex-grid { grid-template-columns:1fr; } }
+    .ex-box { padding:16px; border-radius:12px; background:var(--bg-card2); border:1px solid var(--border); position:relative; }
+    .ex-box.pos { border-top:3px solid var(--green); }
+    .ex-box.neg { border-top:3px solid var(--red); }
+    .ex-box.que { border-top:3px solid var(--orange); }
+    .ex-type { font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:10px; opacity:0.8; }
+    .ex-box.pos .ex-type { color:var(--green); }
+    .ex-box.neg .ex-type { color:var(--red); }
+    .ex-box.que .ex-type { color:var(--orange); }
+    .ex-en { font-size:16px; color:white; font-weight:500; margin-bottom:6px; display:block; }
+    .ex-tr { font-size:13px; color:var(--text-muted); }
+  </style>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpokenMaster">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#6C63FF">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72.png">
+  <link rel="shortcut icon" href="icons/icon-96.png">
+
+  <style>
+    @media (display-mode: standalone) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+      nav, .navbar, #navbar { padding-top: max(14px, env(safe-area-inset-top)); }
+      .browser-only { display: none !important; }
+      .app-only { display: block !important; }
+      footer, .site-footer { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+    }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollable, [class*="scroll"], .tab-row, .pill-row { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    button, nav, .navbar, .card-header { -webkit-user-select: none; user-select: none; }
+    p, td, .content, article { -webkit-user-select: text; user-select: text; }
+
+    .bottom-nav { display: none; }
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+        background: rgba(13,13,43,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,0.08); padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        justify-content: space-around; align-items: center;
+      }
+      body { padding-bottom: 70px; }
+      .bottom-nav-item {
+        display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 12px;
+        border-radius: 12px; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s ease;
+        min-width: 60px; min-height: 52px; justify-content: center; -webkit-tap-highlight-color: transparent;
+      }
+      .bottom-nav-item:active { transform: scale(0.92); background: rgba(108,99,255,0.15); }
+      .bottom-nav-item.active { color: white; background: rgba(108,99,255,0.2); }
+      .bottom-nav-item.active .bnav-icon { transform: scale(1.15); }
+      .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform 0.2s ease; display: block; }
+      .bnav-label { font-size: 0.6rem; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">📚 SpokenMaster</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <div class="nav-row">
+        <a href="index.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">🏠 Home</a>
+        <a href="alphabet.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔤 Alphabet</a>
+        <a href="greetings.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">👋 Greetings</a>
+        <a href="tenses.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">⏱ 12 Tenses</a>
+        <a href="modal-verbs.html" class="nav-item active" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">💫 Modals</a>
+        <a href="conjunctions.html" class="nav-item" style="background:linear-gradient(135deg,#FFC312,#FFBE57)">🔗 Conjunctions</a>
+        <a href="prepositions.html" class="nav-item" style="background:linear-gradient(135deg,#FD79A8,#FF6584)">📍 Prepositions</a>
+      </div>
+      <div class="nav-row">
+        <a href="vocabulary.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📚 Vocabulary</a>
+        <a href="sentences.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">💬 Sentences</a>
+        <a href="conversations.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🗣 Conversations</a>
+        <a href="speaking-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#74B9FF,#00C9FF)">🎤 Speaking</a>
+        <a href="fix-mistakes.html" class="nav-item" style="background:linear-gradient(135deg,#FF4757,#FF6584)">✅ Fix Mistakes</a>
+        <a href="daily-tasks.html" class="nav-item" style="background:linear-gradient(135deg,#FFBE57,#FFC312)">📅 Daily Tasks</a>
+        <a href="quiz.html" class="nav-item" style="background:linear-gradient(135deg,#55EFC4,#43E97B)">🧠 Quiz</a>
+      </div>
+      <div class="nav-row">
+        <a href="idioms.html" class="nav-item" style="background:linear-gradient(135deg,#6C63FF,#A29BFE)">💡 Idioms</a>
+        <a href="phrasal-verbs.html" class="nav-item" style="background:linear-gradient(135deg,#FF6584,#FD79A8)">🔀 Phrasal Verbs</a>
+        <a href="pronunciation.html" class="nav-item" style="background:linear-gradient(135deg,#43E97B,#55EFC4)">🗣 Pronunciation</a>
+        <a href="essays.html" class="nav-item" style="background:linear-gradient(135deg,#FA8231,#FFBE57)">📝 Essays</a>
+        <a href="word-of-day.html" class="nav-item" style="background:linear-gradient(135deg,#00C9FF,#74B9FF)">🌟 Word of Day</a>
+        <a href="about.html" class="nav-item" style="background:linear-gradient(135deg,#A29BFE,#6C63FF)">ℹ About</a>
+        <a href="contact.html" class="nav-item" style="background:linear-gradient(135deg,#00B894,#55EFC4)">📬 Contact</a>
+        <a href="privacy-policy.html" class="nav-item" style="background:linear-gradient(135deg,#E17055,#FA8231)">🔒 Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-hero">
+    <h1>💫 Modal Verbs</h1>
+    <p>Supercharge your English by expressing Ability, Permission, Advice, and Obligation accurately.</p>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setGlobalLang('en', this)">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setGlobalLang('ta', this)">🇮🇳 Tamil</button>
+      <button class="lang-btn" onclick="setGlobalLang('ml', this)">🇮🇳 Malayalam</button>
+      <button class="lang-btn" onclick="setGlobalLang('te', this)">🇮🇳 Telugu</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <div class="rule-banner">
+      <div class="rule-title">⚠️ The Golden Rule of Modal Verbs</div>
+      <p style="color:var(--text-muted); line-height:1.6; font-size:15px;">
+        1. Always use the <b>base form of the verb (V1)</b> immediately after a modal. Never use "to".<br>
+        <i>Correct: I can swim. | Wrong: I can to swim.</i><br>
+        2. Never add 's', 'es', or 'ed' to a modal verb for he/she/it subjects.<br>
+        <i>Correct: She must go. | Wrong: She musts go.</i>
+      </p>
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot" style="text-align:center;padding:10px 0;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:728px;margin:0 auto;">Advertisement (728x90)</div>
+    </div>
+
+    <div class="modals-grid" id="modalsContainer">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- ADSENSE SLOT -->
+    <div class="ad-slot ad-bottom" style="text-align:center;padding:10px 0;margin:40px auto;">
+      <div style="background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.1);padding:20px;border-radius:8px;color:var(--text-muted);font-size:12px;max-width:336px;margin:0 auto;">Advertisement (336x280)</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:28px;margin-bottom:12px;">📚 SpokenMaster</div>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Supporting Tamil | Malayalam | Telugu | English learners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Learn</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a> <a href="alphabet.html">Alphabet</a> <a href="tenses.html">Tenses</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Legal</div>
+        <div class="footer-links" style="flex-direction:column;">
+          <a href="about.html">About Us</a> <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--text-muted);">© 2025 SpokenMaster. Free forever.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.LANG = localStorage.getItem('spokenmaster_lang') || 'en';
+    const btnMap = {'en':0, 'ta':1, 'ml':2, 'te':3};
+    document.querySelectorAll('.lang-btn')[btnMap[window.LANG]||0].classList.add('active');
+
+    function setGlobalLang(lang, btn) {
+      window.LANG = lang;
+      localStorage.setItem('spokenmaster_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+      renderModals();
+    }
+
+    const modalData = [
+      {
+        m: "Can", u: "Ability / Informal Permission",
+        d: "Used to show that someone has the ability to do something, or to ask permission casually.",
+        ex: [
+          { type:"pos", en:"I can speak three languages.", ta:"என்னால் மூன்று மொழிகள் பேச முடியும்.", ml:"എനിക്ക് 3 ഭാഷകൾ സംസാരിക്കാൻ കഴിയും.", te:"నేను మూడు భాషలు మాట్లాడగలను." },
+          { type:"neg", en:"He cannot drive a car.", ta:"அவனால் கார் ஓட்ட முடியாது.", ml:"അവന് കാറോടിക്കാൻ കഴിയില്ല.", te:"అతను కారు నడపలేడు." },
+          { type:"que", en:"Can I borrow your pen?", ta:"நான் உன் பேனாவை கடன் வாங்கலாமா?", ml:"എനിക്ക് നിൻ്റെ പേന കടംതരാമോ?", te:"నేను నీ పెన్ అప్పుగా తీసుకోవచ్చా?" }
+        ]
+      },
+      {
+        m: "Could", u: "Past Ability / Polite Permission",
+        d: "The past tense of 'Can'. It is also used in the present to be extremely polite when asking a question.",
+        ex: [
+          { type:"pos", en:"I could run fast when I was young.", ta:"நான் சிறுவயதில் வேகமாக ஓட முடிந்தது.", ml:"ചെറുപ്പത്തിൽ എനിക്ക് വേഗത്തിൽ ഓടാൻ കഴിയുമായിരുന്നു.", te:"నేను చిన్నప్పుడు వేగంగా పరిగెత్తగలిగాను." },
+          { type:"neg", en:"She couldn't find her keys.", ta:"அவளால் சாவி கண்டுபிடிக்க முடியவில்லை.", ml:"അവൾക്ക് തൻ്റെ താക്കോൽ കണ്ടെത്താനായില്ല.", te:"ఆమె కు ఏ కీస్ దొరకలేదు." },
+          { type:"que", en:"Could you please open the door?", ta:"தயவுசெய்து கதவைத் திறக்க முடியுமா?", ml:"ദയവായി വാതിൽ ഒന്ന് തുറക്കാമോ?", te:"దయచేసి తలుపు తీయగలరా?" }
+        ]
+      },
+      {
+        m: "Should", u: "Advice / Recommendation",
+        d: "Used to give advice, suggest what is good/right, or ask for an opinion.",
+        ex: [
+          { type:"pos", en:"You should eat healthy food.", ta:"நீங்கள் ஆரோக்கியமான உணவை சாப்பிட வேண்டும்.", ml:"നീ ആരോഗ്യകരമായ ഭക്ഷണം കഴിക്കണം.", te:"మీరు ఆరోగ్యకరమైన ఆహారం తినాలి." },
+          { type:"neg", en:"We shouldn't waste electricity.", ta:"நாம் மின்சாரத்தை வீணாக்கக் கூடாது.", ml:"നാം വൈദ്യുതി പാഴാക്കാൻ പാടില്ല.", te:"మనం విద్యుత్ వృథా చేయకూడదు." },
+          { type:"que", en:"Should I call him now?", ta:"நான் இப்போது அவனை அழைக்க வேண்டுமா?", ml:"ഞാൻ അവനെ ഇപ്പോൾ വിളിക്കണോ?", te:"నేను ఇప్పుడు అతన్ని కాల్ చేయాలా?" }
+        ]
+      },
+      {
+        m: "Must", u: "Strong Obligation / Certainty",
+        d: "Used for an absolute rule, strict order, or a logical certainty (100% sure).",
+        ex: [
+          { type:"pos", en:"You must wear a helmet.", ta:"நீங்கள் கண்டிப்பாக ஹெல்மெட் அணிய வேண்டும்.", ml:"നിങ്ങൾ നിർബന്ധമായും ഹെൽമെറ്റ് ധരിക്കണം.", te:"మీరు తప్పనిసరిగా హెల్మెట్ ధరించాలి." },
+          { type:"neg", en:"You must not smoke here.", ta:"நீங்கள் இங்கே புகைபிடிக்கக் கூடாது.", ml:"നിങ്ങൾ ഇവിടെ പുകവലിക്കാൻ പാടില്ല.", te:"మీరు ఇక్కడ ధూమపానం చేయకూడదు." },
+          { type:"que", en:"Must we attend the meeting?", ta:"நாம் கூட்டத்தில் கண்டிப்பாக கலந்து கொள்ள வேண்டுமா?", ml:"നാം മീറ്റിംഗിൽ പങ്കെടുക്കേണ്ടതുണ്ടോ?", te:"మనం మీటింగ్ కు ఖచ్చితంగా హాజరు కావాలా?" }
+        ]
+      },
+      {
+        m: "May", u: "Possibility (50%) / Formal Permission",
+        d: "Used when there is a chance something will happen, or asking permission formally in the office/school.",
+        ex: [
+          { type:"pos", en:"It may rain today.", ta:"இன்று மழை பெய்யலாம்.", ml:"ഇന്ന് മഴ പെയ്തേക്കാം.", te:"ఈ రోజు వర్షం పడవచ్చు." },
+          { type:"neg", en:"They may not come to the party.", ta:"அவர்கள் விருந்துக்கு வராமல் இருக்கலாம்.", ml:"അവർ പാർട്ടിക്ക് വന്നേക്കില്ല.", te:"వారు పార్టీకి రాకపోవచ్చు." },
+          { type:"que", en:"May I come in, sir?", ta:"நான் உள்ளே வரலாமா, ஐயா?", ml:"ഞാൻ അകത്തേക്ക് വന്നോട്ടെ സാർ?", te:"నేను లోపలికి రావచ్చా, సార్?" }
+        ]
+      },
+      {
+        m: "Might", u: "Weak Possibility (20-30%)",
+        d: "Used when there is a very small probability. Much weaker than 'May'.",
+        ex: [
+          { type:"pos", en:"I might go to Chennai next week.", ta:"நான் அடுத்த வாரம் சென்னைக்கு செல்லலாம் (உறுதியில்லை).", ml:"ഞാൻ അടുത്താഴ്ച ചെന്നൈയിൽ പോയേക്കാം.", te:"నేను వచ్చే వారం చెన్నైకి వెళ్లొచ్చు." },
+          { type:"neg", en:"He might not pass the exam.", ta:"அவன் தேர்வில் தேர்ச்சி பெறாமல் இருக்க வாய்ப்புள்ளது.", ml:"അവൻ പരീക്ഷ ജയിച്ചേക്കില്ല.", te:"అతను పరీక్షలో పాస్ కాకపోవచ్చు." },
+          { type:"que", en:"Might I suggest a better idea?", ta:"நான் ஒரு சிறந்த யோசனையை பரிந்துரைக்கலாமா? (மிகவும் மரியாதையானது)", ml:"ഞാനൊരു നല്ല ആശയം പറയട്ടെ?", te:"నేను ఒక మంచి ఐడియా సజెస్ట్ చేయొచ్చా?" }
+        ]
+      },
+      {
+        m: "Will", u: "Future Action / Sudden Decision",
+        d: "Used to talk about future actions, promises, or making a decision instantly at the time of speaking.",
+        ex: [
+          { type:"pos", en:"I will help you with the bags.", ta:"பைகளை தூக்க நான் உதவுகிறேன்.", ml:"ബാഗുകളെടുക്കാൻ ഞാൻ നിന്നെ സഹായിക്കാം.", te:"నేను నీకు బ్యాగులు ఎత్తడానికి సహాయం చేస్తాను." },
+          { type:"neg", en:"She will not tell anyone.", ta:"அவள் யாரிடமும் சொல்ல மாட்டாள்.", ml:"അവൾ ആരോടും പറയില്ല.", te:"ఆమె ఎవరికీ చెప్పదు." },
+          { type:"que", en:"Will you marry me?", ta:"என்னை திருமணம் செய்து கொள்வாயா?", ml:"നീ എന്നെ വിവാഹം കഴിക്കുമോ?", te:"నువ్వు నన్ను పెళ్లి చేసుకుంటావా?" }
+        ]
+      },
+      {
+        m: "Would", u: "Polite Request / Imaginary Situations",
+        d: "The past tense of Will. Used largely for extremely polite offers, desires, or conditional dreams.",
+        ex: [
+          { type:"pos", en:"I would like to drink tea.", ta:"நான் தேநீர் குடிக்க விரும்புகிறேன்.", ml:"എനിക്ക് ചായ കുടിക്കണം.", te:"నేను టీ తాగాలనుకుంటున్నాను." },
+          { type:"neg", en:"If I were you, I wouldn't do that.", ta:"நான் உன்னிடத்தில் இருந்தால், அதைச் செய்ய மாட்டேன்.", ml:"ഞാൻ നിൻ്റെ സ്ഥാനത്താണെങ്കിൽ അത് ചെയ്യില്ല.", te:"నేను నీ స్థానంలో ఉంటే అది చేయను." },
+          { type:"que", en:"Would you open the window?", ta:"நீங்கள் ஜன்னலை திறக்க முடியுமா?", ml:"നിങ്ങൾ ജനാല ഒന്ന് തുറക്കാമോ?", te:"మీరు విండోను తెరుస్తారా?" }
+        ]
+      },
+      {
+        m: "Shall", u: "Offers / Suggestions (Used only for I/We)",
+        d: "Used as a question to offer help or make a suggestion. Almost entirely restricted to 'I' or 'We'.",
+        ex: [
+          { type:"pos", en:"We shall overcome this problem.", ta:"இந்த பிரச்சனையை நாம் சமாளிப்போம் (பழமையானது).", ml:"നമ്മളീ പ്രശ്നത്തെ അതിജീവിക്കും.", te:"ఈ సమస్యను మనం అధిగమిద్దాం." },
+          { type:"neg", en:"I shall not forget your help.", ta:"உங்கள் உதவியை நான் மறக்க மாட்டேன்.", ml:"നിങ്ങളുടെ സഹായം ഞാൻ മറക്കില്ല.", te:"నేను మీ సహాయాన్ని మర్చిపోను." },
+          { type:"que", en:"Shall we start the meeting?", ta:"நாம் கூட்டத்தை தொடங்கலாமா?", ml:"നമുക്ക് മീറ്റിംഗ് തുടങ്ങിയാലോ?", te:"మనం మీటింగ్ ప్రారంభిద్దామా?" }
+        ]
+      },
+      {
+        m: "Ought to", u: "Moral Obligation (Same as Should)",
+        d: "It means the exact same thing as 'Should'. It is heavily focused on moral/social responsibilities.",
+        ex: [
+          { type:"pos", en:"You ought to respect your parents.", ta:"நீங்கள் உங்கள் பெற்றோரை மதிக்க வேண்டும்.", ml:"നിങ്ങൾ നിങ്ങളുടെ മാതാപിതാക്കളെ ബഹുമാനിക്കണം.", te:"మీరు మీ తల్లిదండ్రులను గౌరవించాలి." },
+          { type:"neg", en:"They ought not to waste food.", ta:"அவர்கள் உணவை வீணாக்கக் கூடாது.", ml:"അവർ ഭക്ഷണം പാഴാക്കാൻ പാടില്ല.", te:"వారు ఆహారాన్ని వృధా చేయకూడదు." },
+          { type:"que", en:"Ought I to apologize to him?", ta:"நான் அவனிடம் மன்னிப்பு கேட்க வேண்டுமா?", ml:"ഞാനവനോട് മാപ്പപേക്ഷിക്കണോ?", te:"నేను అతనికి క్షమాపణ చెప్పాలా?" }
+        ]
+      }
+    ];
+
+    function renderModals() {
+      let h = '';
+      modalData.forEach(m => {
+        let exHtml = '';
+        m.ex.forEach(x => {
+          let trans = '';
+          if(window.LANG === 'ta') trans = x.ta;
+          if(window.LANG === 'ml') trans = x.ml;
+          if(window.LANG === 'te') trans = x.te;
+          let tLabel = x.type === 'pos' ? 'Positive' : x.type === 'neg' ? 'Negative' : 'Question';
+          
+          exHtml += `
+            <div class="ex-box ${x.type}">
+              <div class="ex-type">${tLabel}</div>
+              <div class="ex-en">${x.en}</div>
+              <div class="ex-tr" style="display:${trans ? 'block':'none'}">${trans}</div>
+            </div>`;
+        });
+
+        h += `
+        <div class="modal-card">
+          <div class="m-header">
+            <div class="m-title">${m.m}</div>
+            <div class="m-usage">${m.u}</div>
+          </div>
+          <div class="m-body">
+            <p class="m-desc">${m.d}</p>
+            <div class="ex-grid">${exHtml}</div>
+          </div>
+        </div>`;
+      });
+      document.getElementById('modalsContainer').innerHTML = h;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderModals);
+  </script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ </span><span class="bnav-label">Home</span></a>
+    <a href="tenses.html" class="bottom-nav-item"><span class="bnav-icon">â±</span><span class="bnav-label">Tenses</span></a>
+    <a href="quiz.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ§ </span><span class="bnav-label">Quiz</span></a>
+    <a href="vocabulary.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“š</span><span class="bnav-label">Vocab</span></a>
+    <a href="daily-tasks.html" class="bottom-nav-item"><span class="bnav-icon">ðŸ“…</span><span class="bnav-label">Tasks</span></a>
+  </nav>
+  <script src="pwa-register.js"></script>
+</body>
+</html>
